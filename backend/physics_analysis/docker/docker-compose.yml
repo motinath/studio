@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  physics-engine:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "${PHYSICS_ENGINE_PORT:-8100}:8100"
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - physics-output:/app/output
+    restart: unless-stopped
+
+volumes:
+  physics-output:

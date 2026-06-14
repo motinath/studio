@@ -1,0 +1,149 @@
+// QChipLang Example: 50,000-qubit QAOA Application-Specific Chip
+// Target: Superconducting transmon array, Qiskit Metal output
+
+chip QAOA_50K {
+    version: "1.0"
+    process: "IBM_7nm_SC"
+    target_fridge: "BlueFors_XLD"
+    qubit_count: 50000
+    qubit_type: transmon
+    frequency_band: [4.5GHz, 5.5GHz]
+    anharmonicity: -200MHz
+    T1_target: 100us
+    T2_target: 150us
+}
+
+// Scalar demonstration qubits (for unit cell reference)
+qubit q0 {
+    type: transmon
+    frequency: 5.0GHz
+    Ej: 15GHz
+    Ec: 0.25GHz
+    pad_gap: 30um
+    pad_width: 400um
+    pad_height: 90um
+    position: (0um, 0um)
+}
+
+qubit q1 {
+    type: transmon
+    frequency: 5.2GHz
+    Ej: 15GHz
+    Ec: 0.25GHz
+    pad_gap: 30um
+    pad_width: 400um
+    pad_height: 90um
+    position: (1000um, 0um)
+}
+
+// Readout resonator
+resonator r0 {
+    type: quarter_wave
+    frequency: 6.8GHz
+    coupling_Q: 10000
+    kappa: 1MHz
+    length: auto
+    couples_to: q0
+    coupling_gap: 10um
+    meander_width: 10um
+    meander_gap: 6um
+}
+
+// Tunable coupler
+coupler c_q0_q1 {
+    type: tunable_transmon
+    connects: [q0, q1]
+    coupling_strength: 10MHz
+    max_zz: 50kHz
+    flux_line: true
+}
+
+// Tile definition
+tile QAOATile {
+    qubits: 16
+    resonators: 16
+    couplers: 48
+    dimensions: (4000um, 4000um)
+    layout: grid2d
+    io_pins: [north, south, east, west]
+}
+
+// 50k qubit tiled array
+tile_array main_array {
+    tile: QAOATile
+    count: [56, 57]
+    pitch: (4100um, 4100um)
+    stitch_edges: true
+}
+
+// Feedlines (one per 10 resonators)
+feedline fl_row0 {
+    connects: resonators[row=0]
+    impedance: 50ohm
+    width: 10um
+    gap: 6um
+    route: horizontal
+}
+
+// Flux lines for tunable couplers
+flux_line flx_main {
+    targets: coupler[type=tunable_transmon]
+    width: 4um
+    mutual_inductance: 2pH
+    shielding: true
+}
+
+// Drive lines (frequency-multiplexed)
+drive_line drv_main {
+    targets: qubit[0:49999]
+    shared: true
+    mux_count: 10
+    bandwidth: 500MHz
+}
+
+// Packaging
+package {
+    type: flip_chip
+    bump_pitch: 100um
+    io_count: 512
+    edge_launch: true
+}
+
+// Process stack
+process_stack {
+    substrate: sapphire { thickness: 430um }
+    layer base_metal {
+        material: Nb
+        thickness: 200nm
+        deposition: sputtering
+    }
+    layer josephson {
+        material: Al_AlOx_Al
+        thickness: 30nm
+        junction_type: manhattan
+    }
+    layer airbridge {
+        material: Au
+        height: 2um
+    }
+}
+
+// DRC settings
+design_rules {
+    min_gap: 4um
+    min_trace_width: 4um
+    min_junction_area: 0.01um2
+    max_junction_area: 0.1um2
+    qubit_exclusion_zone: 200um
+    check_crosstalk: true
+    check_frequency_collision: true
+    collision_threshold: 20MHz
+}
+
+// Application template
+application QAOA {
+    qubits: 50000
+    connectivity: match_problem_graph
+    coupler_type: tunable_transmon
+    p_layers: 10
+}

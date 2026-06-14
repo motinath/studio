@@ -1,0 +1,35 @@
+{
+  "simulation_id": "sim_20260604_001",
+  "timestamp": "2026-06-04T18:00:00Z",
+  "design_id": "design_3q_demo_v1",
+
+  "electrostatic": {
+    "capacitance_matrix": {
+      "units": "fF",
+      "terminal_ids": ["Q1_island", "Q2_island", "Q3_island", "R1", "R2"],
+      "matrix": [
+        [ 65.20, -3.40, -0.12, -8.50, -0.05],
+        [ -3.40, 58.70, -2.90, -0.08, -7.20],
+        [ -0.12, -2.90, 72.10, -0.03, -0.06],
+        [ -8.50, -0.08, -0.03, 42.10, -0.01],
+        [ -0.05, -7.20, -0.06, -0.01, 39.80]
+      ]
+    }
+  },
+
+  "magnetostatic": {
+    "inductance_data": [
+      {"element_id": "L_Q3_superinductor", "inductance_nH": 300.0}
+    ]
+  },
+
+  "eigenmode": {
+    "modes": [
+      {"mode_index": 1, "frequency_ghz": 5.12, "quality_factor": 1200000, "epr": {"JJ_Q1": 0.92, "JJ_Q2": 0.01, "JJ_Q3": 0.0}},
+      {"mode_index": 2, "frequency_ghz": 5.49, "quality_factor": 1100000, "epr": {"JJ_Q1": 0.01, "JJ_Q2": 0.89, "JJ_Q3": 0.0}},
+      {"mode_index": 3, "frequency_ghz": 1.18, "quality_factor": 950000,  "epr": {"JJ_Q1": 0.0,  "JJ_Q2": 0.0,  "JJ_Q3": 0.95}},
+      {"mode_index": 4, "frequency_ghz": 7.02, "quality_factor": 2100000, "epr": {"JJ_Q1": 0.005, "JJ_Q2": 0.0, "JJ_Q3": 0.0}},
+      {"mode_index": 5, "frequency_ghz": 7.35, "quality_factor": 1800000, "epr": {"JJ_Q1": 0.0,  "JJ_Q2": 0.004, "JJ_Q3": 0.0}}
+    ]
+  }
+}

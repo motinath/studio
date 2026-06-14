@@ -1,0 +1,3790 @@
+{
+  "version": "1.0.0",
+  "components": [
+    {
+      "summary": {
+        "id": "MyQComponent",
+        "name": "My QComponent",
+        "module": "qiskit_metal.qlibrary._template",
+        "category": "other",
+        "description": "This is a QComponent brief summary"
+      },
+      "parameters": [
+        {
+          "name": "width",
+          "type": "length",
+          "unit": "um",
+          "default": "500"
+        },
+        {
+          "name": "height",
+          "type": "length",
+          "unit": "um",
+          "default": "300"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "width": "500um",
+        "height": "300um"
+      }
+    },
+    {
+      "summary": {
+        "id": "QRoute",
+        "name": "QRoute",
+        "module": "qiskit_metal.qlibrary.core.qroute",
+        "category": "other",
+        "description": "QRoute"
+      },
+      "parameters": [
+        {
+          "name": "pin_inputs",
+          "type": "string",
+          "default": "{'start_pin': {'component': '', 'pin': ''}, 'end_pin': {'component': '', 'pin': ''}}"
+        },
+        {
+          "name": "fillet",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "lead",
+          "type": "string",
+          "default": "{'start_straight': '0mm', 'end_straight': '0mm', 'start_jogged_extension': '', 'end_jogged_extension': ''}"
+        },
+        {
+          "name": "total_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "7"
+        },
+        {
+          "name": "trace_width",
+          "type": "string",
+          "default": "cpw_width"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "pin_inputs": {
+          "start_pin": {
+            "component": "",
+            "pin": ""
+          },
+          "end_pin": {
+            "component": "",
+            "pin": ""
+          }
+        },
+        "fillet": "0",
+        "lead": {
+          "start_straight": "0mm",
+          "end_straight": "0mm",
+          "start_jogged_extension": "",
+          "end_jogged_extension": ""
+        },
+        "total_length": "7mm",
+        "trace_width": "cpw_width"
+      }
+    },
+    {
+      "summary": {
+        "id": "BaseQubit",
+        "name": "Base Qubit",
+        "module": "qiskit_metal.qlibrary.core.qubit",
+        "category": "other",
+        "description": "Qubit"
+      },
+      "parameters": [
+        {
+          "name": "connection_pads",
+          "type": "string",
+          "default": "{}"
+        }
+      ],
+      "pins": [
+        {
+          "name": "a",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": 0.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "b",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": 0.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "c",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": 0.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "d",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": 0.0,
+            "angle": 0.0
+          }
+        }
+      ],
+      "default_options": {
+        "connection_pads": {},
+        "_default_connection_pads": {}
+      }
+    },
+    {
+      "summary": {
+        "id": "CapNInterdigitalTee",
+        "name": "Cap NInterdigital Tee",
+        "module": "qiskit_metal.qlibrary.couplers.cap_n_interdigital_tee",
+        "category": "couplers",
+        "description": "Generates a three pin (+) structure comprised of a primary two pin CPW\n    transmission line, and a secondary one pin neighboring CPW transmission\n    line that is capacitively coupled to the primary."
+      },
+      "parameters": [
+        {
+          "name": "prime_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "prime_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "second_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "second_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "cap_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "cap_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "finger_length",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "finger_count",
+          "type": "number",
+          "default": "5"
+        },
+        {
+          "name": "cap_distance",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        }
+      ],
+      "pins": [
+        {
+          "name": "prime_start",
+          "direction": "io",
+          "hint": {
+            "x": -50.0,
+            "y": 0.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "prime_end",
+          "direction": "io",
+          "hint": {
+            "x": 50.0,
+            "y": 0.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "second_end",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": -146.0,
+            "angle": -90.0
+          }
+        }
+      ],
+      "default_options": {
+        "prime_width": "10um",
+        "prime_gap": "6um",
+        "second_width": "10um",
+        "second_gap": "6um",
+        "cap_gap": "6um",
+        "cap_width": "10um",
+        "finger_length": "20um",
+        "finger_count": "5",
+        "cap_distance": "50um"
+      }
+    },
+    {
+      "summary": {
+        "id": "CoupledLineTee",
+        "name": "Coupled Line Tee",
+        "module": "qiskit_metal.qlibrary.couplers.coupled_line_tee",
+        "category": "couplers",
+        "description": "Generates a three pin (+) \n    structure comprised of a primary two \n    pin CPW transmission line, and a \n    secondary one pin neighboring CPW \n    transmission line that is \n    capacitively/inductively coupled \n    to the primary."
+      },
+      "parameters": [
+        {
+          "name": "prime_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "prime_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "second_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "second_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "coupling_space",
+          "type": "length",
+          "unit": "um",
+          "default": "3"
+        },
+        {
+          "name": "coupling_length",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "down_length",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "fillet",
+          "type": "length",
+          "unit": "um",
+          "default": "25"
+        },
+        {
+          "name": "mirror",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "open_termination",
+          "type": "bool",
+          "default": "true"
+        }
+      ],
+      "pins": [
+        {
+          "name": "prime_start",
+          "direction": "io",
+          "hint": {
+            "x": -100.0,
+            "y": 0.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "prime_end",
+          "direction": "io",
+          "hint": {
+            "x": 100.0,
+            "y": 0.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "second_end",
+          "direction": "io",
+          "hint": {
+            "x": 50.0,
+            "y": -125.0,
+            "angle": -90.0
+          }
+        }
+      ],
+      "default_options": {
+        "prime_width": "10um",
+        "prime_gap": "6um",
+        "second_width": "10um",
+        "second_gap": "6um",
+        "coupling_space": "3um",
+        "coupling_length": "100um",
+        "down_length": "100um",
+        "fillet": "25um",
+        "mirror": false,
+        "open_termination": true
+      }
+    },
+    {
+      "summary": {
+        "id": "LineTee",
+        "name": "Line Tee",
+        "module": "qiskit_metal.qlibrary.couplers.line_tee",
+        "category": "couplers",
+        "description": "Generates a three pin (+) structure comprised of a primary two pin CPW\n    transmission line, and a secondary one pin neighboring CPW transmission\n    line that is capacitively coupled to the primary."
+      },
+      "parameters": [
+        {
+          "name": "prime_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "prime_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "second_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "second_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "t_length",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        }
+      ],
+      "pins": [
+        {
+          "name": "prime_start",
+          "direction": "io",
+          "hint": {
+            "x": -50.0,
+            "y": 0.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "prime_end",
+          "direction": "io",
+          "hint": {
+            "x": 50.0,
+            "y": 0.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "second_end",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": -50.0,
+            "angle": -90.0
+          }
+        }
+      ],
+      "default_options": {
+        "prime_width": "10um",
+        "prime_gap": "6um",
+        "second_width": "10um",
+        "second_gap": "6um",
+        "t_length": "50um"
+      }
+    },
+    {
+      "summary": {
+        "id": "TunableCoupler01",
+        "name": "Tunable Coupler01",
+        "module": "qiskit_metal.qlibrary.couplers.tunable_coupler_01",
+        "category": "couplers",
+        "description": "One of the tunable couplers"
+      },
+      "parameters": [
+        {
+          "name": "c_width",
+          "type": "length",
+          "unit": "um",
+          "default": "400"
+        },
+        {
+          "name": "l_width",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "l_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "a_height",
+          "type": "length",
+          "unit": "um",
+          "default": "60"
+        },
+        {
+          "name": "cp_height",
+          "type": "length",
+          "unit": "um",
+          "default": "15"
+        },
+        {
+          "name": "cp_arm_length",
+          "type": "length",
+          "unit": "um",
+          "default": "30"
+        },
+        {
+          "name": "cp_arm_width",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "cp_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "cp_gspace",
+          "type": "length",
+          "unit": "um",
+          "default": "3"
+        },
+        {
+          "name": "fl_width",
+          "type": "length",
+          "unit": "um",
+          "default": "5"
+        },
+        {
+          "name": "fl_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "3"
+        },
+        {
+          "name": "fl_length",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "fl_ground",
+          "type": "length",
+          "unit": "um",
+          "default": "2"
+        }
+      ],
+      "pins": [
+        {
+          "name": "Control",
+          "direction": "io",
+          "hint": {
+            "x": 38.0,
+            "y": 94.0,
+            "angle": 90.0
+          }
+        },
+        {
+          "name": "Flux",
+          "direction": "io",
+          "hint": {
+            "x": -114.0,
+            "y": 87.5,
+            "angle": 90.0
+          }
+        }
+      ],
+      "default_options": {
+        "c_width": "400um",
+        "l_width": "20um",
+        "l_gap": "10um",
+        "a_height": "60um",
+        "cp_height": "15um",
+        "cp_arm_length": "30um",
+        "cp_arm_width": "6um",
+        "cp_gap": "6um",
+        "cp_gspace": "3um",
+        "fl_width": "5um",
+        "fl_gap": "3um",
+        "fl_length": "10um",
+        "fl_ground": "2um"
+      }
+    },
+    {
+      "summary": {
+        "id": "TunableCoupler02",
+        "name": "Tunable Coupler02",
+        "module": "qiskit_metal.qlibrary.couplers.tunable_coupler_02",
+        "category": "couplers",
+        "description": "One of the tunable couplers"
+      },
+      "parameters": [
+        {
+          "name": "pocket_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "3"
+        },
+        {
+          "name": "pocket_height",
+          "type": "length",
+          "unit": "mm",
+          "default": "2"
+        },
+        {
+          "name": "pos_x",
+          "type": "length",
+          "unit": "mm",
+          "default": "0"
+        },
+        {
+          "name": "pos_y",
+          "type": "length",
+          "unit": "mm",
+          "default": "0"
+        },
+        {
+          "name": "orientation",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "pad_radius",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.3"
+        },
+        {
+          "name": "bus_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "bus_inner_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.5"
+        },
+        {
+          "name": "bus_outer_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.5"
+        },
+        {
+          "name": "bus_JJ_height",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.5"
+        },
+        {
+          "name": "JJ_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "JJ_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.4"
+        },
+        {
+          "name": "fbl_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "fbl_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.5"
+        },
+        {
+          "name": "fbl_offset",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "layer",
+          "type": "number",
+          "default": "1"
+        }
+      ],
+      "pins": [
+        {
+          "name": "pin1",
+          "direction": "io",
+          "hint": {
+            "x": 1900.0,
+            "y": 50.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "pin2",
+          "direction": "io",
+          "hint": {
+            "x": -1900.0,
+            "y": 50.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "fbl",
+          "direction": "io",
+          "hint": {
+            "x": -450.0,
+            "y": 1000.0,
+            "angle": 90.0
+          }
+        }
+      ],
+      "default_options": {
+        "pocket_width": "3mm",
+        "pocket_height": "2mm",
+        "pos_x": "0mm",
+        "pos_y": "0mm",
+        "orientation": "0",
+        "pad_radius": "0.3mm",
+        "bus_width": "0.1mm",
+        "bus_inner_length": "0.5mm",
+        "bus_outer_length": "0.5mm",
+        "bus_JJ_height": "0.5mm",
+        "JJ_width": "0.1mm",
+        "JJ_length": "0.4mm",
+        "fbl_width": "0.1mm",
+        "fbl_length": "0.5mm",
+        "fbl_offset": "0.1mm",
+        "layer": "1"
+      }
+    },
+    {
+      "summary": {
+        "id": "Cap3Interdigital",
+        "name": "Cap3Interdigital",
+        "module": "qiskit_metal.qlibrary.lumped.cap_3_interdigital",
+        "category": "resonators",
+        "description": "Create a three finger planar capacitor with a ground pocket cuttout."
+      },
+      "parameters": [
+        {
+          "name": "trace_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "finger_length",
+          "type": "length",
+          "unit": "um",
+          "default": "65"
+        },
+        {
+          "name": "pocket_buffer_width_x",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "pocket_buffer_width_y",
+          "type": "length",
+          "unit": "um",
+          "default": "30"
+        }
+      ],
+      "pins": [
+        {
+          "name": "a",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": 77.5,
+            "angle": 90.0
+          }
+        },
+        {
+          "name": "b",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": -77.5,
+            "angle": -90.0
+          }
+        }
+      ],
+      "default_options": {
+        "trace_width": "10um",
+        "finger_length": "65um",
+        "pocket_buffer_width_x": "10um",
+        "pocket_buffer_width_y": "30um"
+      }
+    },
+    {
+      "summary": {
+        "id": "CapNInterdigital",
+        "name": "Cap NInterdigital",
+        "module": "qiskit_metal.qlibrary.lumped.cap_n_interdigital",
+        "category": "resonators",
+        "description": "Generates a two pin (+) structure\n     comprised of a north CPW transmission line, \n     and a south transmission line, coupled \n     together via a finger capacitor."
+      },
+      "parameters": [
+        {
+          "name": "north_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "north_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "south_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "south_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "cap_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "cap_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "cap_gap_ground",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "finger_length",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "finger_count",
+          "type": "number",
+          "default": "5"
+        },
+        {
+          "name": "cap_distance",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        }
+      ],
+      "pins": [
+        {
+          "name": "north_end",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": 0.0,
+            "angle": 90.0
+          }
+        },
+        {
+          "name": "south_end",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": -146.0,
+            "angle": -90.0
+          }
+        }
+      ],
+      "default_options": {
+        "north_width": "10um",
+        "north_gap": "6um",
+        "south_width": "10um",
+        "south_gap": "6um",
+        "cap_width": "10um",
+        "cap_gap": "6um",
+        "cap_gap_ground": "6um",
+        "finger_length": "20um",
+        "finger_count": "5",
+        "cap_distance": "50um"
+      }
+    },
+    {
+      "summary": {
+        "id": "ResonatorCoilRect",
+        "name": "Resonator Coil Rect",
+        "module": "qiskit_metal.qlibrary.lumped.resonator_coil_rect",
+        "category": "resonators",
+        "description": "A rectangle spiral resonator based on length input. The X dimension is\n    modified by the code based on the total length inputed."
+      },
+      "parameters": [
+        {
+          "name": "n",
+          "type": "number",
+          "default": "3"
+        },
+        {
+          "name": "length",
+          "type": "length",
+          "unit": "um",
+          "default": "2000"
+        },
+        {
+          "name": "line_width",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        },
+        {
+          "name": "height",
+          "type": "length",
+          "unit": "um",
+          "default": "40"
+        },
+        {
+          "name": "gap",
+          "type": "length",
+          "unit": "um",
+          "default": "4"
+        },
+        {
+          "name": "coupler_distance",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        }
+      ],
+      "pins": [
+        {
+          "name": "spiralPin",
+          "direction": "io",
+          "hint": {
+            "x": -137.166667,
+            "y": -24.5,
+            "angle": 180.0
+          }
+        }
+      ],
+      "default_options": {
+        "n": "3",
+        "length": "2000um",
+        "line_width": "1um",
+        "height": "40um",
+        "gap": "4um",
+        "coupler_distance": "10um"
+      }
+    },
+    {
+      "summary": {
+        "id": "jj_dolan",
+        "name": "jj_dolan",
+        "module": "qiskit_metal.qlibrary.qubits.JJ_Dolan",
+        "category": "qubits",
+        "description": "QComponent"
+      },
+      "parameters": [
+        {
+          "name": "JJ_pad_lower_width",
+          "type": "length",
+          "unit": "um",
+          "default": "25"
+        },
+        {
+          "name": "JJ_pad_lower_height",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "JJ_pad_lower_pos_x",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "JJ_pad_lower_pos_y",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "finger_lower_width",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        },
+        {
+          "name": "finger_lower_height",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "extension",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        },
+        {
+          "name": "offset",
+          "type": "length",
+          "unit": "um",
+          "default": "2"
+        },
+        {
+          "name": "second_metal_length",
+          "type": "length",
+          "unit": "um",
+          "default": "5"
+        },
+        {
+          "name": "second_metal_width",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "JJ_pad_lower_width": "25um",
+        "JJ_pad_lower_height": "10um",
+        "JJ_pad_lower_pos_x": "0",
+        "JJ_pad_lower_pos_y": "0",
+        "finger_lower_width": "1um",
+        "finger_lower_height": "20um",
+        "extension": "1um",
+        "offset": "2um",
+        "second_metal_length": "5um",
+        "second_metal_width": "1um"
+      }
+    },
+    {
+      "summary": {
+        "id": "jj_manhattan",
+        "name": "jj_manhattan",
+        "module": "qiskit_metal.qlibrary.qubits.JJ_Manhattan",
+        "category": "qubits",
+        "description": "QComponent"
+      },
+      "parameters": [
+        {
+          "name": "JJ_pad_lower_width",
+          "type": "length",
+          "unit": "um",
+          "default": "25"
+        },
+        {
+          "name": "JJ_pad_lower_height",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "JJ_pad_lower_pos_x",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "JJ_pad_lower_pos_y",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "finger_lower_width",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        },
+        {
+          "name": "finger_lower_height",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "extension",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "JJ_pad_lower_width": "25um",
+        "JJ_pad_lower_height": "10um",
+        "JJ_pad_lower_pos_x": "0",
+        "JJ_pad_lower_pos_y": "0",
+        "finger_lower_width": "1um",
+        "finger_lower_height": "20um",
+        "extension": "1um"
+      }
+    },
+    {
+      "summary": {
+        "id": "SQUID_LOOP",
+        "name": "SQUID_LOOP",
+        "module": "qiskit_metal.qlibrary.qubits.SQUID_loop",
+        "category": "qubits",
+        "description": "QComponent"
+      },
+      "parameters": [
+        {
+          "name": "plate1_width",
+          "type": "length",
+          "unit": "um",
+          "default": "5.5"
+        },
+        {
+          "name": "plate1_height",
+          "type": "length",
+          "unit": "um",
+          "default": "40"
+        },
+        {
+          "name": "plate1_pos_x",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "plate1_pos_y",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "squid_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "segment_a_length",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "segment_a_width",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        },
+        {
+          "name": "JJ_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "0.5"
+        },
+        {
+          "name": "segment_b_length",
+          "type": "length",
+          "unit": "um",
+          "default": "5"
+        },
+        {
+          "name": "segment_b_width",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        },
+        {
+          "name": "segment_c_width",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        },
+        {
+          "name": "segment_d_length",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "segment_d_width",
+          "type": "length",
+          "unit": "um",
+          "default": "2"
+        },
+        {
+          "name": "plate2_width",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "plate2_height",
+          "type": "length",
+          "unit": "um",
+          "default": "30"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "plate1_width": "5.5um",
+        "plate1_height": "40um",
+        "plate1_pos_x": "0",
+        "plate1_pos_y": "0",
+        "squid_gap": "10um",
+        "segment_a_length": "10um",
+        "segment_a_width": "1um",
+        "JJ_gap": "0.5um",
+        "segment_b_length": "5um",
+        "segment_b_width": "1um",
+        "segment_c_width": "1um",
+        "segment_d_length": "10um",
+        "segment_d_width": "2um",
+        "plate2_width": "6um",
+        "plate2_height": "30um"
+      }
+    },
+    {
+      "summary": {
+        "id": "TransmonInterdigitated",
+        "name": "Transmon Interdigitated",
+        "module": "qiskit_metal.qlibrary.qubits.Transmon_Interdigitated",
+        "category": "qubits",
+        "description": "QComponent"
+      },
+      "parameters": [
+        {
+          "name": "pad_width",
+          "type": "length",
+          "unit": "um",
+          "default": "1000"
+        },
+        {
+          "name": "pad_height",
+          "type": "length",
+          "unit": "um",
+          "default": "300"
+        },
+        {
+          "name": "finger_width",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        },
+        {
+          "name": "finger_height",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "finger_space",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        },
+        {
+          "name": "pad_pos_x",
+          "type": "length",
+          "unit": "um",
+          "default": "0"
+        },
+        {
+          "name": "pad_pos_y",
+          "type": "length",
+          "unit": "um",
+          "default": "0"
+        },
+        {
+          "name": "comb_width",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        },
+        {
+          "name": "comb_space_vert",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        },
+        {
+          "name": "comb_space_hor",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        },
+        {
+          "name": "jj_width",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "cc_space",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        },
+        {
+          "name": "cc_width",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "cc_height",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "cc_topleft_space",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        },
+        {
+          "name": "cc_topleft_width",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "cc_topleft_height",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "cc_topright_space",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        },
+        {
+          "name": "cc_topright_width",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "cc_topright_height",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "rotation_top_pad",
+          "type": "number",
+          "default": "180"
+        },
+        {
+          "name": "inductor_width",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        }
+      ],
+      "pins": [
+        {
+          "name": "readout",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": -575.0,
+            "angle": -90.0
+          }
+        },
+        {
+          "name": "bus1",
+          "direction": "io",
+          "hint": {
+            "x": -500.0,
+            "y": 525.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "bus2",
+          "direction": "io",
+          "hint": {
+            "x": 500.0,
+            "y": 525.0,
+            "angle": 0.0
+          }
+        }
+      ],
+      "default_options": {
+        "pad_width": "1000um",
+        "pad_height": "300um",
+        "finger_width": "50um",
+        "finger_height": "100um",
+        "finger_space": "50um",
+        "pad_pos_x": "0um",
+        "pad_pos_y": "0um",
+        "comb_width": "50um",
+        "comb_space_vert": "50um",
+        "comb_space_hor": "50um",
+        "jj_width": "20um",
+        "cc_space": "50um",
+        "cc_width": "100um",
+        "cc_height": "100um",
+        "cc_topleft_space": "50um",
+        "cc_topleft_width": "100um",
+        "cc_topleft_height": "100um",
+        "cc_topright_space": "50um",
+        "cc_topright_width": "100um",
+        "cc_topright_height": "100um",
+        "rotation_top_pad": "180",
+        "inductor_width": "20um"
+      }
+    },
+    {
+      "summary": {
+        "id": "StarQubit",
+        "name": "Star Qubit",
+        "module": "qiskit_metal.qlibrary.qubits.star_qubit",
+        "category": "qubits",
+        "description": "QComponent"
+      },
+      "parameters": [
+        {
+          "name": "radius",
+          "type": "length",
+          "unit": "um",
+          "default": "300"
+        },
+        {
+          "name": "center_radius",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "gap_couplers",
+          "type": "length",
+          "unit": "um",
+          "default": "25"
+        },
+        {
+          "name": "gap_readout",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "connector_length",
+          "type": "length",
+          "unit": "um",
+          "default": "75"
+        },
+        {
+          "name": "trap_offset",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "junc_h",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "cpw_width",
+          "type": "number",
+          "default": "0.01"
+        },
+        {
+          "name": "rotation_cpl1",
+          "type": "number",
+          "default": "0.0"
+        },
+        {
+          "name": "rotation_cpl2",
+          "type": "number",
+          "default": "72.0"
+        },
+        {
+          "name": "rotation_rdout",
+          "type": "number",
+          "default": "144.0"
+        },
+        {
+          "name": "rotation_cpl3",
+          "type": "number",
+          "default": "216.0"
+        },
+        {
+          "name": "rotation_cpl4",
+          "type": "number",
+          "default": "288.0"
+        },
+        {
+          "name": "number_of_connectors",
+          "type": "number",
+          "default": "4"
+        },
+        {
+          "name": "resolution",
+          "type": "number",
+          "default": "16"
+        },
+        {
+          "name": "cap_style",
+          "type": "string",
+          "default": "round"
+        },
+        {
+          "name": "subtract",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "helper",
+          "type": "bool",
+          "default": "false"
+        }
+      ],
+      "pins": [
+        {
+          "name": "pin_cpl1",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": -375.0,
+            "angle": -90.0
+          }
+        },
+        {
+          "name": "pin_cpl2",
+          "direction": "io",
+          "hint": {
+            "x": 356.64619400000004,
+            "y": -115.881373,
+            "angle": -18.000000220465814
+          }
+        },
+        {
+          "name": "pin_cpl3",
+          "direction": "io",
+          "hint": {
+            "x": -220.41947000000002,
+            "y": 303.381373,
+            "angle": 125.99999983900851
+          }
+        },
+        {
+          "name": "pin_cpl4",
+          "direction": "io",
+          "hint": {
+            "x": -356.64619400000004,
+            "y": -115.881373,
+            "angle": -161.9999997795342
+          }
+        },
+        {
+          "name": "pin_rdout",
+          "direction": "io",
+          "hint": {
+            "x": 220.41947000000002,
+            "y": 303.381373,
+            "angle": 54.0000001609915
+          }
+        }
+      ],
+      "default_options": {
+        "radius": "300um",
+        "center_radius": "100um",
+        "gap_couplers": "25um",
+        "gap_readout": "10um",
+        "connector_length": "75um",
+        "trap_offset": "20um",
+        "junc_h": "100um",
+        "cpw_width": "0.01",
+        "rotation_cpl1": "0.0",
+        "rotation_cpl2": "72.0",
+        "rotation_rdout": "144.0",
+        "rotation_cpl3": "216.0",
+        "rotation_cpl4": "288.0",
+        "number_of_connectors": "4",
+        "resolution": "16",
+        "cap_style": "round",
+        "subtract": "False",
+        "helper": "False"
+      }
+    },
+    {
+      "summary": {
+        "id": "TransmonConcentric",
+        "name": "Transmon Concentric",
+        "module": "qiskit_metal.qlibrary.qubits.transmon_concentric",
+        "category": "qubits",
+        "description": "The base `TrasmonConcentric` class."
+      },
+      "parameters": [
+        {
+          "name": "width",
+          "type": "length",
+          "unit": "um",
+          "default": "1000"
+        },
+        {
+          "name": "height",
+          "type": "length",
+          "unit": "um",
+          "default": "1000"
+        },
+        {
+          "name": "rad_o",
+          "type": "length",
+          "unit": "um",
+          "default": "170"
+        },
+        {
+          "name": "rad_i",
+          "type": "length",
+          "unit": "um",
+          "default": "115"
+        },
+        {
+          "name": "gap",
+          "type": "length",
+          "unit": "um",
+          "default": "35"
+        },
+        {
+          "name": "jj_w",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "res_s",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "res_ext",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "fbl_rad",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "fbl_sp",
+          "type": "length",
+          "unit": "um",
+          "default": "100"
+        },
+        {
+          "name": "fbl_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "80"
+        },
+        {
+          "name": "fbl_ext",
+          "type": "length",
+          "unit": "um",
+          "default": "300"
+        },
+        {
+          "name": "pocket_w",
+          "type": "length",
+          "unit": "um",
+          "default": "1500"
+        },
+        {
+          "name": "pocket_h",
+          "type": "length",
+          "unit": "um",
+          "default": "1000"
+        },
+        {
+          "name": "cpw_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10.0"
+        },
+        {
+          "name": "inductor_width",
+          "type": "length",
+          "unit": "um",
+          "default": "5.0"
+        },
+        {
+          "name": "layer",
+          "type": "number",
+          "default": "1"
+        }
+      ],
+      "pins": [
+        {
+          "name": "pin1",
+          "direction": "io",
+          "hint": {
+            "x": -750.0,
+            "y": 270.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "pin2",
+          "direction": "io",
+          "hint": {
+            "x": 750.0,
+            "y": -40.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "pin3",
+          "direction": "io",
+          "hint": {
+            "x": 750.0,
+            "y": 40.0,
+            "angle": 0.0
+          }
+        }
+      ],
+      "default_options": {
+        "width": "1000um",
+        "height": "1000um",
+        "rad_o": "170um",
+        "rad_i": "115um",
+        "gap": "35um",
+        "jj_w": "10um",
+        "res_s": "100um",
+        "res_ext": "100um",
+        "fbl_rad": "100um",
+        "fbl_sp": "100um",
+        "fbl_gap": "80um",
+        "fbl_ext": "300um",
+        "pocket_w": "1500um",
+        "pocket_h": "1000um",
+        "cpw_width": "10.0um",
+        "inductor_width": "5.0um",
+        "layer": "1"
+      }
+    },
+    {
+      "summary": {
+        "id": "TransmonConcentricType2",
+        "name": "Transmon Concentric Type2",
+        "module": "qiskit_metal.qlibrary.qubits.transmon_concentric_type_2",
+        "category": "qubits",
+        "description": "Qubit"
+      },
+      "parameters": [
+        {
+          "name": "pos_x",
+          "type": "length",
+          "unit": "mm",
+          "default": "0"
+        },
+        {
+          "name": "pos_y",
+          "type": "length",
+          "unit": "mm",
+          "default": "0"
+        },
+        {
+          "name": "orientation",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "rad_outer",
+          "type": "length",
+          "unit": "mm",
+          "default": "2"
+        },
+        {
+          "name": "rad_inner",
+          "type": "length",
+          "unit": "mm",
+          "default": "1"
+        },
+        {
+          "name": "gap",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.5"
+        },
+        {
+          "name": "jj_w",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.2"
+        },
+        {
+          "name": "finger_NE_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "finger_NE_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.5"
+        },
+        {
+          "name": "coupler_NE_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "coupler_NE_gap",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "finger_NW_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "finger_NW_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.5"
+        },
+        {
+          "name": "coupler_NW_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "coupler_NW_gap",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "finger_SW_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "finger_SW_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.5"
+        },
+        {
+          "name": "coupler_SW_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "coupler_SW_gap",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "finger_E_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "finger_E_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.5"
+        },
+        {
+          "name": "box_E_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.7"
+        },
+        {
+          "name": "box_E_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.7"
+        },
+        {
+          "name": "finger_N_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "finger_N_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "2"
+        },
+        {
+          "name": "triangle_base",
+          "type": "length",
+          "unit": "mm",
+          "default": "2"
+        },
+        {
+          "name": "triangle_height",
+          "type": "length",
+          "unit": "mm",
+          "default": "1"
+        },
+        {
+          "name": "pocket_w",
+          "type": "length",
+          "unit": "mm",
+          "default": "10"
+        },
+        {
+          "name": "pocket_h",
+          "type": "length",
+          "unit": "mm",
+          "default": "10"
+        },
+        {
+          "name": "layer",
+          "type": "number",
+          "default": "1"
+        }
+      ],
+      "pins": [
+        {
+          "name": "pin1",
+          "direction": "io",
+          "hint": {
+            "x": 1909.189576,
+            "y": 1909.187043,
+            "angle": 44.99996232176216
+          }
+        },
+        {
+          "name": "pin2",
+          "direction": "io",
+          "hint": {
+            "x": -1909.189576,
+            "y": 1909.187043,
+            "angle": 135.00003767823785
+          }
+        },
+        {
+          "name": "pin3",
+          "direction": "io",
+          "hint": {
+            "x": -1909.189576,
+            "y": -1909.187043,
+            "angle": -135.00003767823785
+          }
+        }
+      ],
+      "default_options": {
+        "pos_x": "0mm",
+        "pos_y": "0mm",
+        "orientation": "0",
+        "rad_outer": "2mm",
+        "rad_inner": "1mm",
+        "gap": "0.5mm",
+        "jj_w": "0.2mm",
+        "finger_NE_width": "0.1mm",
+        "finger_NE_length": "0.5mm",
+        "coupler_NE_width": "0.1mm",
+        "coupler_NE_gap": "0.1mm",
+        "finger_NW_width": "0.1mm",
+        "finger_NW_length": "0.5mm",
+        "coupler_NW_width": "0.1mm",
+        "coupler_NW_gap": "0.1mm",
+        "finger_SW_width": "0.1mm",
+        "finger_SW_length": "0.5mm",
+        "coupler_SW_width": "0.1mm",
+        "coupler_SW_gap": "0.1mm",
+        "finger_E_width": "0.1mm",
+        "finger_E_length": "0.5mm",
+        "box_E_width": "0.7mm",
+        "box_E_length": "0.7mm",
+        "finger_N_width": "0.1mm",
+        "finger_N_length": "2mm",
+        "triangle_base": "2mm",
+        "triangle_height": "1mm",
+        "pocket_w": "10mm",
+        "pocket_h": "10mm",
+        "layer": "1"
+      }
+    },
+    {
+      "summary": {
+        "id": "TransmonCross",
+        "name": "Transmon Cross",
+        "module": "qiskit_metal.qlibrary.qubits.transmon_cross",
+        "category": "qubits",
+        "description": "Simple Metal Transmon Cross."
+      },
+      "parameters": [
+        {
+          "name": "cross_width",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "cross_length",
+          "type": "length",
+          "unit": "um",
+          "default": "200"
+        },
+        {
+          "name": "cross_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "chip",
+          "type": "string",
+          "default": "main"
+        }
+      ],
+      "pins": [
+        {
+          "name": "readout",
+          "direction": "io",
+          "hint": {
+            "x": -281.0,
+            "y": 0.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "bus_01",
+          "direction": "io",
+          "hint": {
+            "x": 281.0,
+            "y": 0.0,
+            "angle": -0.0
+          }
+        },
+        {
+          "name": "bus_02",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": 281.0,
+            "angle": 90.0
+          }
+        }
+      ],
+      "default_options": {
+        "cross_width": "20um",
+        "cross_length": "200um",
+        "cross_gap": "20um",
+        "chip": "main",
+        "_default_connection_pads": {
+          "connector_type": "0",
+          "claw_length": "30um",
+          "ground_spacing": "5um",
+          "claw_width": "10um",
+          "claw_gap": "6um",
+          "claw_cpw_length": "40um",
+          "claw_cpw_width": "10um",
+          "connector_location": "0"
+        }
+      }
+    },
+    {
+      "summary": {
+        "id": "TransmonCrossFL",
+        "name": "Transmon Cross FL",
+        "module": "qiskit_metal.qlibrary.qubits.transmon_cross_fl",
+        "category": "qubits",
+        "description": "The base `TransmonCrossFL` class."
+      },
+      "parameters": [
+        {
+          "name": "make_fl",
+          "type": "bool",
+          "default": "true"
+        },
+        {
+          "name": "fl_options",
+          "type": "string",
+          "default": "{'t_top': '15um', 't_offset': '0um', 't_inductive_gap': '3um', 't_width': '5um', 't_gap': '3um'}"
+        }
+      ],
+      "pins": [
+        {
+          "name": "flux_line",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": -258.5,
+            "angle": -90.0
+          }
+        }
+      ],
+      "default_options": {
+        "make_fl": true,
+        "fl_options": {
+          "t_top": "15um",
+          "t_offset": "0um",
+          "t_inductive_gap": "3um",
+          "t_width": "5um",
+          "t_gap": "3um"
+        }
+      }
+    },
+    {
+      "summary": {
+        "id": "TransmonPocket",
+        "name": "Transmon Pocket",
+        "module": "qiskit_metal.qlibrary.qubits.transmon_pocket",
+        "category": "qubits",
+        "description": "The base `TransmonPocket` class."
+      },
+      "parameters": [
+        {
+          "name": "pad_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "30"
+        },
+        {
+          "name": "inductor_width",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "pad_width",
+          "type": "length",
+          "unit": "um",
+          "default": "455"
+        },
+        {
+          "name": "pad_height",
+          "type": "length",
+          "unit": "um",
+          "default": "90"
+        },
+        {
+          "name": "pocket_width",
+          "type": "length",
+          "unit": "um",
+          "default": "650"
+        },
+        {
+          "name": "pocket_height",
+          "type": "length",
+          "unit": "um",
+          "default": "650"
+        }
+      ],
+      "pins": [
+        {
+          "name": "a",
+          "direction": "io",
+          "hint": {
+            "x": 425.0,
+            "y": 195.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "b",
+          "direction": "io",
+          "hint": {
+            "x": -425.0,
+            "y": 195.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "c",
+          "direction": "io",
+          "hint": {
+            "x": 425.0,
+            "y": -195.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "d",
+          "direction": "io",
+          "hint": {
+            "x": -425.0,
+            "y": -195.0,
+            "angle": 180.0
+          }
+        }
+      ],
+      "default_options": {
+        "pad_gap": "30um",
+        "inductor_width": "20um",
+        "pad_width": "455um",
+        "pad_height": "90um",
+        "pocket_width": "650um",
+        "pocket_height": "650um",
+        "_default_connection_pads": {
+          "pad_gap": "15um",
+          "pad_width": "125um",
+          "pad_height": "30um",
+          "pad_cpw_shift": "5um",
+          "pad_cpw_extent": "25um",
+          "cpw_width": "cpw_width",
+          "cpw_gap": "cpw_gap",
+          "cpw_extend": "100um",
+          "pocket_extent": "5um",
+          "pocket_rise": "65um",
+          "loc_W": "+1",
+          "loc_H": "+1"
+        }
+      }
+    },
+    {
+      "summary": {
+        "id": "TransmonPocket6",
+        "name": "Transmon Pocket6",
+        "module": "qiskit_metal.qlibrary.qubits.transmon_pocket_6",
+        "category": "qubits",
+        "description": "Transmon pocket with 6 connection pads."
+      },
+      "parameters": [
+        {
+          "name": "pad_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "30"
+        },
+        {
+          "name": "inductor_width",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "pad_width",
+          "type": "length",
+          "unit": "um",
+          "default": "455"
+        },
+        {
+          "name": "pad_height",
+          "type": "length",
+          "unit": "um",
+          "default": "90"
+        },
+        {
+          "name": "pocket_width",
+          "type": "length",
+          "unit": "um",
+          "default": "650"
+        },
+        {
+          "name": "pocket_height",
+          "type": "length",
+          "unit": "um",
+          "default": "650"
+        }
+      ],
+      "pins": [
+        {
+          "name": "a",
+          "direction": "io",
+          "hint": {
+            "x": 425.0,
+            "y": 125.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "b",
+          "direction": "io",
+          "hint": {
+            "x": -425.0,
+            "y": 125.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "c",
+          "direction": "io",
+          "hint": {
+            "x": 425.0,
+            "y": -125.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "d",
+          "direction": "io",
+          "hint": {
+            "x": -425.0,
+            "y": -125.0,
+            "angle": 180.0
+          }
+        }
+      ],
+      "default_options": {
+        "pad_gap": "30um",
+        "inductor_width": "20um",
+        "pad_width": "455um",
+        "pad_height": "90um",
+        "pocket_width": "650um",
+        "pocket_height": "650um",
+        "_default_connection_pads": {
+          "pad_gap": "15um",
+          "pad_width": "125um",
+          "pad_height": "30um",
+          "pad_cpw_shift": "0um",
+          "pad_cpw_extent": "25um",
+          "cpw_width": "10um",
+          "cpw_gap": "6um",
+          "cpw_extend": "100um",
+          "pocket_extent": "5um",
+          "pocket_rise": "0um",
+          "loc_W": "+1",
+          "loc_H": "+1"
+        }
+      }
+    },
+    {
+      "summary": {
+        "id": "TransmonPocketCL",
+        "name": "Transmon Pocket CL",
+        "module": "qiskit_metal.qlibrary.qubits.transmon_pocket_cl",
+        "category": "qubits",
+        "description": "Create a standard pocket transmon qubit for a ground plane,\n    with two pads connected by a junction"
+      },
+      "parameters": [
+        {
+          "name": "make_CL",
+          "type": "bool",
+          "default": "true"
+        },
+        {
+          "name": "cl_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "cl_width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "cl_length",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "cl_ground_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "cl_pocket_edge",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "cl_off_center",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        }
+      ],
+      "pins": [
+        {
+          "name": "Charge_Line",
+          "direction": "io",
+          "hint": {
+            "x": -417.0,
+            "y": 55.0,
+            "angle": 180.0
+          }
+        }
+      ],
+      "default_options": {
+        "make_CL": true,
+        "cl_gap": "6um",
+        "cl_width": "10um",
+        "cl_length": "20um",
+        "cl_ground_gap": "6um",
+        "cl_pocket_edge": "0",
+        "cl_off_center": "50um"
+      }
+    },
+    {
+      "summary": {
+        "id": "TransmonPocketTeeth",
+        "name": "Transmon Pocket Teeth",
+        "module": "qiskit_metal.qlibrary.qubits.transmon_pocket_teeth",
+        "category": "qubits",
+        "description": "Transmon pocket with teeth pads."
+      },
+      "parameters": [
+        {
+          "name": "pad_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "30"
+        },
+        {
+          "name": "inductor_width",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "pad_width",
+          "type": "length",
+          "unit": "um",
+          "default": "400"
+        },
+        {
+          "name": "pad_height",
+          "type": "length",
+          "unit": "um",
+          "default": "90"
+        },
+        {
+          "name": "pocket_width",
+          "type": "length",
+          "unit": "um",
+          "default": "650"
+        },
+        {
+          "name": "pocket_height",
+          "type": "length",
+          "unit": "um",
+          "default": "650"
+        },
+        {
+          "name": "coupled_pad_height",
+          "type": "length",
+          "unit": "um",
+          "default": "150"
+        },
+        {
+          "name": "coupled_pad_width",
+          "type": "length",
+          "unit": "um",
+          "default": "20"
+        },
+        {
+          "name": "coupled_pad_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        }
+      ],
+      "pins": [
+        {
+          "name": "a",
+          "direction": "io",
+          "hint": {
+            "x": 425.0,
+            "y": 125.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "b",
+          "direction": "io",
+          "hint": {
+            "x": -425.0,
+            "y": 125.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "c",
+          "direction": "io",
+          "hint": {
+            "x": 425.0,
+            "y": -125.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "d",
+          "direction": "io",
+          "hint": {
+            "x": -425.0,
+            "y": -125.0,
+            "angle": 180.0
+          }
+        }
+      ],
+      "default_options": {
+        "pad_gap": "30um",
+        "inductor_width": "20um",
+        "pad_width": "400um",
+        "pad_height": "90um",
+        "pocket_width": "650um",
+        "pocket_height": "650um",
+        "coupled_pad_height": "150um",
+        "coupled_pad_width": "20um",
+        "coupled_pad_gap": "50um",
+        "_default_connection_pads": {
+          "pad_gap": "15um",
+          "pad_width": "20um",
+          "pad_height": "150um",
+          "pad_cpw_shift": "0um",
+          "pad_cpw_extent": "25um",
+          "cpw_width": "10um",
+          "cpw_gap": "6um",
+          "cpw_extend": "100um",
+          "pocket_extent": "5um",
+          "pocket_rise": "0um",
+          "loc_W": "+1",
+          "loc_H": "+1"
+        }
+      }
+    },
+    {
+      "summary": {
+        "id": "ReadoutResFC",
+        "name": "Readout Res FC",
+        "module": "qiskit_metal.qlibrary.resonators.readoutres_fc",
+        "category": "resonators",
+        "description": "QComponent"
+      },
+      "parameters": [
+        {
+          "name": "pos_x",
+          "type": "length",
+          "unit": "um",
+          "default": "0"
+        },
+        {
+          "name": "pos_y",
+          "type": "length",
+          "unit": "um",
+          "default": "0"
+        },
+        {
+          "name": "readout_radius",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        },
+        {
+          "name": "readout_cpw_width",
+          "type": "length",
+          "unit": "um",
+          "default": "5"
+        },
+        {
+          "name": "readout_cpw_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "5"
+        },
+        {
+          "name": "readout_cpw_turnradius",
+          "type": "length",
+          "unit": "um",
+          "default": "50"
+        },
+        {
+          "name": "readout_l1",
+          "type": "length",
+          "unit": "um",
+          "default": "400"
+        },
+        {
+          "name": "readout_l2",
+          "type": "length",
+          "unit": "um",
+          "default": "400"
+        },
+        {
+          "name": "readout_l3",
+          "type": "length",
+          "unit": "um",
+          "default": "400"
+        },
+        {
+          "name": "readout_l4",
+          "type": "length",
+          "unit": "um",
+          "default": "250"
+        },
+        {
+          "name": "readout_l5",
+          "type": "length",
+          "unit": "um",
+          "default": "400"
+        },
+        {
+          "name": "arc_step",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        },
+        {
+          "name": "orientation",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "layer",
+          "type": "number",
+          "default": "1"
+        },
+        {
+          "name": "layer_subtract",
+          "type": "number",
+          "default": "2"
+        },
+        {
+          "name": "subtract",
+          "type": "bool",
+          "default": "true"
+        },
+        {
+          "name": "chip",
+          "type": "string",
+          "default": "main"
+        }
+      ],
+      "pins": [
+        {
+          "name": "readout",
+          "direction": "io",
+          "hint": {
+            "x": 897.487373,
+            "y": -168.198052,
+            "angle": -0.0
+          }
+        }
+      ],
+      "default_options": {
+        "pos_x": "0 um",
+        "pos_y": "0 um",
+        "readout_radius": "50 um",
+        "readout_cpw_width": "5 um",
+        "readout_cpw_gap": "5 um",
+        "readout_cpw_turnradius": "50 um",
+        "readout_l1": "400 um",
+        "readout_l2": "400 um",
+        "readout_l3": "400 um",
+        "readout_l4": "250 um",
+        "readout_l5": "400 um",
+        "arc_step": "1 um",
+        "orientation": "0",
+        "layer": "1",
+        "layer_subtract": "2",
+        "subtract": true,
+        "chip": "main",
+        "_default_connection_pads": {}
+      }
+    },
+    {
+      "summary": {
+        "id": "ResonatorLumped",
+        "name": "Resonator Lumped",
+        "module": "qiskit_metal.qlibrary.resonators.resonator_lumped",
+        "category": "resonators",
+        "description": "QComponent"
+      },
+      "parameters": [
+        {
+          "name": "pos_x",
+          "type": "length",
+          "unit": "um",
+          "default": "0"
+        },
+        {
+          "name": "pos_y",
+          "type": "length",
+          "unit": "um",
+          "default": "0"
+        },
+        {
+          "name": "orientation",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "box_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "5"
+        },
+        {
+          "name": "box_height",
+          "type": "length",
+          "unit": "mm",
+          "default": "5"
+        },
+        {
+          "name": "perimeter_thickness",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.01"
+        },
+        {
+          "name": "res_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.01"
+        },
+        {
+          "name": "initial",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "n_turns",
+          "type": "number",
+          "default": "10"
+        },
+        {
+          "name": "turn_radius",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "inner_space",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "outer_space",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.1"
+        },
+        {
+          "name": "final",
+          "type": "length",
+          "unit": "mm",
+          "default": "2.5"
+        },
+        {
+          "name": "break_width",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.2"
+        },
+        {
+          "name": "layer",
+          "type": "number",
+          "default": "1"
+        }
+      ],
+      "pins": [
+        {
+          "name": "pin_east",
+          "direction": "io",
+          "hint": {
+            "x": 2500.0,
+            "y": 0.0,
+            "angle": 0.0
+          }
+        },
+        {
+          "name": "pin_ne",
+          "direction": "io",
+          "hint": {
+            "x": 2500.0,
+            "y": 2500.0,
+            "angle": 45.0
+          }
+        },
+        {
+          "name": "pin_se",
+          "direction": "io",
+          "hint": {
+            "x": 2500.0,
+            "y": -2500.0,
+            "angle": -45.0
+          }
+        },
+        {
+          "name": "pin_nw",
+          "direction": "io",
+          "hint": {
+            "x": -2500.0,
+            "y": 2500.0,
+            "angle": 135.0
+          }
+        },
+        {
+          "name": "pin_west",
+          "direction": "io",
+          "hint": {
+            "x": -2500.0,
+            "y": 0.0,
+            "angle": 180.0
+          }
+        },
+        {
+          "name": "pin_sw",
+          "direction": "io",
+          "hint": {
+            "x": -2500.0,
+            "y": -2500.0,
+            "angle": -135.0
+          }
+        },
+        {
+          "name": "pin_s",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": -2500.0,
+            "angle": -90.0
+          }
+        },
+        {
+          "name": "pin_n",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": 3110.0,
+            "angle": 90.0
+          }
+        }
+      ],
+      "default_options": {
+        "pos_x": "0 um",
+        "pos_y": "0 um",
+        "orientation": "0",
+        "box_width": "5mm",
+        "box_height": "5mm",
+        "perimeter_thickness": "0.01mm",
+        "res_width": "0.01mm",
+        "initial": "0.1mm",
+        "n_turns": "10",
+        "turn_radius": "0.1mm",
+        "inner_space": "0.1mm",
+        "outer_space": "0.1mm",
+        "final": "2.5mm",
+        "break_width": "0.2mm",
+        "layer": "1"
+      }
+    },
+    {
+      "summary": {
+        "id": "CircleCaterpillar",
+        "name": "Circle Caterpillar",
+        "module": "qiskit_metal.qlibrary.sample_shapes.circle_caterpillar",
+        "category": "other",
+        "description": "A single configurable circle"
+      },
+      "parameters": [
+        {
+          "name": "segments",
+          "type": "number",
+          "default": "5"
+        },
+        {
+          "name": "distance",
+          "type": "number",
+          "default": "1.2"
+        },
+        {
+          "name": "radius",
+          "type": "length",
+          "unit": "um",
+          "default": "300"
+        },
+        {
+          "name": "resolution",
+          "type": "number",
+          "default": "16"
+        },
+        {
+          "name": "cap_style",
+          "type": "string",
+          "default": "round"
+        },
+        {
+          "name": "subtract",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "helper",
+          "type": "bool",
+          "default": "false"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "segments": "5",
+        "distance": "1.2",
+        "radius": "300um",
+        "resolution": "16",
+        "cap_style": "round",
+        "subtract": "False",
+        "helper": "False"
+      }
+    },
+    {
+      "summary": {
+        "id": "CircleRaster",
+        "name": "Circle Raster",
+        "module": "qiskit_metal.qlibrary.sample_shapes.circle_raster",
+        "category": "other",
+        "description": "A single configurable circle"
+      },
+      "parameters": [
+        {
+          "name": "radius",
+          "type": "length",
+          "unit": "um",
+          "default": "300"
+        },
+        {
+          "name": "resolution",
+          "type": "number",
+          "default": "16"
+        },
+        {
+          "name": "cap_style",
+          "type": "string",
+          "default": "round"
+        },
+        {
+          "name": "subtract",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "helper",
+          "type": "bool",
+          "default": "false"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "radius": "300um",
+        "resolution": "16",
+        "cap_style": "round",
+        "subtract": "False",
+        "helper": "False"
+      }
+    },
+    {
+      "summary": {
+        "id": "NGon",
+        "name": "NGon",
+        "module": "qiskit_metal.qlibrary.sample_shapes.n_gon",
+        "category": "other",
+        "description": "A n-gon polygon"
+      },
+      "parameters": [
+        {
+          "name": "n",
+          "type": "number",
+          "default": "3"
+        },
+        {
+          "name": "radius",
+          "type": "length",
+          "unit": "um",
+          "default": "30"
+        },
+        {
+          "name": "subtract",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "helper",
+          "type": "bool",
+          "default": "false"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "n": "3",
+        "radius": "30um",
+        "subtract": "False",
+        "helper": "False"
+      }
+    },
+    {
+      "summary": {
+        "id": "NSquareSpiral",
+        "name": "NSquare Spiral",
+        "module": "qiskit_metal.qlibrary.sample_shapes.n_square_spiral",
+        "category": "other",
+        "description": "An n count square spiral"
+      },
+      "parameters": [
+        {
+          "name": "n",
+          "type": "number",
+          "default": "3"
+        },
+        {
+          "name": "width",
+          "type": "length",
+          "unit": "um",
+          "default": "1"
+        },
+        {
+          "name": "radius",
+          "type": "length",
+          "unit": "um",
+          "default": "40"
+        },
+        {
+          "name": "gap",
+          "type": "length",
+          "unit": "um",
+          "default": "4"
+        },
+        {
+          "name": "subtract",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "helper",
+          "type": "bool",
+          "default": "false"
+        }
+      ],
+      "pins": [
+        {
+          "name": "spiralPin",
+          "direction": "io",
+          "hint": {
+            "x": -35.0,
+            "y": -35.0,
+            "angle": -90.0
+          }
+        }
+      ],
+      "default_options": {
+        "n": "3",
+        "width": "1um",
+        "radius": "40um",
+        "gap": "4um",
+        "subtract": "False",
+        "helper": "False"
+      }
+    },
+    {
+      "summary": {
+        "id": "Rectangle",
+        "name": "Rectangle",
+        "module": "qiskit_metal.qlibrary.sample_shapes.rectangle",
+        "category": "other",
+        "description": "A single configurable square"
+      },
+      "parameters": [
+        {
+          "name": "width",
+          "type": "length",
+          "unit": "um",
+          "default": "500"
+        },
+        {
+          "name": "height",
+          "type": "length",
+          "unit": "um",
+          "default": "300"
+        },
+        {
+          "name": "subtract",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "helper",
+          "type": "bool",
+          "default": "false"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "width": "500um",
+        "height": "300um",
+        "subtract": "False",
+        "helper": "False"
+      }
+    },
+    {
+      "summary": {
+        "id": "RectangleHollow",
+        "name": "Rectangle Hollow",
+        "module": "qiskit_metal.qlibrary.sample_shapes.rectangle_hollow",
+        "category": "other",
+        "description": "A single configurable square"
+      },
+      "parameters": [
+        {
+          "name": "width",
+          "type": "length",
+          "unit": "um",
+          "default": "500"
+        },
+        {
+          "name": "height",
+          "type": "length",
+          "unit": "um",
+          "default": "300"
+        },
+        {
+          "name": "subtract",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "helper",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "inner",
+          "type": "string",
+          "default": "{'width': '250um', 'height': '100um', 'offset_x': '40um', 'offset_y': '-20um', 'orientation': '15'}"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "width": "500um",
+        "height": "300um",
+        "subtract": "False",
+        "helper": "False",
+        "inner": {
+          "width": "250um",
+          "height": "100um",
+          "offset_x": "40um",
+          "offset_y": "-20um",
+          "orientation": "15"
+        }
+      }
+    },
+    {
+      "summary": {
+        "id": "SmileyFace",
+        "name": "Smiley Face",
+        "module": "qiskit_metal.qlibrary.sample_shapes.smiley_face",
+        "category": "other",
+        "description": "TEST COMPONENT It is for fun only"
+      },
+      "parameters": [
+        {
+          "name": "happy",
+          "type": "bool",
+          "default": "true"
+        },
+        {
+          "name": "wink",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "orientation",
+          "type": "number",
+          "default": "0"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "happy": true,
+        "wink": false,
+        "orientation": 0
+      }
+    },
+    {
+      "summary": {
+        "id": "LaunchpadWirebond",
+        "name": "Launchpad Wirebond",
+        "module": "qiskit_metal.qlibrary.terminations.launchpad_wb",
+        "category": "terminations",
+        "description": "Launch pad to feed/read signals to/from the chip."
+      },
+      "parameters": [
+        {
+          "name": "trace_width",
+          "type": "string",
+          "default": "cpw_width"
+        },
+        {
+          "name": "trace_gap",
+          "type": "string",
+          "default": "cpw_gap"
+        },
+        {
+          "name": "lead_length",
+          "type": "length",
+          "unit": "um",
+          "default": "25"
+        },
+        {
+          "name": "pad_width",
+          "type": "length",
+          "unit": "um",
+          "default": "80"
+        },
+        {
+          "name": "pad_height",
+          "type": "length",
+          "unit": "um",
+          "default": "80"
+        },
+        {
+          "name": "pad_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "58"
+        },
+        {
+          "name": "taper_height",
+          "type": "length",
+          "unit": "um",
+          "default": "122"
+        }
+      ],
+      "pins": [
+        {
+          "name": "tie",
+          "direction": "io",
+          "hint": {
+            "x": 25.0,
+            "y": 0.0,
+            "angle": -0.0
+          }
+        }
+      ],
+      "default_options": {
+        "trace_width": "cpw_width",
+        "trace_gap": "cpw_gap",
+        "lead_length": "25um",
+        "pad_width": "80um",
+        "pad_height": "80um",
+        "pad_gap": "58um",
+        "taper_height": "122um"
+      }
+    },
+    {
+      "summary": {
+        "id": "LaunchpadWirebondCoupled",
+        "name": "Launchpad Wirebond Coupled",
+        "module": "qiskit_metal.qlibrary.terminations.launchpad_wb_coupled",
+        "category": "terminations",
+        "description": "Launch pad to feed/read signals to/from the chip."
+      },
+      "parameters": [
+        {
+          "name": "trace_width",
+          "type": "string",
+          "default": "cpw_width"
+        },
+        {
+          "name": "trace_gap",
+          "type": "string",
+          "default": "cpw_gap"
+        },
+        {
+          "name": "coupler_length",
+          "type": "length",
+          "unit": "um",
+          "default": "62.5"
+        },
+        {
+          "name": "lead_length",
+          "type": "length",
+          "unit": "um",
+          "default": "25"
+        }
+      ],
+      "pins": [
+        {
+          "name": "tie",
+          "direction": "io",
+          "hint": {
+            "x": 95.0,
+            "y": 0.0,
+            "angle": -0.0
+          }
+        }
+      ],
+      "default_options": {
+        "trace_width": "cpw_width",
+        "trace_gap": "cpw_gap",
+        "coupler_length": "62.5um",
+        "lead_length": "25um"
+      }
+    },
+    {
+      "summary": {
+        "id": "LaunchpadWirebondDriven",
+        "name": "Launchpad Wirebond Driven",
+        "module": "qiskit_metal.qlibrary.terminations.launchpad_wb_driven",
+        "category": "terminations",
+        "description": "Launch pad to feed/read signals to/from the chip."
+      },
+      "parameters": [
+        {
+          "name": "trace_width",
+          "type": "string",
+          "default": "cpw_width"
+        },
+        {
+          "name": "trace_gap",
+          "type": "string",
+          "default": "cpw_gap"
+        },
+        {
+          "name": "lead_length",
+          "type": "length",
+          "unit": "um",
+          "default": "25"
+        },
+        {
+          "name": "pad_width",
+          "type": "length",
+          "unit": "um",
+          "default": "80"
+        },
+        {
+          "name": "pad_height",
+          "type": "length",
+          "unit": "um",
+          "default": "80"
+        },
+        {
+          "name": "pad_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "58"
+        },
+        {
+          "name": "taper_height",
+          "type": "length",
+          "unit": "um",
+          "default": "122"
+        }
+      ],
+      "pins": [
+        {
+          "name": "tie",
+          "direction": "io",
+          "hint": {
+            "x": 25.0,
+            "y": 0.0,
+            "angle": -0.0
+          }
+        },
+        {
+          "name": "in",
+          "direction": "io",
+          "hint": {
+            "x": -260.0,
+            "y": 0.0,
+            "angle": -0.0
+          }
+        }
+      ],
+      "default_options": {
+        "trace_width": "cpw_width",
+        "trace_gap": "cpw_gap",
+        "lead_length": "25um",
+        "pad_width": "80um",
+        "pad_height": "80um",
+        "pad_gap": "58um",
+        "taper_height": "122um"
+      }
+    },
+    {
+      "summary": {
+        "id": "OpenToGround",
+        "name": "Open To Ground",
+        "module": "qiskit_metal.qlibrary.terminations.open_to_ground",
+        "category": "terminations",
+        "description": "A basic open to ground termination."
+      },
+      "parameters": [
+        {
+          "name": "width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        },
+        {
+          "name": "gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        },
+        {
+          "name": "termination_gap",
+          "type": "length",
+          "unit": "um",
+          "default": "6"
+        }
+      ],
+      "pins": [
+        {
+          "name": "open",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": 0.0,
+            "angle": 180.0
+          }
+        }
+      ],
+      "default_options": {
+        "width": "10um",
+        "gap": "6um",
+        "termination_gap": "6um"
+      }
+    },
+    {
+      "summary": {
+        "id": "ShortToGround",
+        "name": "Short To Ground",
+        "module": "qiskit_metal.qlibrary.terminations.short_to_ground",
+        "category": "terminations",
+        "description": "A basic short to ground termination"
+      },
+      "parameters": [
+        {
+          "name": "width",
+          "type": "length",
+          "unit": "um",
+          "default": "10"
+        }
+      ],
+      "pins": [
+        {
+          "name": "short",
+          "direction": "io",
+          "hint": {
+            "x": 0.0,
+            "y": 0.0,
+            "angle": 180.0
+          }
+        }
+      ],
+      "default_options": {
+        "width": "10um"
+      }
+    },
+    {
+      "summary": {
+        "id": "RouteAnchors",
+        "name": "Route Anchors",
+        "module": "qiskit_metal.qlibrary.tlines.anchored_path",
+        "category": "routes",
+        "description": "Creates and connects a series of anchors through which the Route passes."
+      },
+      "parameters": [
+        {
+          "name": "anchors",
+          "type": "string",
+          "default": "{}"
+        },
+        {
+          "name": "advanced",
+          "type": "string",
+          "default": "{'avoid_collision': 'false'}"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "anchors": {},
+        "advanced": {
+          "avoid_collision": "false"
+        }
+      }
+    },
+    {
+      "summary": {
+        "id": "RouteFramed",
+        "name": "Route Framed",
+        "module": "qiskit_metal.qlibrary.tlines.framed_path",
+        "category": "routes",
+        "description": "A non-meandered basic CPW that is auto-generated between 2 components."
+      },
+      "parameters": [
+        {
+          "name": "pin_inputs",
+          "type": "string",
+          "default": "{'start_pin': {'component': '', 'pin': ''}, 'end_pin': {'component': '', 'pin': ''}}"
+        },
+        {
+          "name": "fillet",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "lead",
+          "type": "string",
+          "default": "{'start_straight': '0mm', 'end_straight': '0mm', 'start_jogged_extension': '', 'end_jogged_extension': ''}"
+        },
+        {
+          "name": "total_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "7"
+        },
+        {
+          "name": "trace_width",
+          "type": "string",
+          "default": "cpw_width"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "pin_inputs": {
+          "start_pin": {
+            "component": "",
+            "pin": ""
+          },
+          "end_pin": {
+            "component": "",
+            "pin": ""
+          }
+        },
+        "fillet": "0",
+        "lead": {
+          "start_straight": "0mm",
+          "end_straight": "0mm",
+          "start_jogged_extension": "",
+          "end_jogged_extension": ""
+        },
+        "total_length": "7mm",
+        "trace_width": "cpw_width"
+      }
+    },
+    {
+      "summary": {
+        "id": "RouteMeander",
+        "name": "Route Meander",
+        "module": "qiskit_metal.qlibrary.tlines.meandered",
+        "category": "routes",
+        "description": "Implements a simple CPW, with a single meander."
+      },
+      "parameters": [
+        {
+          "name": "meander",
+          "type": "string",
+          "default": "{'spacing': '200um', 'asymmetry': '0um'}"
+        },
+        {
+          "name": "snap",
+          "type": "bool",
+          "default": "true"
+        },
+        {
+          "name": "prevent_short_edges",
+          "type": "bool",
+          "default": "true"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "meander": {
+          "spacing": "200um",
+          "asymmetry": "0um"
+        },
+        "snap": "true",
+        "prevent_short_edges": "true"
+      }
+    },
+    {
+      "summary": {
+        "id": "RouteMixed",
+        "name": "Route Mixed",
+        "module": "qiskit_metal.qlibrary.tlines.mixed_path",
+        "category": "routes",
+        "description": "Implements fully featured Routing, allowing different type of\n    connections between anchors."
+      },
+      "parameters": [
+        {
+          "name": "between_anchors",
+          "type": "string",
+          "default": "{}"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "between_anchors": {}
+      }
+    },
+    {
+      "summary": {
+        "id": "RoutePathfinder",
+        "name": "Route Pathfinder",
+        "module": "qiskit_metal.qlibrary.tlines.pathfinder",
+        "category": "routes",
+        "description": "Non-meandered CPW class that combines A* pathfinding algorithm with\n    simple 1-, 2-, or S-shaped segment checks and user-specified anchor points."
+      },
+      "parameters": [
+        {
+          "name": "step_size",
+          "type": "length",
+          "unit": "mm",
+          "default": "0.25"
+        },
+        {
+          "name": "advanced",
+          "type": "string",
+          "default": "{'avoid_collision': 'true'}"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "step_size": "0.25mm",
+        "advanced": {
+          "avoid_collision": "true"
+        }
+      }
+    },
+    {
+      "summary": {
+        "id": "RouteStraight",
+        "name": "Route Straight",
+        "module": "qiskit_metal.qlibrary.tlines.straight_path",
+        "category": "routes",
+        "description": "Draw a straight Route connecting two pins."
+      },
+      "parameters": [
+        {
+          "name": "pin_inputs",
+          "type": "string",
+          "default": "{'start_pin': {'component': '', 'pin': ''}, 'end_pin': {'component': '', 'pin': ''}}"
+        },
+        {
+          "name": "fillet",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "lead",
+          "type": "string",
+          "default": "{'start_straight': '0mm', 'end_straight': '0mm', 'start_jogged_extension': '', 'end_jogged_extension': ''}"
+        },
+        {
+          "name": "total_length",
+          "type": "length",
+          "unit": "mm",
+          "default": "7"
+        },
+        {
+          "name": "trace_width",
+          "type": "string",
+          "default": "cpw_width"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "pin_inputs": {
+          "start_pin": {
+            "component": "",
+            "pin": ""
+          },
+          "end_pin": {
+            "component": "",
+            "pin": ""
+          }
+        },
+        "fillet": "0",
+        "lead": {
+          "start_straight": "0mm",
+          "end_straight": "0mm",
+          "start_jogged_extension": "",
+          "end_jogged_extension": ""
+        },
+        "total_length": "7mm",
+        "trace_width": "cpw_width"
+      }
+    },
+    {
+      "summary": {
+        "id": "BridgeFreeJunction",
+        "name": "Bridge Free Junction",
+        "module": "qiskit_metal.qlibrary.user_components.BridgeFreeJJ",
+        "category": "other",
+        "description": "QComponent"
+      },
+      "parameters": [
+        {
+          "name": "JJ_width",
+          "type": "string",
+          "default": "4. um"
+        },
+        {
+          "name": "JJ_height",
+          "type": "string",
+          "default": "4. um"
+        },
+        {
+          "name": "teta_1",
+          "type": "number",
+          "default": "30"
+        },
+        {
+          "name": "teta_2",
+          "type": "number",
+          "default": "30"
+        },
+        {
+          "name": "wire_length",
+          "type": "length",
+          "unit": "um",
+          "default": "30"
+        },
+        {
+          "name": "wire_width",
+          "type": "length",
+          "unit": "um",
+          "default": "0.5"
+        },
+        {
+          "name": "resist_t1",
+          "type": "length",
+          "unit": "um",
+          "default": ".3"
+        },
+        {
+          "name": "resist_t2",
+          "type": "length",
+          "unit": "um",
+          "default": ".2"
+        },
+        {
+          "name": "orientation",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "layer",
+          "type": "number",
+          "default": "53"
+        },
+        {
+          "name": "layer_2",
+          "type": "number",
+          "default": "545."
+        },
+        {
+          "name": "layer_3",
+          "type": "number",
+          "default": "55."
+        },
+        {
+          "name": "layer_4",
+          "type": "number",
+          "default": "1."
+        },
+        {
+          "name": "pos_x",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "pos_y",
+          "type": "number",
+          "default": "0"
+        }
+      ],
+      "pins": [],
+      "default_options": {
+        "JJ_width": "4. um",
+        "JJ_height": "4. um",
+        "teta_1": "30",
+        "teta_2": "30",
+        "wire_length": "30um",
+        "wire_width": "0.5 um",
+        "resist_t1": ".3um",
+        "resist_t2": ".2um",
+        "orientation": "0",
+        "layer": "53",
+        "layer_2": "545.",
+        "layer_3": "55.",
+        "layer_4": "1.",
+        "pos_x": "0",
+        "pos_y": "0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# ── Core Framework ────────────────────────────────────────────────────────────
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+pydantic-settings==2.7.0
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy==2.0.36
+alembic==1.14.0
+aiosqlite==0.20.0          # SQLite async driver (dev default)
+asyncpg==0.31.0            # Postgres async driver (production)
+
+# ── Auth ──────────────────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.20
+
+# ── HTTP / Utils ──────────────────────────────────────────────────────────────
+httpx==0.28.1
+aiofiles==24.1.0
+python-dotenv==1.0.1
+
+# ── Physics / ML ──────────────────────────────────────────────────────────────
+networkx==3.4.2
+torch>=2.0.0               # Optional — falls back to regex intent if not installed
+
+# ── AI Assistant ──────────────────────────────────────────────────────────────
+anthropic==0.40.0          # Optional — falls back to rule-based responses if no API key

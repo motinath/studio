@@ -1,0 +1,22 @@
+* QChipLang → SPICE Netlist
+* Generated: 2026-06-01T22:01:21.139740
+* Chip: QAOA_50K
+.SUBCKT QuantumChip
+
+* Qubit q0
+CJ_q0 N0001 0 500000.00fF
+BJ_q0 N0001 0 I='-15.00n*sin(V(N0001))'
+
+* Qubit q1
+CJ_q1 N0002 0 500000.00fF
+BJ_q1 N0002 0 I='-15.00n*sin(V(N0002))'
+
+* Resonator r0 @ 6.8GHz
+L_r0 N0003 N0004 0.548nH
+C_r0 N0004 0 1.0pF
+
+* Coupler c_q0_q1: 10.0MHz
+CC_c_q0_q1 N0001 N0002 1000000000.00fF
+
+.ENDS QuantumChip
+.END

@@ -1,0 +1,310 @@
+{
+  "qchiplang_version": "1.0",
+  "generated": "2026-06-01T22:01:21.139210",
+  "chip": {
+    "name": "QAOA_50K",
+    "version": "1.0",
+    "process": "IBM_7nm_SC",
+    "target_fridge": "BlueFors_XLD",
+    "qubit_count": {
+      "value": 50000.0,
+      "unit": null
+    },
+    "qubit_type": "transmon",
+    "frequency_band": [
+      {
+        "value": 4.5,
+        "unit": "GHz"
+      },
+      {
+        "value": 5.5,
+        "unit": "GHz"
+      }
+    ],
+    "anharmonicity": {
+      "value": -200.0,
+      "unit": "MHz"
+    },
+    "T1_target": {
+      "value": 100.0,
+      "unit": "us"
+    },
+    "T2_target": {
+      "value": 150.0,
+      "unit": "us"
+    }
+  },
+  "qubits": [
+    {
+      "name": "q0",
+      "dims": null,
+      "type": "transmon",
+      "frequency": {
+        "value": 5.0,
+        "unit": "GHz"
+      },
+      "Ej": {
+        "value": 15.0,
+        "unit": "GHz"
+      },
+      "Ec": {
+        "value": 0.25,
+        "unit": "GHz"
+      },
+      "pad_gap": {
+        "value": 30.0,
+        "unit": "um"
+      },
+      "pad_width": {
+        "value": 400.0,
+        "unit": "um"
+      },
+      "pad_height": {
+        "value": 90.0,
+        "unit": "um"
+      },
+      "position": {
+        "tuple": [
+          {
+            "value": 0.0,
+            "unit": "um"
+          },
+          {
+            "value": 0.0,
+            "unit": "um"
+          }
+        ]
+      }
+    },
+    {
+      "name": "q1",
+      "dims": null,
+      "type": "transmon",
+      "frequency": {
+        "value": 5.2,
+        "unit": "GHz"
+      },
+      "Ej": {
+        "value": 15.0,
+        "unit": "GHz"
+      },
+      "Ec": {
+        "value": 0.25,
+        "unit": "GHz"
+      },
+      "pad_gap": {
+        "value": 30.0,
+        "unit": "um"
+      },
+      "pad_width": {
+        "value": 400.0,
+        "unit": "um"
+      },
+      "pad_height": {
+        "value": 90.0,
+        "unit": "um"
+      },
+      "position": {
+        "tuple": [
+          {
+            "value": 1000.0,
+            "unit": "um"
+          },
+          {
+            "value": 0.0,
+            "unit": "um"
+          }
+        ]
+      }
+    }
+  ],
+  "resonators": [
+    {
+      "name": "r0",
+      "type": "quarter_wave",
+      "frequency": {
+        "value": 6.8,
+        "unit": "GHz"
+      },
+      "coupling_Q": {
+        "value": 10000.0,
+        "unit": null
+      },
+      "kappa": {
+        "value": 1.0,
+        "unit": "MHz"
+      },
+      "length": "auto",
+      "couples_to": "q0",
+      "coupling_gap": {
+        "value": 10.0,
+        "unit": "um"
+      },
+      "meander_width": {
+        "value": 10.0,
+        "unit": "um"
+      },
+      "meander_gap": {
+        "value": 6.0,
+        "unit": "um"
+      }
+    }
+  ],
+  "couplers": [
+    {
+      "name": "c_q0_q1",
+      "type": "tunable_transmon",
+      "connects": [
+        "q0",
+        "q1"
+      ],
+      "coupling_strength": {
+        "value": 10.0,
+        "unit": "MHz"
+      },
+      "max_zz": {
+        "value": 50.0,
+        "unit": "kHz"
+      },
+      "flux_line": true
+    }
+  ],
+  "connections": [],
+  "topologies": [],
+  "tiles": [
+    {
+      "name": "QAOATile",
+      "qubits": {
+        "value": 16.0,
+        "unit": null
+      },
+      "resonators": {
+        "value": 16.0,
+        "unit": null
+      },
+      "couplers": {
+        "value": 48.0,
+        "unit": null
+      },
+      "dimensions": {
+        "tuple": [
+          {
+            "value": 4000.0,
+            "unit": "um"
+          },
+          {
+            "value": 4000.0,
+            "unit": "um"
+          }
+        ]
+      },
+      "layout": "grid2d",
+      "io_pins": [
+        "north",
+        "south",
+        "east",
+        "west"
+      ]
+    }
+  ],
+  "tile_arrays": [
+    {
+      "name": "main_array",
+      "tile": "QAOATile",
+      "count": [
+        {
+          "value": 56.0,
+          "unit": null
+        },
+        {
+          "value": 57.0,
+          "unit": null
+        }
+      ],
+      "pitch": {
+        "tuple": [
+          {
+            "value": 4100.0,
+            "unit": "um"
+          },
+          {
+            "value": 4100.0,
+            "unit": "um"
+          }
+        ]
+      },
+      "stitch_edges": true
+    }
+  ],
+  "feedlines": [
+    {
+      "name": "fl_row0",
+      "connects": {
+        "ref": "resonators",
+        "subscript": {
+          "filter": "row",
+          "value": {
+            "value": 0.0,
+            "unit": null
+          }
+        }
+      },
+      "impedance": {
+        "value": 50.0,
+        "unit": "ohm"
+      },
+      "width": {
+        "value": 10.0,
+        "unit": "um"
+      },
+      "gap": {
+        "value": 6.0,
+        "unit": "um"
+      },
+      "route": "horizontal"
+    }
+  ],
+  "design_rules": {
+    "min_gap": {
+      "value": 4.0,
+      "unit": "um"
+    },
+    "min_trace_width": {
+      "value": 4.0,
+      "unit": "um"
+    },
+    "min_junction_area": {
+      "value": 0.01,
+      "unit": "um2"
+    },
+    "max_junction_area": {
+      "value": 0.1,
+      "unit": "um2"
+    },
+    "qubit_exclusion_zone": {
+      "value": 200.0,
+      "unit": "um"
+    },
+    "check_crosstalk": true,
+    "check_frequency_collision": true,
+    "collision_threshold": {
+      "value": 20.0,
+      "unit": "MHz"
+    }
+  },
+  "applications": [
+    {
+      "name": "QAOA",
+      "qubits": {
+        "value": 50000.0,
+        "unit": null
+      },
+      "connectivity": "match_problem_graph",
+      "coupler_type": "tunable_transmon",
+      "p_layers": {
+        "value": 10.0,
+        "unit": null
+      }
+    }
+  ]
+}

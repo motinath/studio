@@ -1,0 +1,90 @@
+{
+  "design_id": "design_3q_demo_v1",
+  "project_name": "3-Qubit Demo Processor",
+
+  "qubits": [
+    {
+      "qubit_id": "Q1",
+      "type": "transmon",
+      "junction_params": {"EJ_ghz": 20.0},
+      "targets": {
+        "frequency_ghz": 5.0,
+        "frequency_tolerance_ghz": 0.15,
+        "anharmonicity_mhz": -250,
+        "anharmonicity_tolerance_mhz": 30,
+        "T1_min_us": 80,
+        "T2_min_us": 40
+      }
+    },
+    {
+      "qubit_id": "Q2",
+      "type": "transmon",
+      "junction_params": {"EJ_ghz": 22.0},
+      "targets": {
+        "frequency_ghz": 5.4,
+        "frequency_tolerance_ghz": 0.15,
+        "anharmonicity_mhz": -240,
+        "anharmonicity_tolerance_mhz": 30,
+        "T1_min_us": 80,
+        "T2_min_us": 40
+      }
+    },
+    {
+      "qubit_id": "Q3",
+      "type": "fluxonium",
+      "junction_params": {"EJ_ghz": 8.9},
+      "flux_bias": 0.5,
+      "targets": {
+        "frequency_ghz": 1.2,
+        "frequency_tolerance_ghz": 0.2,
+        "anharmonicity_mhz": -800,
+        "anharmonicity_tolerance_mhz": 100,
+        "T1_min_us": 200,
+        "T2_min_us": 100
+      }
+    }
+  ],
+
+  "resonators": [
+    {
+      "resonator_id": "R1",
+      "type": "readout",
+      "coupled_to": "Q1",
+      "target_frequency_ghz": 7.0,
+      "target_kappa_khz": 500
+    },
+    {
+      "resonator_id": "R2",
+      "type": "readout",
+      "coupled_to": "Q2",
+      "target_frequency_ghz": 7.3,
+      "target_kappa_khz": 500
+    }
+  ],
+
+  "couplers": [
+    {
+      "coupler_id": "C12",
+      "type": "capacitive",
+      "connects": ["Q1", "Q2"],
+      "target_coupling_mhz": 5.0,
+      "max_zz_khz": 50
+    }
+  ],
+
+  "global_constraints": {
+    "min_qubit_frequency_spacing_mhz": 100,
+    "max_crosstalk_db": -40,
+    "fabrication_process": "standard_al_on_si"
+  },
+
+  "noise_environment": {
+    "temperature_mK": 15,
+    "Q_capacitive": 1000000,
+    "Q_inductive": 500000000,
+    "flux_noise_amplitude": 1e-6,
+    "charge_noise_amplitude": 1e-4,
+    "critical_current_noise_amplitude": 1e-7,
+    "quasiparticle_density": 1e-8
+  }
+}

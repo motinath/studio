@@ -1,0 +1,3170 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+
+
+<head>
+
+
+
+  <meta charset="utf-8" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+  <title>QClang Development Documentation</title>
+
+
+
+  <meta name="description" content="Starter documentation parameters for QClang development." />
+
+
+
+  <link rel="stylesheet" href="assets/styles.css?v=cdac-materials-pages-v1" />
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+  <div class="site-shell">
+
+
+
+    <header class="topbar">
+
+
+
+      <a class="brand" href="#home" aria-label="QClang documentation home">
+
+
+
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+
+
+
+        <span>QClang</span>
+
+
+
+      </a>
+
+
+
+      <button class="search-button" id="searchButton" type="button">
+
+
+
+        <span class="search-icon">Search</span>
+
+
+
+        <span>Search docs...</span>
+
+
+
+        <kbd>Ctrl K</kbd>
+
+
+
+      </button>
+
+
+
+      <button class="assistant-button" id="assistantButton" type="button">Ask Assistant</button>
+
+
+
+      <button class="theme-button" id="themeButton" type="button" aria-label="Theme status">Light</button>
+
+
+
+    </header>
+
+
+
+
+
+
+
+    <nav class="tabs" aria-label="Primary navigation">
+
+
+
+      <a href="#home" class="active">Home</a>
+
+
+
+      <a href="#getting-started">Getting Started</a>
+
+
+
+      <a href="#user-guide">User Guide</a>
+
+
+
+      <a href="#language-reference">Language Reference</a>
+
+
+
+      <a href="#compiler-reference">Compiler Reference</a>
+
+
+
+      <a href="#chip-synthesis">Chip Synthesis</a>
+
+
+
+      <a href="#hfss-tutorial">Simulation Tutorials</a>
+
+
+
+      <a href="#hfss-results-analysis">Results Analysis</a>
+
+
+
+      <a href="#integration">Integration</a>
+
+
+
+      <a href="#support">Support</a>
+
+
+
+    </nav>
+
+
+
+
+
+
+
+    <div class="layout docs-layout">
+
+
+
+      <aside class="sidebar" aria-label="Documentation sections">
+
+
+
+        <div class="side-title">Getting Started</div>
+
+
+
+        <div class="side-group">
+
+
+
+          <a href="#hello-world">Hello World</a>
+
+
+
+          <a href="#installation">Installation</a>
+
+
+
+          <a href="#using-python">Using Python and QClang</a>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="side-title">Onboarding Tutorial</div>
+
+
+
+        <div class="side-group">
+
+
+
+          <a href="#getting-started" class="selected">Onboarding Tutorial</a>
+
+
+
+          <a href="#qclang-overview">QClang Overview Tutorial</a>
+
+
+
+          <a href="#syntax-part-1">Syntax Tutorial - Part 1</a>
+
+
+
+          <a href="#syntax-part-2">Syntax Tutorial - Part 2</a>
+
+
+
+          <a href="#synthesis-tutorial">Synthesis Tutorial</a>
+
+
+
+          <a href="#execution-part-1">Execution Tutorial - Part 1</a>
+
+
+
+          <a href="#execution-part-2">Execution Tutorial - Part 2</a>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="side-title">Reference Parameters</div>
+
+
+
+        <div class="side-group">
+
+
+
+          <a href="#language-reference">Language Blocks</a>
+
+
+
+          <a href="#compiler-reference">Compiler Pipeline</a>
+
+
+
+          <a href="#design-rules">Design Rules</a>
+
+
+
+          <a href="#targets">Compilation Targets</a>
+
+
+
+          <a href="#api-reference">API Reference</a>
+
+
+
+          <a class="side-parent" href="#superconducting-materials" data-tree="materials" aria-expanded="false">
+            <span>Superconducting Materials</span>
+            <span class="side-chevron" aria-hidden="true">&gt;</span>
+          </a>
+          <div class="side-children" data-tree-panel="materials" hidden>
+            <a class="side-child" href="#material-aluminum-al">Aluminum (Al)</a>
+            <a class="side-child" href="#material-niobium-nb">Niobium (Nb)</a>
+            <a class="side-child" href="#material-silicon-si-substrate">Silicon (Si) Substrate</a>
+            <a class="side-child" href="#material-sapphire-al2o3-substrate">Sapphire (Al2O3) Substrate</a>
+            <a class="side-child" href="#material-titanium-nitride-tin">Titanium Nitride (TiN)</a>
+            <a class="side-child" href="#material-niobium-nitride-nbn">Niobium Nitride (NbN)</a>
+            <a class="side-child" href="#material-niobium-titanium-nitride-nbtin">Niobium Titanium Nitride (NbTiN)</a>
+            <a class="side-child" href="#material-aluminum-oxide-alox-tunnel-barrier">Aluminum Oxide (AlOx)</a>
+            <a class="side-child" href="#material-molybdenum-rhenium-more">Molybdenum Rhenium (MoRe)</a>
+            <a class="side-child" href="#material-indium-in-bump-bonds">Indium (In) Bump Bonds</a>
+            <a class="side-child" href="#materials-summary">Materials Summary</a>
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="side-title">Simulation and Analysis</div>
+
+
+
+        <div class="side-group">
+
+
+
+          <a href="#hfss-tutorial">HFSS Tutorial</a>
+
+
+
+          <a href="#q3d-tutorial">Q3D Analysis Tutorial</a>
+
+
+
+          <a href="#epr-tutorial">EPR / scQubits Tutorial</a>
+
+
+
+          <a href="#simulation-dashboard">Simulation Dashboard</a>
+
+
+
+          <a href="#results-reports">Results and Reports</a>
+
+
+
+          <a class="side-parent" href="#hfss-results-analysis" data-tree="hfss" aria-expanded="false">
+
+
+
+            <span>HFSS Results Analysis</span>
+
+
+
+            <span class="side-chevron" aria-hidden="true">&gt;</span>
+
+
+
+          </a>
+
+
+
+          <div class="side-children" data-tree-panel="hfss" hidden>
+
+
+
+            
+            <a class="side-child" href="#hfss-s-parameters">S-Parameters &amp; RF Performance</a>
+
+            <a class="side-child" href="#hfss-resonator-cavity">Resonator &amp; Cavity Parameters</a>
+
+            <a class="side-child" href="#hfss-em-fields">Electromagnetic Field Outputs</a>
+
+            <a class="side-child" href="#hfss-qubit-performance">Qubit Performance Metrics</a>
+
+            <a class="side-child" href="#hfss-crosstalk-isolation">Crosstalk &amp; Isolation</a>
+
+            <a class="side-child" href="#hfss-thermal-loss">Thermal &amp; Loss Parameters</a>
+
+            <a class="side-child" href="#hfss-convergence">Simulation Convergence Metrics</a>
+
+            <a class="side-child" href="#hfss-summary">HFSS Summary</a>
+
+          
+
+
+
+          </div>
+
+
+
+          <a class="side-parent" href="#q3d-results-analysis" data-tree="q3d" aria-expanded="false">
+
+
+
+            <span>Q3D Results Analysis</span>
+
+
+
+            <span class="side-chevron" aria-hidden="true">&gt;</span>
+
+
+
+          </a>
+
+
+
+          <div class="side-children" data-tree-panel="q3d" hidden>
+
+
+
+            
+
+            <a class="side-child" href="#q3d-resistance-matrix">Resistance Matrix (R)</a>
+
+
+
+            <a class="side-child" href="#q3d-inductance-matrix">Inductance Matrix (L)</a>
+
+
+
+            <a class="side-child" href="#q3d-conductance-matrix">Conductance Matrix (G)</a>
+
+
+
+            <a class="side-child" href="#q3d-capacitance-matrix">Capacitance Matrix (C)</a>
+
+
+
+            <a class="side-child" href="#q3d-parasitic-resistance">Parasitic Resistance</a>
+
+
+
+            <a class="side-child" href="#q3d-parasitic-inductance">Parasitic Inductance</a>
+
+
+
+            <a class="side-child" href="#q3d-parasitic-capacitance">Parasitic Capacitance</a>
+
+
+
+            <a class="side-child" href="#q3d-electromagnetic-coupling">Electromagnetic Coupling</a>
+
+
+
+            <a class="side-child" href="#q3d-substrate-dielectric-loss">Substrate &amp; Dielectric Loss</a>
+
+
+
+            <a class="side-child" href="#q3d-skin-effect-frequency">Skin Effect &amp; Frequency-Dependent</a>
+
+
+
+            <a class="side-child" href="#q3d-post-processing-derived">Post-Processing Derived Outputs</a>
+
+
+
+            <a class="side-child" href="#q3d-key-takeaways">Key Takeaways</a>
+
+
+
+          
+
+
+
+          </div>
+
+
+
+          <a class="side-parent" href="#epr-results-analysis" data-tree="epr" aria-expanded="false">
+
+
+
+            <span>EPR / scQubits Results</span>
+
+
+
+            <span class="side-chevron" aria-hidden="true">&gt;</span>
+
+
+
+          </a>
+
+
+
+          <div class="side-children" data-tree-panel="epr" hidden>
+
+
+
+            <a class="side-child" href="#epr-overview-table">Overview</a>
+
+
+
+            <a class="side-child" href="#epr-core-parameters">Core EPR Parameters</a>
+
+
+
+            <a class="side-child" href="#epr-qubit-performance">Qubit Performance</a>
+
+
+
+            <a class="side-child" href="#epr-resonator-coupling">Resonator &amp; Coupling</a>
+
+
+
+            <a class="side-child" href="#epr-loss-dissipation">Loss &amp; Dissipation</a>
+
+
+
+            <a class="side-child" href="#epr-junction-parameters">Junction Parameters</a>
+
+
+
+            <a class="side-child" href="#epr-simulation-convergence">Simulation Convergence</a>
+
+
+
+            <a class="side-child" href="#epr-summary-table">Summary Table</a>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </aside>
+
+
+
+
+
+
+
+      <main class="content" id="pageContent">
+
+
+
+        <section class="doc-section hero-section" id="home">
+
+
+
+          <p class="eyebrow">QClang Development Documentation</p>
+
+
+
+          <h1>Starter documentation for QClang language development.</h1>
+
+
+
+          <p class="lead">
+
+
+
+            QClang is the project language for describing superconducting quantum chip designs.
+
+
+
+            This documentation is a starter structure: it gives the correct documentation parameters
+
+
+
+            and basic beginner content now, then it can be expanded with full implementation details
+
+
+
+            after the final QClang project folder is ready.
+
+
+
+          </p>
+
+
+
+          <div class="hero-actions">
+
+
+
+            <a class="primary-link" href="#getting-started">Start tutorial</a>
+
+
+
+            <a class="secondary-link" href="#compiler-reference">View compiler pipeline</a>
+
+
+
+          </div>
+
+
+
+          <div class="metrics-grid">
+
+
+
+            <article>
+
+
+
+              <strong>.qc / .qcl</strong>
+
+
+
+              <span>language files for quantum chip source descriptions</span>
+
+
+
+            </article>
+
+
+
+            <article>
+
+
+
+              <strong>3</strong>
+
+
+
+              <span>main outputs: Qiskit Metal, JSON IR, and SPICE-style text</span>
+
+
+
+            </article>
+
+
+
+            <article>
+
+
+
+              <strong>Draft</strong>
+
+
+
+              <span>basic docs now, complete docs after final QClang completion</span>
+
+
+
+            </article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="getting-started">
+
+
+
+          <div class="section-heading">
+
+
+
+            <div>
+
+
+
+              <p class="eyebrow">Onboarding Tutorial</p>
+
+
+
+              <h2>Onboarding Tutorial</h2>
+
+
+
+            </div>
+
+
+
+            <button class="copy-button" type="button" data-copy-section="getting-started">Copy page</button>
+
+
+
+          </div>
+
+
+
+          <p>
+
+
+
+            This page introduces the QClang workflow from beginner level. A new user should first
+
+
+
+            understand what a QClang source file represents, how it is parsed, how it becomes an
+
+
+
+            internal design model, and how that model is exported to downstream chip design tools.
+
+
+
+          </p>
+
+
+
+          <ol class="learning-list">
+
+
+
+            <li><strong>Beginner:</strong> learn chip, qubit, coupler, readout, and design rule parameters.</li>
+
+
+
+            <li><strong>Intermediate:</strong> learn parse, validate, compile, and export stages.</li>
+
+
+
+            <li><strong>Advanced:</strong> connect QClang with backend APIs, design graph, routing, DRC, and exports.</li>
+
+
+
+          </ol>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="hello-world">
+
+
+
+          <div class="section-heading">
+
+
+
+            <div>
+
+
+
+              <p class="eyebrow">Beginner</p>
+
+
+
+              <h2>Hello World</h2>
+
+
+
+            </div>
+
+
+
+            <button class="copy-button" type="button" data-copy-section="hello-world">Copy page</button>
+
+
+
+          </div>
+
+
+
+          <p>
+
+
+
+            A first QClang example should be small. It should declare one chip and a few hardware
+
+
+
+            objects so the reader can see the shape of the language before learning advanced blocks.
+
+
+
+          </p>
+
+
+
+          <div class="code-card">
+
+
+
+            <div class="code-title">hello.qc</div>
+
+
+
+            <pre><code>chip HelloChip
+
+
+
+  variable substrate = "silicon"
+
+
+
+  variable metal = "aluminum"
+
+
+
+
+
+
+
+  qubit Q1 type=transmon frequency=5.0
+
+
+
+  readout RO_Q1 connect(Q1)
+
+
+
+end</code></pre>
+
+
+
+          </div>
+
+
+
+          <div class="info-box">
+
+
+
+            <strong>What this example introduces</strong>
+
+
+
+            <p>Chip metadata, a single qubit, and a readout object connected to that qubit.</p>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="installation">
+
+
+
+          <p class="eyebrow">Setup</p>
+
+
+
+          <h2>Installation</h2>
+
+
+
+          <p>
+
+
+
+            The final installation page should explain how to prepare the QClang development
+
+
+
+            environment. At starter level, document the expected backend folder, Python environment,
+
+
+
+            and where the QClang compiler package is located.
+
+
+
+          </p>
+
+
+
+          <div class="parameter-table">
+
+
+
+            <article><strong>Backend root</strong><span>Project backend folder where QClang services run.</span></article>
+
+
+
+            <article><strong>Compiler package</strong><span>QClang lexer, parser, validator, compiler, and full dialect modules.</span></article>
+
+
+
+            <article><strong>Examples folder</strong><span>Place for sample .qc and .qcl files used by new users.</span></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="using-python">
+
+
+
+          <p class="eyebrow">Development</p>
+
+
+
+          <h2>Using Python and QClang</h2>
+
+
+
+          <p>
+
+
+
+            Python is used to expose QClang compiler functions through backend services.
+
+
+
+            This section should explain the normal developer flow: load source text, parse it,
+
+
+
+            validate it, compile it, and return a structured response.
+
+
+
+          </p>
+
+
+
+          <div class="code-card">
+
+
+
+            <div class="code-title">Conceptual flow</div>
+
+
+
+            <pre><code>source = read_qclang_file("design.qc")
+
+
+
+ast = parse(source)
+
+
+
+validation = validate(ast)
+
+
+
+result = compile(ast, target="json_ir")</code></pre>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="user-guide">
+
+
+
+          <p class="eyebrow">User Guide</p>
+
+
+
+          <h2>User Guide</h2>
+
+
+
+          <p>
+
+
+
+            The user guide should teach how QClang fits into the full quantum chip design workflow.
+
+
+
+            It should stay practical: what users write, what the compiler reads, and what the backend returns.
+
+
+
+          </p>
+
+
+
+          <div class="pipeline">
+
+
+
+            <article><span>1</span><h3>Write</h3><p>Create QClang source with chip, qubit, coupler, and readout declarations.</p></article>
+
+
+
+            <article><span>2</span><h3>Validate</h3><p>Check structure, references, units, and design constraints.</p></article>
+
+
+
+            <article><span>3</span><h3>Compile</h3><p>Generate design output for JSON inspection or chip design tooling.</p></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="qclang-overview">
+
+
+
+          <p class="eyebrow">Overview Tutorial</p>
+
+
+
+          <h2>QClang Overview Tutorial</h2>
+
+
+
+          <p>
+
+
+
+            QClang is a small domain language for quantum chip design. It should describe a design
+
+
+
+            in a readable way, then let the compiler convert that design into structured outputs.
+
+
+
+          </p>
+
+
+
+          <ul class="learning-list">
+
+
+
+            <li><strong>Source language:</strong> the user-facing chip description.</li>
+
+
+
+            <li><strong>AST:</strong> the internal parsed representation.</li>
+
+
+
+            <li><strong>Design graph:</strong> the shared structure used by routing, DRC, and exports.</li>
+
+
+
+            <li><strong>Generated output:</strong> the result returned to the frontend or saved as artifacts.</li>
+
+
+
+          </ul>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="syntax-part-1">
+
+
+
+          <p class="eyebrow">Syntax</p>
+
+
+
+          <h2>Syntax Tutorial - Part 1</h2>
+
+
+
+          <p>
+
+
+
+            Start syntax documentation with the common block pattern. Do not overload beginners with
+
+
+
+            every final rule. Introduce only names, variables, declarations, and connections.
+
+
+
+          </p>
+
+
+
+          <div class="two-column">
+
+
+
+            <article><h3>Declarations</h3><p>Use declarations for chip, qubit, coupler, readout, feedline, and launchpad objects.</p></article>
+
+
+
+            <article><h3>Properties</h3><p>Use properties for frequency, material, topology, chip size, spacing, and routing options.</p></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="syntax-part-2">
+
+
+
+          <p class="eyebrow">Syntax</p>
+
+
+
+          <h2>Syntax Tutorial - Part 2</h2>
+
+
+
+          <p>
+
+
+
+            The second syntax page can introduce larger design parameters such as topology,
+
+
+
+            arrays, rule blocks, and output targets. When the final compiler is complete,
+
+
+
+            this page should be expanded with the exact grammar.
+
+
+
+          </p>
+
+
+
+          <div class="parameter-table">
+
+
+
+            <article><strong>Topology</strong><span>grid, heavy-hex, chain, or project-specific topology names.</span></article>
+
+
+
+            <article><strong>Rules</strong><span>Spacing, frequency, fabrication, and connectivity constraints.</span></article>
+
+
+
+            <article><strong>Targets</strong><span>qiskit_metal, json_ir, spice, qclang export, and design reports.</span></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="language-reference">
+
+
+
+          <p class="eyebrow">Language Reference</p>
+
+
+
+          <h2>Language Blocks</h2>
+
+
+
+          <p>
+
+
+
+            This reference page lists the parameters that the final QClang language documentation
+
+
+
+            should contain. The current content is basic by design and can be replaced with exact
+
+
+
+            definitions after the final language implementation is complete.
+
+
+
+          </p>
+
+
+
+          <div class="reference-grid">
+
+
+
+            <article><h3>chip</h3><p>Defines global design metadata such as name, substrate, metal, topology, and chip size.</p></article>
+
+
+
+            <article><h3>qubit</h3><p>Defines a quantum device node, usually with type, frequency, placement, and group parameters.</p></article>
+
+
+
+            <article><h3>coupler</h3><p>Defines a connection between two qubits and optional coupling strength.</p></article>
+
+
+
+            <article><h3>readout</h3><p>Defines readout resonator objects connected to target qubits.</p></article>
+
+
+
+            <article><h3>feedline</h3><p>Defines the shared microwave route that connects readout components.</p></article>
+
+
+
+            <article><h3>launchpad</h3><p>Defines chip input/output access points for routing and exports.</p></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="compiler-reference">
+
+
+
+          <p class="eyebrow">Compiler Reference</p>
+
+
+
+          <h2>Compiler Pipeline</h2>
+
+
+
+          <p>
+
+
+
+            The compiler reference should explain each internal stage without treating current
+
+
+
+            development issues as documentation content. Keep this as a clean parameter list until
+
+
+
+            the final implementation is ready.
+
+
+
+          </p>
+
+
+
+          <table>
+
+
+
+            <thead><tr><th>Stage</th><th>Purpose</th><th>Expected output</th></tr></thead>
+
+
+
+            <tbody>
+
+
+
+              <tr><td>Lexer</td><td>Reads source characters and creates tokens.</td><td>Token stream</td></tr>
+
+
+
+              <tr><td>Parser</td><td>Builds the abstract syntax tree from tokens.</td><td>AST</td></tr>
+
+
+
+              <tr><td>Validator</td><td>Checks structure, references, and required fields.</td><td>Validation report</td></tr>
+
+
+
+              <tr><td>Compiler</td><td>Converts the parsed design into backend-ready output.</td><td>Generated result</td></tr>
+
+
+
+              <tr><td>Full dialect</td><td>Supports extended .qcl features such as braces, arrays, and export targets.</td><td>JSON IR, SPICE, or Metal code</td></tr>
+
+
+
+            </tbody>
+
+
+
+          </table>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="design-rules">
+
+
+
+          <p class="eyebrow">Design Rules</p>
+
+
+
+          <h2>Design Rules</h2>
+
+
+
+          <p>
+
+
+
+            QClang documentation should include design rule parameters so users understand what
+
+
+
+            the compiler or design pipeline may check later.
+
+
+
+          </p>
+
+
+
+          <div class="reference-grid">
+
+
+
+            <article><h3>Geometry rules</h3><p>Spacing, overlap, off-chip placement, and route collision checks.</p></article>
+
+
+
+            <article><h3>Frequency rules</h3><p>Qubit frequency spacing, readout separation, and collision avoidance.</p></article>
+
+
+
+            <article><h3>Fabrication rules</h3><p>Minimum widths, clearances, material assumptions, and process constraints.</p></article>
+
+
+
+            <article><h3>Connectivity rules</h3><p>Qubit-coupler-readout consistency and missing connection checks.</p></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="targets">
+
+
+
+          <p class="eyebrow">Compilation Targets</p>
+
+
+
+          <h2>Compilation Targets</h2>
+
+
+
+          <p>
+
+
+
+            Targets describe where QClang output should go. In the final documentation,
+
+
+
+            each target can include exact request/response examples and screenshots.
+
+
+
+          </p>
+
+
+
+          <div class="target-list">
+
+
+
+            <article><h3>json_ir</h3><p>Structured intermediate representation for debugging and frontend inspection.</p></article>
+
+
+
+            <article><h3>qiskit_metal</h3><p>Python code intended for quantum chip component generation workflows.</p></article>
+
+
+
+            <article><h3>spice</h3><p>SPICE-style text for circuit-level representation.</p></article>
+
+
+
+            <article><h3>exports</h3><p>Project exports such as QClang source, JSON, SVG, GDS, DXF, and reports.</p></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="chip-synthesis">
+
+
+
+          <p class="eyebrow">Chip Synthesis</p>
+
+
+
+          <h2>Chip Synthesis</h2>
+
+
+
+          <p>
+
+
+
+            Chip synthesis documentation should explain how QClang source becomes a design graph,
+
+
+
+            then goes through placement, frequency planning, routing, DRC, and export generation.
+
+
+
+          </p>
+
+
+
+          <div class="pipeline">
+
+
+
+            <article><span>1</span><h3>Constraints</h3><p>Collect chip size, substrate, topology, metal, and qubit count.</p></article>
+
+
+
+            <article><span>2</span><h3>Graph</h3><p>Create a design graph with qubits, couplers, readouts, feedlines, and launchpads.</p></article>
+
+
+
+            <article><span>3</span><h3>Export</h3><p>Return generated artifacts for the user interface and downstream tooling.</p></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <section class="doc-section" id="superconducting-materials" hidden>
+          <p class="eyebrow">Chip Synthesis</p>
+          <h2>Superconducting Materials</h2>
+          <p class="section-lead">
+            This page summarizes <strong>CDAC_Superconducting_Materials.pptx</strong> for QClang documentation.
+            Use it to understand the material families that a superconducting quantum-chip design flow must describe
+            before layout, fabrication, HFSS simulation, Q3D extraction, and EPR/scQubits analysis.
+          </p>
+
+          <div class="info-box">
+            <strong>Learning goal</strong>
+            <p>Superconducting quantum circuits require carefully selected materials across three functional layers: Each slide covers one material: Role · Properties · Critical Temperature · Importance for qubit coherence</p>
+          </div>
+
+          <div class="parameter-table material-family-grid">
+            <article><strong>Superconducting Metals</strong><span>Aluminum (Al), Niobium (Nb), Molybdenum Rhenium (MoRe), and Indium (In). These materials form qubit electrodes, resonators, wiring, and flip-chip interconnects.</span></article><article><strong>Superconducting Compounds</strong><span>Titanium Nitride (TiN), Niobium Nitride (NbN), and Niobium Titanium Nitride (NbTiN). These support high kinetic inductance, photon detection, high-Q microwave circuits, and magnetic-field-tolerant designs.</span></article><article><strong>Substrates and Barriers</strong><span>Silicon (Si), Sapphire (Al2O3), and Aluminum Oxide (AlOx). These define the chip foundation and the Josephson junction tunnel barrier that creates qubit nonlinearity.</span></article>
+          </div>
+        </section>
+
+        <section class="doc-section material-doc-section" id="material-aluminum-al" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Aluminum (Al)</h2>
+          <p class="section-lead">The Workhorse of Superconducting Qubits</p>
+
+          <article class="material-card material-card-page">
+            <div>
+              <p class="eyebrow">Tc = 1.2 K</p>
+              <h3>Aluminum (Al)</h3>
+              <p class="material-subtitle">The Workhorse of Superconducting Qubits</p>
+            </div>
+            <div class="material-detail">
+              <strong>Role in quantum circuits</strong>
+              <p>Qubit body, Josephson junction electrodes, resonators, coplanar waveguides</p>
+            </div>
+            <div class="material-detail">
+              <strong>Why it matters</strong>
+              <p>Aluminum&#x27;s native oxide (AlOx) forms a reproducible ~1–2 nm tunnel barrier for Josephson junctions — the heart of every superconducting qubit. Its long coherence times and CMOS-compatible deposition make it the most widely used qubit material worldwide, adopted by IBM, Google, IQM and in C-DAC&#x27;s reference facility.</p>
+            </div>
+            <div class="material-detail">
+              <strong>Key facts</strong>
+              <ul><li>Type I superconductor — minimal trapped flux vortices</li><li>Naturally forms AlOx tunnel barrier (~1–2 nm thick)</li><li>Shadow evaporation enables precise Josephson junction fabrication</li><li>Used by IBM, Google, IQM &amp; adopted in C-DAC reference facility</li><li>Low decoherence from TLS defects when surface is clean</li></ul>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="doc-section material-doc-section" id="material-niobium-nb" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Niobium (Nb)</h2>
+          <p class="section-lead">High-Tc Superconductor for Resonators &amp; Wiring</p>
+
+          <article class="material-card material-card-page">
+            <div>
+              <p class="eyebrow">Tc = 9.3 K</p>
+              <h3>Niobium (Nb)</h3>
+              <p class="material-subtitle">High-Tc Superconductor for Resonators &amp; Wiring</p>
+            </div>
+            <div class="material-detail">
+              <strong>Role in quantum circuits</strong>
+              <p>Microwave resonators, transmission lines, ground planes, multi-layer wiring</p>
+            </div>
+            <div class="material-detail">
+              <strong>Why it matters</strong>
+              <p>Niobium&#x27;s higher critical temperature gives a wider thermal margin. It is the material of choice for resonators and readout structures in high-qubit-count processors. Sputter-deposited as thin films, it enables scalable multi-layer chip architectures essential for 50–100 qubit systems like those in C-DAC&#x27;s program.</p>
+            </div>
+            <div class="material-detail">
+              <strong>Key facts</strong>
+              <ul><li>Type II superconductor — operates well in moderate magnetic fields</li><li>Widely used in SRF (superconducting radio-frequency) cavities</li><li>Preferred for multi-layer, high-qubit-count chip stacks</li><li>Sputter-deposited as thin films on Si or sapphire wafers</li><li>Critical for scalable quantum processor architectures</li></ul>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="doc-section material-doc-section" id="material-silicon-si-substrate" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Silicon (Si) Substrate</h2>
+          <p class="section-lead">The Foundation of Most Quantum Chips</p>
+
+          <article class="material-card material-card-page">
+            <div>
+              <p class="eyebrow">Non-superconducting — dielectric substrate</p>
+              <h3>Silicon (Si) Substrate</h3>
+              <p class="material-subtitle">The Foundation of Most Quantum Chips</p>
+            </div>
+            <div class="material-detail">
+              <strong>Role in quantum circuits</strong>
+              <p>Substrate / foundation for depositing superconducting thin films and qubit circuits</p>
+            </div>
+            <div class="material-detail">
+              <strong>Why it matters</strong>
+              <p>High-resistivity intrinsic silicon is the most common substrate because semiconductor fabrication techniques are directly compatible. It enables patterning of qubits using electron-beam and optical lithography at scale. C-DAC&#x27;s reference facility uses silicon wafers for double-sided qubit chip fabrication.</p>
+            </div>
+            <div class="material-detail">
+              <strong>Key facts</strong>
+              <ul><li>Dielectric constant ~11.7; extremely well-characterised</li><li>Float-zone (intrinsic) Si has very low impurity levels</li><li>Compatible with standard cleanroom microfabrication tools</li><li>Loss tangent must be carefully managed at millikelvin temperatures</li><li>Used in double-sided 3-inch wafer fabrication at C-DAC partner labs</li></ul>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="doc-section material-doc-section" id="material-sapphire-al2o3-substrate" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Sapphire (Al₂O₃) Substrate</h2>
+          <p class="section-lead">Ultra-Low-Loss Substrate for High-Coherence Qubits</p>
+
+          <article class="material-card material-card-page">
+            <div>
+              <p class="eyebrow">Non-superconducting — crystalline dielectric</p>
+              <h3>Sapphire (Al₂O₃) Substrate</h3>
+              <p class="material-subtitle">Ultra-Low-Loss Substrate for High-Coherence Qubits</p>
+            </div>
+            <div class="material-detail">
+              <strong>Role in quantum circuits</strong>
+              <p>Low-loss substrate for high-coherence qubit circuits; alternative to silicon</p>
+            </div>
+            <div class="material-detail">
+              <strong>Why it matters</strong>
+              <p>Sapphire offers extremely low dielectric loss and a very clean surface, resulting in longer qubit coherence times (T1, T2). It is used in state-of-the-art processors where maximising coherence is critical. Google&#x27;s Sycamore processor uses sapphire substrates.</p>
+            </div>
+            <div class="material-detail">
+              <strong>Key facts</strong>
+              <ul><li>Dielectric constant ~9–10; very low loss tangent</li><li>Single-crystal c-plane (0001) orientation preferred</li><li>Cleaner surfaces reduce two-level system (TLS) defects</li><li>Used in Google&#x27;s Sycamore and many research-grade qubits globally</li><li>Higher cost than silicon but delivers superior coherence times</li></ul>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="doc-section material-doc-section" id="material-titanium-nitride-tin" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Titanium Nitride (TiN)</h2>
+          <p class="section-lead">High Kinetic Inductance Superconductor</p>
+
+          <article class="material-card material-card-page">
+            <div>
+              <p class="eyebrow">Tc = 4–5.6 K (tunable)</p>
+              <h3>Titanium Nitride (TiN)</h3>
+              <p class="material-subtitle">High Kinetic Inductance Superconductor</p>
+            </div>
+            <div class="material-detail">
+              <strong>Role in quantum circuits</strong>
+              <p>Kinetic inductance detectors (KIDs), high-impedance resonators, superconducting inductors</p>
+            </div>
+            <div class="material-detail">
+              <strong>Why it matters</strong>
+              <p>TiN has a large kinetic inductance arising from its high normal-state resistivity. This makes it ideal for compact high-impedance resonators and microwave kinetic inductance detectors (MKIDs). Its Tc is tunable by adjusting nitrogen content during reactive sputtering deposition.</p>
+            </div>
+            <div class="material-detail">
+              <strong>Key facts</strong>
+              <ul><li>High kinetic inductance — enables compact circuit elements</li><li>Tc tunable via N₂ partial pressure during sputtering deposition</li><li>Hard, chemically stable coating — easy to pattern by etching</li><li>Used in microwave kinetic inductance detectors (MKIDs)</li><li>Studied at C-DAC partner labs for next-generation qubit designs</li></ul>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="doc-section material-doc-section" id="material-niobium-nitride-nbn" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Niobium Nitride (NbN)</h2>
+          <p class="section-lead">High-Tc Nitride for Photon Detection &amp; Qubits</p>
+
+          <article class="material-card material-card-page">
+            <div>
+              <p class="eyebrow">Tc = 16 K (bulk); ~10 K thin film</p>
+              <h3>Niobium Nitride (NbN)</h3>
+              <p class="material-subtitle">High-Tc Nitride for Photon Detection &amp; Qubits</p>
+            </div>
+            <div class="material-detail">
+              <strong>Role in quantum circuits</strong>
+              <p>Superconducting nanowire single-photon detectors (SNSPDs), resonators, qubit circuits</p>
+            </div>
+            <div class="material-detail">
+              <strong>Why it matters</strong>
+              <p>NbN has the highest Tc among common superconducting nitrides and is prized for single-photon detection at near-infrared wavelengths. Its large superconducting gap makes it resistant to quasiparticle poisoning — a key decoherence mechanism in qubit circuits used in quantum networking nodes.</p>
+            </div>
+            <div class="material-detail">
+              <strong>Key facts</strong>
+              <ul><li>Highest Tc among common nitrides — operable at 4 K with standard cryostats</li><li>Used in SNSPDs for quantum communication &amp; networking links</li><li>Large superconducting gap reduces quasiparticle poisoning</li><li>Deposited by reactive magnetron sputtering on MgO or sapphire</li><li>Integrated into quantum networking nodes alongside transmon qubits</li></ul>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="doc-section material-doc-section" id="material-niobium-titanium-nitride-nbtin" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Niobium Titanium Nitride (NbTiN)</h2>
+          <p class="section-lead">Optimised Alloy for Low-Loss Microwave Circuits</p>
+
+          <article class="material-card material-card-page">
+            <div>
+              <p class="eyebrow">Tc ≈ 15 K</p>
+              <h3>Niobium Titanium Nitride (NbTiN)</h3>
+              <p class="material-subtitle">Optimised Alloy for Low-Loss Microwave Circuits</p>
+            </div>
+            <div class="material-detail">
+              <strong>Role in quantum circuits</strong>
+              <p>High-Q microwave resonators, MKID arrays, qubit coupling elements, SQUIDs</p>
+            </div>
+            <div class="material-detail">
+              <strong>Why it matters</strong>
+              <p>NbTiN combines the high Tc of NbN with improved thin-film uniformity and magnetic field resilience. It is widely used for microwave resonators requiring both high quality factor (Q) and resilience to in-plane magnetic fields, making it superior for large-scale qubit arrays and flux-tunable designs.</p>
+            </div>
+            <div class="material-detail">
+              <strong>Key facts</strong>
+              <ul><li>Higher Q resonators compared to plain Nb films</li><li>Resilient to in-plane magnetic fields — ideal for fluxonium qubits</li><li>Excellent film uniformity over large (4-inch+) wafers</li><li>Critical for SQUIDs and superconducting interference devices</li><li>Adopted in European quantum platforms (QuTech, IQM) and C-DAC partners</li></ul>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="doc-section material-doc-section" id="material-aluminum-oxide-alox-tunnel-barrier" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Aluminum Oxide (AlOx) Tunnel Barrier</h2>
+          <p class="section-lead">The Quantum Tunneling Element — Heart of the Josephson Junction</p>
+
+          <article class="material-card material-card-page">
+            <div>
+              <p class="eyebrow">Non-superconducting amorphous dielectric (~1–3 nm)</p>
+              <h3>Aluminum Oxide (AlOx) Tunnel Barrier</h3>
+              <p class="material-subtitle">The Quantum Tunneling Element — Heart of the Josephson Junction</p>
+            </div>
+            <div class="material-detail">
+              <strong>Role in quantum circuits</strong>
+              <p>Insulating tunnel barrier in Al/AlOx/Al Josephson junctions — defines qubit nonlinearity</p>
+            </div>
+            <div class="material-detail">
+              <strong>Why it matters</strong>
+              <p>The AlOx tunnel barrier is the most critical element in superconducting qubits. Formed by controlled thermal oxidation of aluminum, it creates a ~1–2 nm amorphous oxide through which Cooper pairs tunnel, producing the non-linear inductance that makes a qubit distinct from a classical LC oscillator.</p>
+            </div>
+            <div class="material-detail">
+              <strong>Key facts</strong>
+              <ul><li>Formed by controlled O₂ exposure of Al surface (thermal oxidation)</li><li>Thickness (~1–2 nm) sets the critical current Ic of the junction</li><li>Amorphous structure introduces TLS defects — primary decoherence source</li><li>Shadow-angle evaporation produces self-aligned Josephson junctions</li><li>Active C-DAC research: cleaner barriers to extend T1 coherence times</li></ul>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="doc-section material-doc-section" id="material-molybdenum-rhenium-more" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Molybdenum Rhenium (MoRe)</h2>
+          <p class="section-lead">Emerging Alloy for Resilient Qubit Circuits</p>
+
+          <article class="material-card material-card-page">
+            <div>
+              <p class="eyebrow">Tc ≈ 9–14 K (varies with Re content)</p>
+              <h3>Molybdenum Rhenium (MoRe)</h3>
+              <p class="material-subtitle">Emerging Alloy for Resilient Qubit Circuits</p>
+            </div>
+            <div class="material-detail">
+              <strong>Role in quantum circuits</strong>
+              <p>Josephson junction electrodes, qubit wiring in magnetic-field-tolerant and hybrid designs</p>
+            </div>
+            <div class="material-detail">
+              <strong>Why it matters</strong>
+              <p>MoRe alloys offer a tunable Tc and are highly compatible with silicon nanofabrication processes. They are being explored for qubit designs that must tolerate small magnetic fields, including topological qubit experiments using Majorana zero modes in semiconductor-superconductor hybrid systems.</p>
+            </div>
+            <div class="material-detail">
+              <strong>Key facts</strong>
+              <ul><li>Tc tunable by adjusting the Mo:Re ratio during co-sputtering</li><li>Compatible with semiconductor (Si) foundry fabrication processes</li><li>Used in hybrid semiconductor-superconductor qubit devices</li><li>Explored for Majorana-based topological qubit research (Microsoft)</li><li>Under evaluation at leading quantum labs and C-DAC ecosystem partners</li></ul>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="doc-section material-doc-section" id="material-indium-in-bump-bonds" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Indium (In) Bump Bonds</h2>
+          <p class="section-lead">Superconducting 3D Integration for Scalable Processors</p>
+
+          <article class="material-card material-card-page">
+            <div>
+              <p class="eyebrow">Tc = 3.4 K</p>
+              <h3>Indium (In) Bump Bonds</h3>
+              <p class="material-subtitle">Superconducting 3D Integration for Scalable Processors</p>
+            </div>
+            <div class="material-detail">
+              <strong>Role in quantum circuits</strong>
+              <p>Flip-chip indium bump bonds for 3D multi-chip quantum processor stacking</p>
+            </div>
+            <div class="material-detail">
+              <strong>Why it matters</strong>
+              <p>Indium is soft and ductile, making it ideal for superconducting bump bonds that connect multiple quantum chips in a 3D flip-chip stack. This technique, pioneered by Google and IBM, enables qubit chips and control chips to be connected with low-loss superconducting contacts, crucial for scaling beyond 100 qubits.</p>
+            </div>
+            <div class="material-detail">
+              <strong>Key facts</strong>
+              <ul><li>Low melting point (157°C) — compatible with quantum chip processing</li><li>Soft metal: forms reliable superconducting bump bonds under low pressure</li><li>Superconducting at 3.4 K — well below qubit operating temperature (~15 mK)</li><li>Enables scalable 3D quantum processor stacking architectures</li><li>Evaluated for C-DAC reference facility 50–100 qubit multi-chip modules</li></ul>
+            </div>
+          </article>
+        </section>
+
+        <section class="doc-section material-doc-section" id="materials-summary" hidden>
+          <p class="eyebrow">Superconducting Materials</p>
+          <h2>Materials Summary</h2>
+          <p class="section-lead">Quick comparison table from <strong>CDAC_Superconducting_Materials.pptx</strong>.</p>
+          <div class="result-table-wrap material-summary-table">
+            <table class="data-table">
+              <thead>
+                <tr><th>Material</th><th>Type</th><th>Tc</th><th>Primary Use</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Aluminum (Al)</td><td>Superconductor</td><td>1.2 K</td><td>Qubit body, JJ electrodes</td></tr><tr><td>Niobium (Nb)</td><td>Superconductor</td><td>9.3 K</td><td>Resonators, wiring layers</td></tr><tr><td>Silicon (Si)</td><td>Substrate</td><td>—</td><td>Qubit chip foundation</td></tr><tr><td>Sapphire (Al₂O₃)</td><td>Substrate</td><td>—</td><td>High-coherence substrate</td></tr><tr><td>Titanium Nitride (TiN)</td><td>Compound SC</td><td>4–5.6 K</td><td>High-kinetic-inductance elements</td></tr><tr><td>Niobium Nitride (NbN)</td><td>Compound SC</td><td>16 K</td><td>SNSPDs, resonators</td></tr><tr><td>NbTiN</td><td>Compound SC</td><td>15 K</td><td>High-Q resonators, SQUIDs</td></tr><tr><td>AlOx (tunnel barrier)</td><td>Dielectric</td><td>—</td><td>Josephson junction tunnel barrier</td></tr><tr><td>MoRe alloy</td><td>Superconductor</td><td>9–14 K</td><td>Hybrid / topological qubits</td></tr><tr><td>Indium (In)</td><td>Superconductor</td><td>3.4 K</td><td>3D flip-chip bump bonds</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <section class="doc-section" id="synthesis-tutorial">
+
+
+
+          <p class="eyebrow">Synthesis Tutorial</p>
+
+
+
+          <h2>Synthesis Tutorial</h2>
+
+
+
+          <p>
+
+
+
+            This tutorial page should explain the high-level synthesis path using safe starter content:
+
+
+
+            source input, constraint extraction, graph generation, routing, and export.
+
+
+
+          </p>
+
+
+
+          <div class="info-box">
+
+
+
+            <strong>Future update</strong>
+
+
+
+            <p>After the final QClang folder is complete, replace this starter text with exact examples from the working compiler.</p>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="hfss-tutorial">
+
+
+
+          <p class="eyebrow">HFSS Tutorial</p>
+
+
+
+          <h2>HFSS Electromagnetic Simulation</h2>
+
+
+
+          <p>
+
+
+
+            HFSS is a full-wave 3D electromagnetic field solver used to test and analyze
+
+
+
+            RF, microwave, antenna, and superconducting quantum circuit designs before manufacturing.
+
+
+
+            In the QClang documentation, place this tutorial after chip synthesis because the synthesized
+
+
+
+            chip geometry becomes the input for electromagnetic simulation.
+
+
+
+          </p>
+
+
+
+          <figure class="tutorial-figure">
+
+
+
+            <img src="assets/tutorials/hfss-quantum-circuit.png" alt="HFSS superconducting quantum circuit analysis" />
+
+
+
+            <figcaption>HFSS tutorial image: superconducting quantum circuit, transmon, resonator, field distribution, and fabrication layers.</figcaption>
+
+
+
+          </figure>
+
+
+
+          <div class="parameter-table">
+
+
+
+            <article><strong>Why HFSS is needed</strong><span>It predicts device performance before manufacturing, reduces design mistakes, and saves prototype cost.</span></article>
+
+
+
+            <article><strong>Core method</strong><span>HFSS uses the Finite Element Method to solve Maxwell's equations in complex 3D geometries.</span></article>
+
+
+
+            <article><strong>Driven Modal</strong><span>Used for antennas, filters, waveguides, S-parameters, field overlays, gain, and radiation patterns.</span></article>
+
+
+
+            <article><strong>Driven Terminal</strong><span>Used for PCB traces, connectors, cables, voltage/current behavior, impedance, and signal integrity.</span></article>
+
+
+
+            <article><strong>Eigenmode</strong><span>Finds natural resonant frequencies, cavity modes, waveguide cutoffs, and Q-factors without ports.</span></article>
+
+
+
+            <article><strong>Results</strong><span>Field plots, S11 reflection, S21 transmission, resonant frequencies, and quantum circuit field behavior.</span></article>
+
+
+
+          </div>
+
+
+
+          <div class="figure-grid">
+
+
+
+            <figure><img src="assets/tutorials/hfss-workflow.png" alt="HFSS workflow" /><figcaption>Workflow: geometry, materials, boundaries, mesh, simulation, results.</figcaption></figure>
+
+
+
+            <figure><img src="assets/tutorials/hfss-field.png" alt="HFSS field visualization" /><figcaption>Field visualization used to inspect electromagnetic behavior.</figcaption></figure>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="q3d-tutorial">
+
+
+
+          <p class="eyebrow">Q3D Analysis Tutorial</p>
+
+
+
+          <h2>Q3D Extractor Analysis</h2>
+
+
+
+          <p>
+
+
+
+            Q3D analysis belongs after HFSS in the documentation because it explains how a
+
+
+
+            quantum chip layout is converted into electrical interaction values. Q3D helps
+
+
+
+            analyze capacitance, coupling, electric field strength, and unwanted interaction
+
+
+
+            before fabrication.
+
+
+
+          </p>
+
+
+
+          <figure class="tutorial-figure">
+
+
+
+            <img src="assets/tutorials/q3d-aedt-interface.png" alt="ANSYS AEDT Q3D interface" />
+
+
+
+            <figcaption>Q3D tutorial image: AEDT interface showing geometry, fields, and extraction workflow.</figcaption>
+
+
+
+          </figure>
+
+
+
+          <ol class="learning-list">
+
+
+
+            <li><strong>Quantum chip layout:</strong> start from qubits, resonators, readout lines, control lines, and ground plane.</li>
+
+
+
+            <li><strong>Import into AEDT:</strong> bring the geometry into ANSYS Electronics Desktop.</li>
+
+
+
+            <li><strong>Open Q3D Extractor:</strong> analyze electrical interactions between physical structures.</li>
+
+
+
+            <li><strong>Assign materials:</strong> apply aluminum, silicon, sapphire, niobium, or project-specific materials.</li>
+
+
+
+            <li><strong>Generate mesh:</strong> divide the structure into small elements for calculation accuracy.</li>
+
+
+
+            <li><strong>Calculate fields:</strong> inspect electric field strength, direction, and energy concentration.</li>
+
+
+
+            <li><strong>Extract capacitance matrix:</strong> convert physical geometry into electrical information.</li>
+
+
+
+          </ol>
+
+
+
+          <div class="figure-grid">
+
+
+
+            <figure><img src="assets/tutorials/q3d-chip-layout.png" alt="Q3D quantum chip layout" /><figcaption>Input layout: qubits, readout lines, control lines, and ground plane.</figcaption></figure>
+
+
+
+            <figure><img src="assets/tutorials/q3d-capacitance-matrix.png" alt="Q3D capacitance matrix" /><figcaption>Capacitance matrix: diagonal values are self-capacitance; off-diagonal values show component interaction.</figcaption></figure>
+
+
+
+          </div>
+
+
+
+          <div class="info-box">
+
+
+
+            <strong>How to explain color fields</strong>
+
+
+
+            <p>Red or yellow means strong electric field, green means medium field, and blue means weak field.</p>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="epr-tutorial">
+
+
+
+          <p class="eyebrow">EPR / scQubits Tutorial</p>
+
+
+
+          <h2>EPR Analysis in Superconducting Quantum Circuits</h2>
+
+
+
+          <p>
+
+
+
+            EPR means Energy Participation Ratio. It explains what percentage of total
+
+
+
+            electromagnetic energy is stored in each circuit component. In QClang documentation,
+
+
+
+            place EPR after HFSS and Q3D because EPR converts field simulation information into
+
+
+
+            quantum parameters such as qubit frequency, anharmonicity, coupling strength, and Kerr effects.
+
+
+
+          </p>
+
+
+
+          <div class="figure-grid">
+
+
+
+            <figure><img src="assets/tutorials/epr-transmon.png" alt="Transmon qubit structure" /><figcaption>Transmon qubit: capacitor plus Josephson junction structure.</figcaption></figure>
+
+
+
+            <figure><img src="assets/tutorials/epr-josephson.png" alt="Josephson junction diagram" /><figcaption>Josephson junction: two superconductors separated by a thin insulating layer.</figcaption></figure>
+
+
+
+            <figure><img src="assets/tutorials/epr-field.png" alt="EPR field energy visualization" /><figcaption>Field-energy visualization used before participation analysis.</figcaption></figure>
+
+
+
+          </div>
+
+
+
+          <div class="parameter-table">
+
+
+
+            <article><strong>Why EPR is needed</strong><span>It predicts qubit behavior before fabrication and reduces trial-and-error design iterations.</span></article>
+
+
+
+            <article><strong>Energy distribution</strong><span>It shows how energy is shared between capacitor, Josephson junction, resonator, and other modes.</span></article>
+
+
+
+            <article><strong>HFSS relationship</strong><span>HFSS calculates fields; EPR converts field information into quantum circuit parameters.</span></article>
+
+
+
+            <article><strong>Parameters obtained</strong><span>Qubit frequency, anharmonicity, coupling strength, Kerr effects, and mode interactions.</span></article>
+
+
+
+            <article><strong>Industry use</strong><span>Used in superconducting qubit research, academic labs, circuit QED workflows, and scalable chip studies.</span></article>
+
+
+
+            <article><strong>scQubits placement</strong><span>Use scQubits-style analysis after EM simulation to display Hamiltonian, energy levels, coherence, participation, and interactions.</span></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="simulation-dashboard">
+
+
+
+          <p class="eyebrow">Simulation Dashboard Tutorial</p>
+
+
+
+          <h2>Simulation Dashboard Parameters</h2>
+
+
+
+          <p>
+
+
+
+            This tutorial describes where the simulation screens from the provided images should live.
+
+
+
+            In the final QClang documentation, add screenshots here showing HFSS eigenmode simulation,
+
+
+
+            model tree, material layers, object properties, field visualization, mesh settings, and progress status.
+
+
+
+          </p>
+
+
+
+          <div class="reference-grid">
+
+
+
+            <article><h3>HFSS Eigenmode Simulation</h3><p>Document the 3D model view, setup tabs, logs, results, files, progress bar, and solver status.</p></article>
+
+
+
+            <article><h3>Model Tree</h3><p>Explain substrate, metal layers, qubits, couplers, readout resonators, flux lines, ports, boundaries, and excitations.</p></article>
+
+
+
+            <article><h3>Field Visualization</h3><p>Show E-field plots, color legends, frequency selection, vector display, cross section, and measurements.</p></article>
+
+
+
+            <article><h3>Simulation List</h3><p>Document total simulations, running/completed/failed counts, filters, rows, side preview, and export actions.</p></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="results-reports">
+
+
+
+          <p class="eyebrow">Results and Reports Tutorial</p>
+
+
+
+          <h2>Results, Verification, and Reports</h2>
+
+
+
+          <p>
+
+
+
+            Place final result screenshots here. This page should explain how users read simulation
+
+
+
+            outputs after HFSS and EPR/scQubits analysis: qubit frequency distribution, energy levels,
+
+
+
+            coupling maps, coherence summary, verification status, artifacts, and downloadable reports.
+
+
+
+          </p>
+
+
+
+          <div class="parameter-table">
+
+
+
+            <article><strong>Summary metrics</strong><span>Total qubits, average qubit frequency, anharmonicity, T1, T2, coherence, gates, and status.</span></article>
+
+
+
+            <article><strong>Qubit table</strong><span>Frequency, anharmonicity, T1, T2, coherence, participation ratio, and pass/fail status.</span></article>
+
+
+
+            <article><strong>Physics plots</strong><span>Frequency histogram, coupling map, energy levels, Hamiltonian summary, and performance estimates.</span></article>
+
+
+
+            <article><strong>Verification summary</strong><span>Design rule, frequency, coupling, coherence, fabrication, and custom checks.</span></article>
+
+
+
+            <article><strong>Artifacts</strong><span>HFSS results, scQubits results, capacitance matrix, Hamiltonian data, and PDF reports.</span></article>
+
+
+
+            <article><strong>Reports</strong><span>Generate and download complete analysis reports after final simulation completion.</span></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="execution-part-1">
+
+
+
+          <p class="eyebrow">Execution Tutorial</p>
+
+
+
+          <h2>Execution Tutorial - Part 1</h2>
+
+
+
+          <p>
+
+
+
+            This page explains the first execution stage for QClang documentation users.
+
+
+
+            After a QClang file is written and checked by the compiler, the design should be
+
+
+
+            exported into simulation-ready artifacts such as JSON IR, geometry data, or
+
+
+
+            electromagnetic setup files.
+
+
+
+          </p>
+
+
+
+          <div class="parameter-table">
+
+
+
+            <article><strong>Input</strong><span>A validated <code>.qcl</code> chip description with qubits, resonators, couplers, ports, and constraints.</span></article>
+
+
+
+            <article><strong>Compiler output</strong><span>Structured intermediate representation and design artifacts that simulation tools can consume.</span></article>
+
+
+
+            <article><strong>Simulation handoff</strong><span>Use this stage before HFSS, Q3D, and EPR analysis pages.</span></article>
+
+
+
+            <article><strong>User goal</strong><span>Confirm that the design intent is converted into a usable simulation workflow.</span></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="execution-part-2">
+
+
+
+          <p class="eyebrow">Execution Tutorial</p>
+
+
+
+          <h2>Execution Tutorial - Part 2</h2>
+
+
+
+          <p>
+
+
+
+            This page explains the second execution stage: reading simulation outputs and
+
+
+
+            connecting them back to QClang design decisions. Users should compare HFSS,
+
+
+
+            Q3D, and EPR/scQubits values against the result-analysis tables.
+
+
+
+          </p>
+
+
+
+          <div class="parameter-table">
+
+
+
+            <article><strong>HFSS review</strong><span>Check S-parameters, resonator response, field concentration, crosstalk, and convergence.</span></article>
+
+
+
+            <article><strong>Q3D review</strong><span>Check extracted capacitance, coupling, coherence-related thresholds, yield, and system quality.</span></article>
+
+
+
+            <article><strong>EPR review</strong><span>Check participation ratios, Hamiltonian parameters, loss channels, qubit metrics, and scQubits outputs.</span></article>
+
+
+
+            <article><strong>Final decision</strong><span>Use the analysis pages to decide whether the QClang design is ready, marginal, or needs redesign.</span></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+        <section class="doc-section" id="hfss-results-analysis">
+        <p class="eyebrow">Results Analysis</p>
+        <h2>HFSS Results Analysis</h2>
+        <p class="section-lead">HFSS results explain how the QClang-generated chip behaves electromagnetically. This page has been updated from <strong>HFSS_Quantum_Parameters (1).pptx</strong> and grouped so learners can study one simulation category at a time.</p>
+        <div class="parameter-table"><article><strong>Quantum Computing — SilicoFeller Format</strong><span>52</span></article><article><strong>Parameters</strong><span>7</span></article><article><strong>Categories</strong><span>26</span></article><article><strong>Critical</strong><span>Sources: IEEE / APS Research Papers &amp; Doctoral Theses (2004–2024)</span></article></div>
+        <div class="result-workbook grouped-results">
+        <details class="result-sheet result-root" open><summary><span>HFSS Simulation Output Parameters</span><small>52 parameters grouped into 7 categories</small></summary><div class="result-nested">
+        <details class="result-category" id="hfss-s-parameters" open><summary>S-Parameters &amp; RF Performance</summary><p class="category-note">RF checks for matching, transmission, isolation, coupling, phase response, and standing-wave behavior.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>VER ID</th><th>Parameter</th><th>Severity</th><th>Design Rule / Constraint</th><th>Ideal / Optimal Value</th><th>Acceptable Range</th><th>Good</th><th>Bad</th><th>Why It Matters</th></tr></thead><tbody><tr><td>1</td><td>HFSS-S-001</td><td>Return Loss</td><td>Critical</td><td>S11 ≤ −20 dB at operating frequency</td><td>&lt; −20 dB</td><td>−15 to −25 dB</td><td>&lt; −20 dB: excellent impedance match; full power into resonator/qubit</td><td>&gt; −10 dB: &gt;10% power reflected; readout chain SNR degraded</td><td>Reflected power from input port. Poor return loss = impedance mismatch → signal reflections degrade qubit readout fidelity.</td></tr><tr><td>2</td><td>HFSS-S-002</td><td>Insertion Loss</td><td>Critical</td><td>S21 ≥ −0.1 dB in passband</td><td>&lt; −0.1 dB</td><td>−0.1 to −1 dB</td><td>&lt; −0.1 dB: near-lossless transmission; signal integrity preserved</td><td>&gt; −3 dB: half power lost; readout SNR &lt; 3 dB, fidelity severely impacted</td><td>Signal transmission efficiency. High insertion loss reduces readout SNR, requiring higher drive power that heats the device.</td></tr><tr><td>3</td><td>HFSS-S-003</td><td>Transmission |S21|</td><td>High</td><td>|S21| ≥ 0.95 (linear) in passband</td><td>≈ 1.0 (unity)</td><td>0.9 – 1.0</td><td>≥ 0.95: &gt;90% amplitude transmission; strong coupling confirmed</td><td>&lt; 0.5: &gt;50% amplitude loss; readout inefficient</td><td>Linear magnitude of S21. Near-unity confirms full coupling efficiency; used in EPR extraction and resonator characterisation.</td></tr><tr><td>4</td><td>HFSS-S-004</td><td>Port Isolation</td><td>High</td><td>Sij ≤ −30 dB between non-coupled ports</td><td>&lt; −30 dB</td><td>−20 to −40 dB</td><td>&lt; −30 dB: crosstalk negligible; simultaneous multi-qubit readout viable</td><td>&gt; −15 dB: strong port coupling; driven rotations on idle qubits</td><td>Cross-port electromagnetic isolation. Insufficient isolation causes simultaneous readout errors and qubit–qubit cross-drive.</td></tr><tr><td>5</td><td>HFSS-S-005</td><td>Forward Isolation (S12)</td><td>High</td><td>S12 ≤ −20 dB (Purcell filter context)</td><td>&lt; −20 dB</td><td>−15 to −30 dB</td><td>&lt; −20 dB: amplifier backaction blocked; qubit protected from output noise</td><td>&gt; −10 dB: HEMT noise reaches qubit; excess excitation and T₁ degradation</td><td>Reverse isolation prevents HEMT amplifier noise photons from reaching qubit. Critical in Purcell filter and circulator design.</td></tr><tr><td>6</td><td>HFSS-S-006</td><td>Phase of S21 (GDD)</td><td>Medium</td><td>Group delay deviation &lt; 1 ns across qubit bandwidth</td><td>Linear phase</td><td>&lt; 5° deviation</td><td>Linear phase: negligible pulse distortion; gate calibration stable</td><td>Non-linear phase: pulse distortion → systematic gate errors</td><td>Non-linear phase response causes group delay dispersion that distorts shaped control pulses, increasing gate error.</td></tr><tr><td>7</td><td>HFSS-S-007</td><td>Coupling Coefficient κ</td><td>Critical</td><td>1 MHz ≤ κ/2π ≤ 10 MHz (readout resonator)</td><td>1 – 5 MHz</td><td>0.5 – 20 MHz</td><td>1–5 MHz: fast readout (&lt; 1 µs) with Purcell rate &lt; 1 kHz; near quantum limit</td><td>&lt; 0.1 MHz: readout &gt; 10 µs; &gt; 100 MHz: Purcell collapse of T₁</td><td>External coupling rate of readout resonator. Sets fundamental trade-off between measurement speed and Purcell-induced qubit decay.</td></tr><tr><td>8</td><td>HFSS-S-008</td><td>VSWR</td><td>Medium</td><td>VSWR ≤ 1.1 : 1 at operating frequency</td><td>&lt; 1.1 : 1</td><td>1.1 – 1.5 : 1</td><td>&lt; 1.1:1: &gt;99% power transfer; standing waves negligible</td><td>&gt; 2.0:1: standing waves cause frequency-dependent errors</td><td>Voltage standing wave ratio quantifies impedance mismatch. High VSWR degrades power delivery to qubit and readout resonator.</td></tr></tbody></table></div></details><details class="result-category" id="hfss-resonator-cavity" open><summary>Resonator &amp; Cavity Parameters</summary><p class="category-note">Resonator and cavity checks that control readout speed, coupling, Q factors, impedance, and frequency placement.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>VER ID</th><th>Parameter</th><th>Severity</th><th>Design Rule / Constraint</th><th>Ideal / Optimal Value</th><th>Acceptable Range</th><th>Good</th><th>Bad</th><th>Why It Matters</th></tr></thead><tbody><tr><td>9</td><td>HFSS-R-001</td><td>Resonant Frequency f₀</td><td>Critical</td><td>4.0 GHz ≤ f₀ ≤ 8.0 GHz; detuned ≥ 300 MHz from qubit</td><td>5 – 7 GHz</td><td>4 – 8 GHz</td><td>5–7 GHz: low thermal photon occupancy; standard coax hardware</td><td>&lt; 1 GHz: thermal excitation; &gt; 15 GHz: lossy substrate</td><td>Resonator frequency sets readout photon energy, hardware requirements, and Purcell rate via qubit–resonator detuning.</td></tr><tr><td>10</td><td>HFSS-R-002</td><td>Loaded Q (Q_L)</td><td>Critical</td><td>Q_L ~ 5,000–20,000 (readout); &gt; 10⁶ (memory)</td><td>5,000 – 20,000</td><td>1,000 – 50,000</td><td>5k–20k: readout BW 250–1000 kHz; fast measurement with acceptable Purcell</td><td>&lt; 500: too leaky; rapid Purcell decay; &gt; 10⁶ readout: extremely slow</td><td>Loaded Q determines readout bandwidth κ = ω₀/Q_L. Governs measurement time and Purcell-limited qubit T₁.</td></tr><tr><td>11</td><td>HFSS-R-003</td><td>Internal Q (Q_i)</td><td>Critical</td><td>Q_i ≥ 10⁵ (2D planar); ≥ 10⁷ (3D cavity)</td><td>&gt; 10⁶</td><td>10⁵ – 10⁷</td><td>&gt; 10⁶: resonator loss &lt;&lt; Purcell loss; qubit T₁ not resonator-limited</td><td>&lt; 10⁴: resonator dominates T₁ budget; unacceptable in planar SC circuits</td><td>Internal Q reflects intrinsic material, TLS, and vortex losses in resonator walls. Sets upper limit on qubit T₁ via Purcell.</td></tr><tr><td>12</td><td>HFSS-R-004</td><td>External Q (Q_e)</td><td>High</td><td>Q_e ~ 2,000 – 50,000 (readout)</td><td>2,000 – 20,000</td><td>500 – 100,000</td><td>2k–20k: controllable readout rate; Purcell rate &lt; qubit decay rate</td><td>&lt; 100: over-coupled; Purcell T₁ &lt; 1 µs; &gt; 10⁶: under-coupled</td><td>External Q sets coupling to transmission line. With Q_i &gt;&gt; Q_e (over-coupled), resonator is readout-limited not loss-limited.</td></tr><tr><td>13</td><td>HFSS-R-005</td><td>Coupling Strength g</td><td>Critical</td><td>50 MHz ≤ g/2π ≤ 200 MHz (strong coupling)</td><td>50 – 150 MHz</td><td>10 – 300 MHz</td><td>50–150 MHz: well in strong coupling; g/κ &gt; 10 and g/γ &gt; 10 confirmed</td><td>&lt; 1 MHz: weak coupling; cQED regime not achieved; readout fidelity &lt; 90%</td><td>Qubit–resonator coupling. Strong coupling (g &gt;&gt; κ, γ) is fundamental requirement for circuit QED dispersive readout.</td></tr><tr><td>14</td><td>HFSS-R-006</td><td>Dispersive Shift χ</td><td>Critical</td><td>0.5 MHz ≤ |χ|/2π ≤ 10 MHz</td><td>1 – 5 MHz</td><td>0.1 – 20 MHz</td><td>1–5 MHz: large IQ-plane separation; high-fidelity single-shot readout</td><td>&lt; 0.01 MHz: states indistinguishable; &gt; 50 MHz: photon-induced dephasing</td><td>State-dependent resonator frequency shift enables QND readout. χ = g²/Δ sets IQ-plane angle; drives single-shot fidelity.</td></tr><tr><td>15</td><td>HFSS-R-007</td><td>Photon Decay Rate κ</td><td>High</td><td>κ/2π = 1 – 5 MHz (readout resonator)</td><td>1 – 5 MHz</td><td>0.1 – 20 MHz</td><td>1–5 MHz: readout ring-up/ring-down time ~100–500 ns; compatible with 1 µs cycles</td><td>&lt; 10 kHz: readout too slow; &gt; 100 MHz: broad resonator; Purcell collapse</td><td>Resonator energy decay rate sets readout speed. Too small → slow readout; too large → Purcell-limited T₁.</td></tr><tr><td>16</td><td>HFSS-R-008</td><td>Impedance Z₀</td><td>Medium</td><td>Z₀ = 50 Ω ± 2 Ω (matched to coax)</td><td>50 Ω</td><td>45 – 55 Ω</td><td>50 Ω ± 1 Ω: VSWR &lt; 1.05; full power coupling, no reflections in cryo lines</td><td>&lt; 25 Ω or &gt; 100 Ω: VSWR &gt; 2; large reflections; effective κ shifts from design</td><td>Characteristic impedance matching to 50 Ω coaxial environment. Mismatch reduces coupling efficiency and shifts κ from design.</td></tr><tr><td>17</td><td>HFSS-R-009</td><td>Frequency Pulling Δf</td><td>Medium</td><td>Δf &lt; 1 MHz from design target</td><td>&lt; 0.5 MHz</td><td>&lt; 2 MHz</td><td>&lt; 0.5 MHz: resonator on-frequency; readout pulse pre-calibrated</td><td>&gt; 5 MHz: readout tone off-resonance; SNR degraded; tone calibration required</td><td>Frequency shift due to coupling, fabrication tolerances, or dielectric loading. Excess pulling requires per-device calibration.</td></tr><tr><td>18</td><td>HFSS-R-010</td><td>Kinetic Inductance α</td><td>Low</td><td>0.01 ≤ α ≤ 0.3 for standard Al/Nb resonators</td><td>0.05 – 0.2</td><td>0.001 – 0.5</td><td>0.05–0.2: moderate nonlinearity; resonator frequency stable vs power</td><td>&gt; 0.8: strong nonlinearity; resonator bifurcates at readout photon numbers</td><td>Kinetic inductance fraction α = L_k/(L_k+L_geo). Controls resonator nonlinearity, power handling, and anharmonicity contribution.</td></tr></tbody></table></div></details><details class="result-category" id="hfss-em-fields" open><summary>Electromagnetic Field Outputs</summary><p class="category-note">Field-solution checks for peak fields, surface/interface participation, EPR participation, and radiation quality.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>VER ID</th><th>Parameter</th><th>Severity</th><th>Design Rule / Constraint</th><th>Ideal / Optimal Value</th><th>Acceptable Range</th><th>Good</th><th>Bad</th><th>Why It Matters</th></tr></thead><tbody><tr><td>19</td><td>HFSS-E-001</td><td>Peak E-Field |E|max</td><td>High</td><td>|E|max &lt; 10⁶ V/m at junction (single photon)</td><td>&lt; 10⁵ V/m</td><td>&lt; 10⁷ V/m</td><td>&lt; 10⁵ V/m: well below oxide breakdown; TLS excitation rate suppressed</td><td>&gt; 10⁸ V/m: dielectric breakdown risk; TLS saturation</td><td>Peak E-field at Josephson junction. High fields excite TLS defects in AlOx barrier and substrate, directly increasing T₁⁻¹.</td></tr><tr><td>20</td><td>HFSS-E-002</td><td>H-Field Distribution |H|</td><td>Medium</td><td>|H| &lt; 10³ A/m at SC surface; spatially uniform</td><td>&lt; 500 A/m</td><td>&lt; 5,000 A/m</td><td>&lt; 500 A/m uniform: no vortex nucleation; surface current below pair-breaking</td><td>&gt; 10⁵ A/m: vortex trapping in SC film; each vortex adds ~1 kHz to κ</td><td>H-field concentration at superconductor surface. Hotspots exceed H_c1 locally, nucleating Abrikosov vortices that add loss.</td></tr><tr><td>21</td><td>HFSS-E-003</td><td>Interface Participation pᵢ</td><td>Critical</td><td>p_SA &lt; 10⁻³; p_MS &lt; 10⁻³</td><td>&lt; 10⁻³</td><td>10⁻³ – 10⁻²</td><td>&lt; 10⁻³: interface loss contribution &lt; 1 kHz to T₁⁻¹; T₁ &gt; 1 ms achievable</td><td>&gt; 10⁻¹: interface dominates all loss channels; T₁ &lt; 10 µs</td><td>Fraction of electric field energy at lossy interface. pᵢ × tan δᵢ × ω = loss rate. Dominant predictor of TLS-limited T₁.</td></tr><tr><td>22</td><td>HFSS-E-004</td><td>Surface Participation p_MA</td><td>Critical</td><td>p_MA (metal–air) &lt; 10⁻⁴</td><td>&lt; 10⁻⁴</td><td>10⁻⁴ – 10⁻³</td><td>&lt; 10⁻⁴: native oxide TLS loss negligible; consistent with T₁ &gt; 500 µs</td><td>&gt; 10⁻²: native oxide (AlOx) TLS dominates decay; T₁ &lt; 50 µs</td><td>Energy stored in metal–air (native oxide) interface. Key TLS loss channel in Al transmons; reduced by surface treatment.</td></tr><tr><td>23</td><td>HFSS-E-005</td><td>Bulk Participation p_bulk</td><td>High</td><td>p_bulk &lt; 10⁻² for Si/sapphire substrates</td><td>&lt; 5×10⁻³</td><td>10⁻² – 5×10⁻²</td><td>&lt; 5×10⁻³: bulk dielectric loss &lt; 1 kHz; substrate does not limit T₁</td><td>&gt; 0.1: bulk dominates; even ultra-pure Si limits T₁ &lt; 100 µs</td><td>Energy fraction in bulk substrate dielectric. Multiplied by tan δ gives bulk T₁ contribution. Minimised by geometry.</td></tr><tr><td>24</td><td>HFSS-E-006</td><td>EPR (Junction EPR)</td><td>Critical</td><td>Junction EPR ≥ 0.9 for dominant mode</td><td>0.95 – 1.0</td><td>0.8 – 1.0</td><td>0.95–1.0: junction hosts &gt;95% inductive energy; anharmonicity and χ predicted accurately</td><td>&lt; 0.5: junction energy shared with stray inductances; Hamiltonian extraction unreliable</td><td>Fraction of inductive energy in Josephson junction vs total. Drives EPR method for extracting dispersive shifts and decay rates.</td></tr><tr><td>25</td><td>HFSS-E-007</td><td>Radiation Q (Q_rad)</td><td>High</td><td>Q_rad ≥ 10⁶ for on-chip resonators (shielded)</td><td>&gt; 10⁶</td><td>&gt; 10⁵</td><td>&gt; 10⁶: radiation loss &lt; 1 kHz; package design validated; Q_i not radiation-limited</td><td>&lt; 10⁴: radiation loss dominates internal Q; chip must be redesigned</td><td>Quality factor limited by power radiated from chip. Poor shielding or slot-line modes radiate energy, reducing Q_i and T₁.</td></tr></tbody></table></div></details><details class="result-category" id="hfss-qubit-performance" open><summary>Qubit Performance Metrics</summary><p class="category-note">HFSS-derived qubit checks for frequency, anharmonicity, energy scales, coherence, Purcell decay, and gate fidelity.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>VER ID</th><th>Parameter</th><th>Severity</th><th>Design Rule / Constraint</th><th>Ideal / Optimal Value</th><th>Acceptable Range</th><th>Good</th><th>Bad</th><th>Why It Matters</th></tr></thead><tbody><tr><td>26</td><td>HFSS-Q-001</td><td>Anharmonicity α</td><td>Critical</td><td>|α|/2π ≥ 150 MHz (|α| = |ω₁₂ − ω₀₁|)</td><td>−200 to −300 MHz</td><td>−100 to −500 MHz</td><td>|α| 200–300 MHz: DRAG gates &lt; 30 ns with leakage &lt; 0.01%; selective driving</td><td>|α| &lt; 50 MHz: must slow gates to &gt; 200 ns; leakage to |2⟩ &gt; 1%</td><td>Frequency gap between 0→1 and 1→2 transitions. Must exceed pulse bandwidth for selective driving without leakage.</td></tr><tr><td>27</td><td>HFSS-Q-002</td><td>Qubit Frequency f_q</td><td>Critical</td><td>4.0 GHz ≤ f_q ≤ 6.0 GHz (transmon sweet spot)</td><td>4 – 6 GHz</td><td>3 – 8 GHz</td><td>4–6 GHz: kT/hf &lt; 0.001 at 20 mK; standard microwave hardware</td><td>&lt; 1 GHz: thermal population &gt; 1%; &gt; 10 GHz: substrate loss increases</td><td>Qubit transition frequency. Must be well above thermal energy (kT/h ≈ 400 MHz at 20 mK) and away from substrate TLS resonances.</td></tr><tr><td>28</td><td>HFSS-Q-003</td><td>Josephson Energy E_J</td><td>Critical</td><td>10 GHz ≤ E_J/h ≤ 40 GHz; E_J/E_C ≥ 50</td><td>15 – 30 GHz</td><td>5 – 60 GHz</td><td>15–30 GHz: f_q on target; charge insensitive; junction reproducible within ±5%</td><td>&lt; 1 GHz: qubit below 2 GHz; thermally excited; E_J/E_C &lt; 10: charge sensitive</td><td>Josephson tunneling energy sets qubit frequency and E_J/E_C ratio. Extracted in HFSS via junction inductance L_J = Φ₀²/E_J.</td></tr><tr><td>29</td><td>HFSS-Q-004</td><td>Charging Energy E_C</td><td>Critical</td><td>200 MHz ≤ E_C/h ≤ 350 MHz</td><td>200 – 350 MHz</td><td>100 – 500 MHz</td><td>200–350 MHz: anharmonicity ~−E_C; charge noise suppressed; qubit addressable</td><td>&lt; 50 MHz: near-harmonic oscillator; &gt; 1000 MHz: Cooper-pair box regime</td><td>Single-electron charging energy set by shunt capacitance. E_C = e²/2C_Σ; defines anharmonicity and charge sensitivity.</td></tr><tr><td>30</td><td>HFSS-Q-005</td><td>Purcell Decay Rate γ_P</td><td>Critical</td><td>γ_P/2π &lt; 1 kHz (without filter); &lt; 100 Hz (with)</td><td>&lt; 500 Hz</td><td>&lt; 10 kHz</td><td>&lt; 500 Hz: Purcell T₁ contribution &gt; 2 ms; does not limit qubit T₁ budget</td><td>&gt; 100 kHz: Purcell T₁ &lt; 10 µs; qubit lifetime dominated by readout line</td><td>Qubit decay rate into transmission line via off-resonant resonator. γ_P = (g/Δ)²κ. Limits T₁ without Purcell filter.</td></tr><tr><td>31</td><td>HFSS-Q-006</td><td>Predicted T₁</td><td>Critical</td><td>T₁ &gt; 100 µs (planar 2D); &gt; 1 ms (3D cavity)</td><td>&gt; 500 µs (3D) / &gt; 100 µs (2D)</td><td>50 – 500 µs</td><td>&gt; 100 µs: supports &gt; 1000 gate depth within coherence envelope (10 ns gates)</td><td>&lt; 10 µs: &lt; 100 gates within T₁; fault-tolerant computation infeasible</td><td>Predicted energy relaxation time from HFSS loss model: 1/T₁ = Σ(pᵢ × ωᵢ × tan δᵢ) + γ_Purcell + γ_radiation.</td></tr><tr><td>32</td><td>HFSS-Q-007</td><td>Predicted T₂</td><td>Critical</td><td>T₂ &gt; 50 µs; ideally T₂ ≈ 2T₁ (pure dephasing limited)</td><td>&gt; 100 µs</td><td>20 – 300 µs</td><td>T₂ ≈ 2T₁: pure dephasing negligible; charge and flux noise well-suppressed</td><td>T₂ ≪ T₁: strong 1/f dephasing; substrate charge traps or flux noise dominant</td><td>Pure dephasing time. Gap between T₂ and 2T₁ quantifies 1/f noise from TLS charge noise and flux noise in junctions.</td></tr><tr><td>33</td><td>HFSS-Q-008</td><td>1Q Gate Fidelity F₁Q</td><td>Critical</td><td>F₁Q ≥ 99.9% (randomised benchmarking)</td><td>&gt; 99.9 %</td><td>99 – 99.99 %</td><td>&gt; 99.9%: below surface-code fault-tolerance threshold (~99.4%); QEC viable</td><td>&lt; 99%: error rate exceeds fault-tolerance threshold; errors cascade in QEC</td><td>Single-qubit gate fidelity estimated from T₁, T₂, anharmonicity, and leakage. Must exceed fault-tolerant threshold ~99.5%.</td></tr><tr><td>34</td><td>HFSS-Q-009</td><td>2Q Gate Fidelity F₂Q</td><td>Critical</td><td>F₂Q ≥ 99.5% (CZ or iSWAP gate)</td><td>&gt; 99.5 %</td><td>98 – 99.9 %</td><td>&gt; 99.5%: viable for surface code with standard overhead; ZZ residual &lt; 10 kHz</td><td>&lt; 97%: excessive error rate; 2Q errors dominate total circuit error budget</td><td>Two-qubit gate fidelity. More sensitive to residual ZZ coupling, leakage, coupler calibration, and neighbouring qubit crosstalk.</td></tr></tbody></table></div></details><details class="result-category" id="hfss-crosstalk-isolation" open><summary>Crosstalk &amp; Isolation</summary><p class="category-note">Checks for always-on ZZ, neighbour isolation, leakage, package modes, and unintended electromagnetic coupling.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>VER ID</th><th>Parameter</th><th>Severity</th><th>Design Rule / Constraint</th><th>Ideal / Optimal Value</th><th>Acceptable Range</th><th>Good</th><th>Bad</th><th>Why It Matters</th></tr></thead><tbody><tr><td>35</td><td>HFSS-C-001</td><td>ZZ Coupling ζ (idle)</td><td>Critical</td><td>ζ_ZZ/2π &lt; 10 kHz between non-coupled pairs (idle)</td><td>&lt; 1 kHz</td><td>1 – 100 kHz</td><td>&lt; 1 kHz: conditional phase &lt; 0.01 rad in 10 µs; negligible idle ZZ error</td><td>&gt; 1 MHz: &gt; 1 rad conditional phase per µs; circuit depth severely limited</td><td>Always-on ZZ interaction from dispersive coupling. Even static ZZ causes phase errors that accumulate, limiting circuit depth.</td></tr><tr><td>36</td><td>HFSS-C-002</td><td>Nearest Neighbour Isolation</td><td>High</td><td>S_ij (nearest neighbour) ≤ −40 dB</td><td>&lt; −40 dB</td><td>−30 to −50 dB</td><td>&lt; −40 dB: driven rotation on neighbour qubit &lt; 10⁻⁴ rad during single-qubit gate</td><td>&gt; −20 dB: significant driven rotation on neighbours; simultaneous single-qubit gates not independent</td><td>EM isolation between nearest-neighbour qubits. Insufficient isolation causes unwanted rotations during single-qubit gates.</td></tr><tr><td>37</td><td>HFSS-C-003</td><td>Next-Nearest Isolation</td><td>High</td><td>S_ij (next-nearest) ≤ −60 dB</td><td>&lt; −60 dB</td><td>−50 to −70 dB</td><td>&lt; −60 dB: long-range crosstalk &lt; 10⁻⁶ rad; 2D grid operation fully independent</td><td>&gt; −40 dB: long-range coupling; frequency collisions compound with nearest-neighbour</td><td>Isolation beyond nearest neighbour. Critical for scalable multi-qubit processors; long-range EM leakage compounds errors.</td></tr><tr><td>38</td><td>HFSS-C-004</td><td>Leakage to |2⟩ (L₁)</td><td>Critical</td><td>L₁ &lt; 0.01% per gate</td><td>&lt; 0.01 %</td><td>0.01 – 0.1 %</td><td>&lt; 0.01%: seepage outside qubit subspace negligible; DRAG pulse sufficient</td><td>&gt; 1%: leakage accumulates over circuit; error correction cannot track non-qubit states</td><td>Population leaked to |2⟩ non-computational state during gates. DRAG pulses mitigate but require sufficient anharmonicity.</td></tr><tr><td>39</td><td>HFSS-C-005</td><td>Spurious Mode Gap Δf_spur</td><td>High</td><td>Δf_spur ≥ 1 GHz from nearest spurious EM mode</td><td>&gt; 1 GHz gap</td><td>0.5 – 2 GHz gap</td><td>&gt; 1 GHz gap: no spurious mode within pulse bandwidth; gate calibration stable</td><td>&lt; 0.2 GHz: mode within pulse bandwidth; state leakage and parametric drive of spurious modes</td><td>Frequency distance to nearest unintended EM mode. Modes within drive bandwidth cause state leakage and gate calibration drift.</td></tr><tr><td>40</td><td>HFSS-C-006</td><td>Package Mode Density</td><td>Medium</td><td>&lt; 1 spurious package mode per GHz near qubit band</td><td>&lt; 0.5 modes/GHz</td><td>&lt; 5 modes/GHz</td><td>&lt; 0.5/GHz: low probability of accidental hybridisation across 64-qubit chip</td><td>&gt; 10/GHz: dense mode spectrum; unavoidable hybridisation; package must be redesigned</td><td>Density of package/enclosure modes near qubit frequency. High density increases probability of accidental mode hybridisation.</td></tr></tbody></table></div></details><details class="result-category" id="hfss-thermal-loss" open><summary>Thermal &amp; Loss Parameters</summary><p class="category-note">Loss and thermal checks for dielectric, conductor, substrate, TLS, radiation, and package-related dissipation.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>VER ID</th><th>Parameter</th><th>Severity</th><th>Design Rule / Constraint</th><th>Ideal / Optimal Value</th><th>Acceptable Range</th><th>Good</th><th>Bad</th><th>Why It Matters</th></tr></thead><tbody><tr><td>41</td><td>HFSS-T-001</td><td>Dielectric Loss Tangent</td><td>Critical</td><td>tan δ &lt; 10⁻⁶ (bulk substrate, Si or Al₂O₃)</td><td>&lt; 10⁻⁶</td><td>10⁻⁷ – 10⁻⁵</td><td>&lt; 10⁻⁶ (Si/sapphire): substrate contribution to T₁⁻¹ &lt; 1 kHz; Q_i &gt; 10⁶</td><td>&gt; 10⁻³ (SiO₂, organics): dielectric loss dominates; T₁ &lt; 1 µs; unacceptable</td><td>Bulk dielectric loss factor. Mandates high-resistivity Si or c-plane sapphire; amorphous oxides and organics are lossy.</td></tr><tr><td>42</td><td>HFSS-T-002</td><td>Surface Resistance Rs</td><td>High</td><td>Rs &lt; 0.01 mΩ/□ at 10 mK for Al/Nb films</td><td>&lt; 0.005 mΩ/□</td><td>0.001 – 0.1 mΩ/□</td><td>&lt; 0.005 mΩ/□: residual resistance ratio high; vortex-free film; Q_i &gt; 10⁶</td><td>&gt; 1 mΩ/□: residual normal-metal loss or vortex contribution; Q_i &lt; 10⁴</td><td>Microwave surface resistance of superconducting film. Residual Rs from vortices, normal-metal inclusions, or granularity limits Q_i.</td></tr><tr><td>43</td><td>HFSS-T-003</td><td>Dissipated Power P_sub</td><td>High</td><td>P_sub &lt; 1 pW per qubit at design drive level</td><td>&lt; 0.1 pW</td><td>0.1 – 100 pW</td><td>&lt; 0.1 pW: quasiparticle generation rate negligible; T₁ not QP-limited</td><td>&gt; 1 nW: significant quasiparticle poisoning; T₁ collapses in µs timescale</td><td>Power deposited in substrate at millikelvin temperatures. Excess heating raises quasiparticle population, reducing T₁.</td></tr><tr><td>44</td><td>HFSS-T-004</td><td>Thermal NEP</td><td>Medium</td><td>NEP &lt; 10⁻²⁰ W/√Hz at qubit frequency (20 mK)</td><td>&lt; 10⁻²⁰ W/√Hz</td><td>10⁻²⁰ – 10⁻¹⁸</td><td>&lt; 10⁻²⁰: thermal photon occupancy n_th &lt; 10⁻³; qubit not spuriously excited</td><td>&gt; 10⁻¹⁶: near-classical noise floor; qubit excited multiple times per measurement cycle</td><td>Thermal noise equivalent power at qubit frequency. Drives spurious qubit excitation and sets fundamental measurement noise floor.</td></tr><tr><td>45</td><td>HFSS-T-005</td><td>TLS Loss Rate 1/T₁_TLS</td><td>Critical</td><td>1/T₁_TLS &lt; 1 kHz (TLS contribution to decay)</td><td>&lt; 0.5 kHz</td><td>0.5 – 10 kHz</td><td>&lt; 0.5 kHz: TLS loss gives T₁_TLS &gt; 2 ms; not limiting coherence budget</td><td>&gt; 100 kHz: TLS dominates all other T₁ channels; requires redesign</td><td>Decay rate contribution from two-level system defects at metal–substrate, metal–air, and substrate–air interfaces.</td></tr><tr><td>46</td><td>HFSS-T-006</td><td>Conductor Loss α_c</td><td>Medium</td><td>α_c &lt; 0.001 dB/m in SC resonator lines</td><td>&lt; 0.0001 dB/m</td><td>0.0001 – 0.1 dB/m</td><td>&lt; 0.0001 dB/m: ohmic loss negligible vs radiation and TLS loss in SC lines</td><td>&gt; 1 dB/m: conductor loss dominates; normal-metal sections or damaged SC film</td><td>Ohmic attenuation per unit length. Negligible in good superconductors far below Tc; dominant in normal metal or granular films.</td></tr><tr><td>47</td><td>HFSS-T-007</td><td>Package Radiation Loss 1/Q_rad</td><td>High</td><td>1/Q_rad &lt; 10⁻⁷ (shielded package)</td><td>&lt; 10⁻⁷</td><td>10⁻⁷ – 10⁻⁵</td><td>&lt; 10⁻⁷: radiation Q &gt; 10⁷; package does not limit resonator or qubit Q</td><td>&gt; 10⁻⁴: radiation loss comparable to TLS loss; package seams/vias must be redesigned</td><td>Inverse radiation Q. Power fraction radiated from chip to environment via package seams, slots, and via fields.</td></tr></tbody></table></div></details><details class="result-category" id="hfss-convergence" open><summary>Simulation Convergence Metrics</summary><p class="category-note">Numerical-quality checks for adaptive passes, mesh size, energy error, S-parameter convergence, and RAM use.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>VER ID</th><th>Parameter</th><th>Severity</th><th>Design Rule / Constraint</th><th>Ideal / Optimal Value</th><th>Acceptable Range</th><th>Good</th><th>Bad</th><th>Why It Matters</th></tr></thead><tbody><tr><td>48</td><td>HFSS-V-001</td><td>Delta S Convergence (ΔS)</td><td>Critical</td><td>ΔS &lt; 0.002 (max |S-matrix change| between passes)</td><td>&lt; 0.001</td><td>0.001 – 0.005</td><td>&lt; 0.001: S-parameters converged to 3rd decimal place; Q-factor reliable to ±1%</td><td>&gt; 0.01: S-parameters still shifting; Q and coupling coefficients unreliable</td><td>Primary HFSS convergence criterion. Maximum change in S-parameter matrix between successive adaptive mesh refinement passes.</td></tr><tr><td>49</td><td>HFSS-V-002</td><td>Adaptive Pass Count</td><td>Medium</td><td>Converge within 6 – 15 adaptive passes</td><td>6 – 12 passes</td><td>6 – 25 passes</td><td>6–12 passes: efficient meshing; geometry well-suited to HFSS basis functions</td><td>&gt; 40 passes without convergence: poorly conditioned geometry or material error; abort and review</td><td>Number of mesh refinement iterations to reach ΔS criterion. Many passes indicates difficult geometry or incorrect material setup.</td></tr><tr><td>50</td><td>HFSS-V-003</td><td>Mesh Element Count</td><td>Medium</td><td>10,000 – 500,000 tetrahedra for typical qubit geometry</td><td>20k – 100k</td><td>10k – 500k</td><td>20k–100k: sufficient resolution for junction, pad, and resonator without excessive RAM</td><td>&gt; 1,000,000: direct solver RAM &gt; 256 GB; iterative solver with lower accuracy required</td><td>Total finite-element mesh size. Under-meshed → inaccurate fields; over-meshed → excessive compute cost and RAM.</td></tr><tr><td>51</td><td>HFSS-V-004</td><td>Energy Error Δε/ε</td><td>High</td><td>Energy error &lt; 0.5% (relative stored energy error)</td><td>&lt; 0.2 %</td><td>0.2 – 1 %</td><td>&lt; 0.2%: field solution accurate; participation ratios and Q-factors reliable to &lt; 1%</td><td>&gt; 2%: field solution inaccurate; EPR and loss calculations may be off by &gt; 10%</td><td>Relative error in total stored electromagnetic energy. Low energy error confirms accurate field solutions and Q-factor extraction.</td></tr><tr><td>52</td><td>HFSS-V-005</td><td>Simulation RAM Usage</td><td>Low</td><td>Peak RAM &lt; 64 GB for standard qubit simulation</td><td>&lt; 16 GB</td><td>16 – 64 GB</td><td>&lt; 16 GB: fits standard workstation; direct solver; fastest and most accurate</td><td>&gt; 128 GB: requires HPC cluster; iterative solver fallback; convergence harder</td><td>RAM required for direct matrix solver. Excess forces iterative solver with lower accuracy and convergence risk.</td></tr></tbody></table></div></details>
+        <details class="result-category" id="hfss-summary" open><summary>HFSS Summary</summary>
+        <p class="category-note">Use this as the quick overview of HFSS severity and category coverage.</p>
+        <div class="parameter-table"><article><strong>25</strong><span>Critical</span></article><article><strong>15</strong><span>High</span></article><article><strong>10</strong><span>Medium</span></article><article><strong>2</strong><span>Low</span></article><article><strong>S-Parameters &amp; RF Performance</strong><span>8 params · 3 critical</span></article><article><strong>Resonator &amp; Cavity Parameters</strong><span>10 params · 5 critical</span></article><article><strong>Electromagnetic Field Outputs</strong><span>7 params · 3 critical</span></article><article><strong>Qubit Performance Metrics</strong><span>9 params · 9 critical</span></article><article><strong>Crosstalk &amp; Isolation</strong><span>6 params · 2 critical</span></article><article><strong>Thermal &amp; Loss Parameters</strong><span>7 params · 2 critical</span></article><article><strong>Simulation Convergence Metrics</strong><span>5 params · 1 critical</span></article></div>
+        </details>
+        </div></details></div></section>
+        
+<section class="doc-section" id="q3d-results-analysis">
+
+        <p class="eyebrow">Results Analysis</p>
+
+        <h2>Q3D Results Analysis</h2>
+
+        <p class="section-lead">Q3D results explain the RLGC matrices, parasitic extraction values, and derived qubit metrics used after QClang creates superconducting chip geometry. This page has been updated from <strong>Q3D_Parameters_Corrected.pptx</strong>.</p>
+
+        <div class="parameter-table"><article><strong>58 parameters</strong><span>The corrected PPT covers 58 Q3D output parameters.</span></article><article><strong>11 categories</strong><span>Each category is kept as a left-sidebar subtopic and a readable documentation table.</span></article><article><strong>Matrix foundation</strong><span>Resistance, inductance, conductance, and capacitance matrices are the base Q3D outputs.</span></article><article><strong>Design loop</strong><span>Use Q3D matrices to derive Ec, Ej, g, χ, ζ, and Purcell-rate checks for QClang layouts.</span></article></div>
+
+        <div class="result-workbook grouped-results">
+
+        <details class="result-sheet result-root" open><summary><span>Q3D Corrected Parameters</span><small>58 corrected parameters grouped into 11 categories</small></summary><div class="result-nested">
+
+        <details class="result-category" id="q3d-resistance-matrix" open><summary>Resistance Matrix (R)</summary><p class="category-note">Resistance outputs describe DC and AC conductor losses. For superconducting layouts, use these values as fabrication and normal-state quality checks before low-temperature correction.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>1</td><td>DC Self-Resistance (R_ii)</td><td>R_ii / mΩ</td><td>DC sweep; sheet-resistance extraction</td><td>0.5 – 5 mΩ</td><td>&lt; 1 mΩ</td><td>0.5 – 5 mΩ</td><td>&gt; 50 mΩ</td><td>Ohmic loss in qubit loop raises thermal noise floor and damps resonator Q factor</td><td>Al becomes superconducting at 4K → R→0; use RₙA as fabrication quality proxy</td></tr><tr><td>2</td><td>AC Self-Resistance at 5–6 GHz</td><td>R_ac / mΩ</td><td>HFSS/Q3D surface impedance model</td><td>2 – 20 mΩ</td><td>&lt; 5 mΩ (superconducting at 4K)</td><td>5 – 20 mΩ</td><td>&gt; 100 mΩ</td><td>Values shown apply to normal-metal (room-temp) modeling; at cryogenic temp Al is superconducting (R→0). For non-SC segments or pre-cooldown checks, normal-metal losses degrade quality factor Q.</td><td>Skin effect sets frequency dependence: R_ac ∝ √f for bulk, ≈ R_dc for thin film &lt; δ_s. These ranges are room-temperature references; at mK, SC Al gives R_ac → 0.</td></tr><tr><td>3</td><td>Mutual Resistance (R_ij)</td><td>R_ij / μΩ</td><td>Full R matrix extraction in Q3D</td><td>&lt; 10 μΩ</td><td>≈ 0 (no shared current path)</td><td>&lt; 50 μΩ</td><td>&gt; 500 μΩ</td><td>Shared resistive coupling between conductors indicates galvanic crosstalk</td><td>Non-zero R_ij reveals overlapping ground return paths; fix by isolating ground planes</td></tr><tr><td>4</td><td>Contact / Via Resistance</td><td>R_via / mΩ</td><td>TDR or DC 4-probe; Q3D via model</td><td>&lt; 2 mΩ per via</td><td>&lt; 1 mΩ (superconducting through-Si)</td><td>1 – 5 mΩ</td><td>&gt; 20 mΩ</td><td>Resistance at layer transitions limits Q in 3D integration and flip-chip assemblies</td><td>Critical for multi-chip modules; oxidation or poor metal contact is the main failure mode</td></tr><tr><td>5</td><td>Ground Plane Sheet Resistance</td><td>R_sh / mΩ/sq</td><td>4-probe measurement; Q3D bulk conductivity input</td><td>&lt; 0.1 mΩ/sq (Al at 4K)</td><td>&lt; 0.1 mΩ/sq</td><td>0.1 – 0.5 mΩ/sq</td><td>&gt; 5 mΩ/sq</td><td>High R_sh creates inductive ground return paths and shifts mode frequencies across the chip</td><td>Perforated ground planes for vortex pinning add ~5–10 pH/sq inductance per square</td></tr></tbody></table></div></details><details class="result-category" id="q3d-inductance-matrix" open><summary>Inductance Matrix (L)</summary><p class="category-note">Inductance outputs connect geometry, kinetic inductance, mutual inductance, and Josephson energy used in qubit Hamiltonian extraction.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>6</td><td>Self-Inductance (L_ii)</td><td>L_ii / nH</td><td>Q3D magnetoquasistatic solver; pyEPR energy participation</td><td>0.5 – 5 nH</td><td>1 – 3 nH (target Ej/Ec ~ 50–80)</td><td>0.5 – 5 nH</td><td>&lt; 0.1 or &gt; 20 nH</td><td>Sets Josephson energy Ej = Φ₀²/2L; directly determines qubit frequency f ≈ √(8EjEc)/h</td><td>L = L_geometric + L_kinetic; kinetic inductance is material-dependent (Al: ~0.1–1 pH/sq)</td></tr><tr><td>7</td><td>Mutual Inductance (M_ij)</td><td>M_ij / pH</td><td>Q3D off-diagonal L matrix extraction</td><td>1 – 50 pH</td><td>&lt; 5 pH (idle qubits)</td><td>5 – 50 pH</td><td>&gt; 500 pH</td><td>Magnetically coupled flux between loops drives parasitic ZZ interaction and inductive crosstalk</td><td>Intentional M_ij used in flux-tunable couplers; unintentional M_ij sets residual ZZ floor</td></tr><tr><td>8</td><td>Geometric Inductance</td><td>L_geo / pH/μm</td><td>Q3D partial inductance extraction (PEEC)</td><td>0.3 – 0.8 pH/μm</td><td>&lt; 0.5 pH/μm (wide ground traces)</td><td>0.5 – 1 pH/μm</td><td>&gt; 2 pH/μm</td><td>Inductance from current path geometry adds to kinetic inductance to set total L and mode freq</td><td>Slot cuts in ground plane drastically increase L_geo; continuous ground plane is preferred</td></tr><tr><td>9</td><td>Kinetic Inductance (L_k)</td><td>L_k / pH/sq</td><td>Microwave resonator fitting; L_k = ℏ²/(π Δ e² n_s t)</td><td>1–2 pH/sq (Al, 100–200 nm); 30–200 pH/sq (NbTiN)</td><td>&lt; 2 pH/sq (standard Al transmon, 100–200 nm film)</td><td>1 – 10 pH/sq</td><td>&gt; 100 pH/sq (non-KI devices)</td><td>Inertia of Cooper pairs; provides non-linearity in KI qubits; adds to geometric L in CPW</td><td>High-L_k materials (NbTiN, TiN, NbN) used deliberately for kinetic inductance qubit designs</td></tr><tr><td>10</td><td>Josephson Inductance (L_J)</td><td>L_J / nH</td><td>Derived: L_J = Φ₀/(2π I_c) = Φ₀²/(2Ej); I_c from RₙA measurement</td><td>5 – 15 nH</td><td>8 – 12 nH (Ej/Ec ~ 50–80)</td><td>5 – 20 nH</td><td>&lt; 1 or &gt; 50 nH</td><td>Non-linear inductance of JJ; L_J(φ) = L_J0/cos(φ) provides essential quantum non-linearity</td><td>L_J is the ONLY non-linear element; its ratio to shunting capacitance sets anharmonicity α</td></tr></tbody></table></div></details><details class="result-category" id="q3d-conductance-matrix" open><summary>Conductance Matrix (G)</summary><p class="category-note">Conductance outputs describe leakage paths, dielectric loss, and shunt conductance that can reduce resonator Q and qubit coherence.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>11</td><td>Self-Conductance (G_ii)</td><td>G_ii / nS</td><td>Q3D DC conductance solve</td><td>&lt; 0.1 nS</td><td>&lt; 0.1 nS (high-R substrate)</td><td>0.1 – 1 nS</td><td>&gt; 10 nS</td><td>Leakage current to ground through substrate limits resonator quality factor directly</td><td>G_ii = 1/R_leak; appears as parallel resistance Q = ω_r C_r / G in resonator model</td></tr><tr><td>12</td><td>Substrate Bulk Conductance</td><td>G_bulk / nS</td><td>Resistivity measurement + Q3D G matrix</td><td>&lt; 0.01 nS</td><td>&lt; 0.01 nS (&gt; 10 kΩcm Si at 4K)</td><td>0.01 – 0.5 nS</td><td>&gt; 5 nS</td><td>Low-resistivity Si drastically degrades resonator Q; bulk conductance is the dominant channel</td><td>Use high-resistivity Si (&gt; 10 kΩcm) or sapphire; resistivity increases &gt;100× when cooled to 4K (carrier freeze-out; magnitude is strongly doping-dependent)</td></tr><tr><td>13</td><td>Surface / Interface Conductance</td><td>G_surf / nS/μm</td><td>Surface participation ratio + loss tangent fitting</td><td>&lt; 0.001 nS/μm</td><td>&lt; 0.001 nS/μm (clean passivated)</td><td>0.001 – 0.05 nS/μm</td><td>&gt; 0.1 nS/μm</td><td>Conductance along metal-air or metal-substrate interfaces is a major T₁ limitation via TLS</td><td>Adsorbed water and organic residues increase G_surf; HF dip and N₂ purge before cooldown helps</td></tr><tr><td>14</td><td>Mutual Conductance (G_ij)</td><td>G_ij / pS</td><td>Q3D off-diagonal G matrix extraction</td><td>&lt; 1 pS</td><td>&lt; 1 pS (isolated conductors)</td><td>1 – 50 pS</td><td>&gt; 500 pS</td><td>Leakage coupling between signal conductors via substrate surface conduction channels</td><td>Non-zero G_ij in presence of surface water or conductive substrate; fixed by surface clean or guard rings</td></tr></tbody></table></div></details><details class="result-category" id="q3d-capacitance-matrix" open><summary>Capacitance Matrix (C)</summary><p class="category-note">Capacitance outputs are the main Q3D bridge into transmon energy, coupling, detuning, and readout design.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>15</td><td>Qubit Self-Capacitance (C_Σ)</td><td>C_Σ / fF</td><td>Q3D electrostatic solve; Maxwell capacitance matrix</td><td>60 – 100 fF</td><td>60 – 100 fF (transmon shunting)</td><td>40 – 200 fF</td><td>&lt; 10 fF or &gt; 500 fF</td><td>Sets charging energy Ec = e²/2C_Σ; large C_Σ → transmon regime → exponentially reduced charge noise</td><td>C_Σ = Σ|C_ij| from Maxwell matrix; target Ej/Ec = 50–80 for optimal transmon performance</td></tr><tr><td>16</td><td>Readout Resonator Capacitance (C_r)</td><td>C_r / fF</td><td>Q3D capacitance matrix + HFSS eigenmode simulation</td><td>200 – 500 fF</td><td>200 – 500 fF (λ/4 CPW)</td><td>100 – 600 fF</td><td>&lt; 50 or &gt; 1 pF</td><td>Resonator mode capacitance sets frequency: ω_r = 1/√(L_r C_r); must target 6.5–8 GHz window</td><td>Combined with Q_ext sets readout bandwidth κ = ω_r/Q_ext; trade-off between speed and SNR</td></tr><tr><td>17</td><td>Qubit–Resonator Coupling Cap (C_g)</td><td>C_g / fF</td><td>Q3D Maxwell matrix off-diagonal C_12 between qubit island and resonator</td><td>1 – 10 fF</td><td>1 – 10 fF (dispersive limit)</td><td>0.5 – 15 fF</td><td>&lt; 0.1 or &gt; 50 fF</td><td>Sets coupling g = C_g/(2C_Σ)·√(ω_q ω_r/L_r C_r); must stay dispersive (g ≪ qubit–resonator detuning)</td><td>g/2π target 50–150 MHz; too large → strong coupling regime; Purcell decay ∝ (g/Δ)² × κ</td></tr><tr><td>18</td><td>Qubit–Qubit Coupling Cap (C_J)</td><td>C_J / fF</td><td>Q3D full capacitance matrix between qubit islands</td><td>0.5 – 5 fF</td><td>0.5 – 5 fF (tunable coupler)</td><td>0.2 – 10 fF</td><td>&lt; 0.05 or &gt; 30 fF</td><td>Drives direct transverse coupling J; residual C_J causes always-on ZZ unless tunable coupler used</td><td>Modern heavy-hex lattice uses tunable couplers to cancel residual ZZ to &lt; 10 kHz</td></tr><tr><td>19</td><td>Pad-to-Ground Parasitic Cap</td><td>C_pad / fF</td><td>Q3D with ground plane mesh</td><td>&lt; 5 fF per pad</td><td>&lt; 5 fF (small footprint)</td><td>1 – 20 fF</td><td>&gt; 50 fF</td><td>Unintended pad-to-ground capacitance shifts qubit frequency from design target</td><td>Each 1 fF of parasitic shifts f_qubit by ~10–30 MHz; critical to include in Hamiltonian model</td></tr><tr><td>20</td><td>Trace Mutual Capacitance (C_ij)</td><td>C_ij / fF</td><td>Q3D electrostatic solve off-diagonal extraction</td><td>&lt; 1 fF (separated lines)</td><td>&lt; 1 fF</td><td>1 – 5 fF</td><td>&gt; 20 fF</td><td>Capacitive coupling between control lines causes microwave crosstalk in drive and readout paths</td><td>Overlapping traces on adjacent layers is the primary source; add ground shield layer to suppress</td></tr></tbody></table></div></details><details class="result-category" id="q3d-parasitic-resistance" open><summary>Parasitic Resistance</summary><p class="category-note">Parasitic resistance checks identify unwanted ohmic paths, contacts, vias, and interconnect losses before superconducting operation.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>21</td><td>Series JJ Parasitic Resistance</td><td>R_ser / Ω</td><td>RF impedance spectroscopy; Q3D lead model</td><td>&lt; 0.01 Ω</td><td>&lt; 0.01 Ω (clean superconducting)</td><td>0.01 – 0.1 Ω</td><td>&gt; 1 Ω</td><td>Quasiparticle conductance in JJ leads causes T₁ decay via Ohmic dissipation in qubit circuit</td><td>Quasiparticle poisoning (stray radiation) transiently raises R_ser; shielding critical at mK</td></tr><tr><td>22</td><td>Shunt Parasitic Resistance (R_p)</td><td>R_p / kΩ</td><td>Q3D G matrix → R_p = 1/G_ii</td><td>&gt; 1 MΩ</td><td>&gt; 1 MΩ (effectively open)</td><td>100 kΩ – 1 MΩ</td><td>&lt; 10 kΩ</td><td>Parallel leakage path across qubit capacitor reduces effective Q = R_p·√(C/L)</td><td>Substrate residues from lithography are the most common cause; requires thorough O₂ plasma clean</td></tr><tr><td>23</td><td>Wirebond / Bump Resistance</td><td>R_wb / mΩ</td><td>4-probe TDR; Q3D bond-wire cylinder model</td><td>&lt; 5 mΩ per bond</td><td>&lt; 5 mΩ</td><td>2 – 20 mΩ</td><td>&gt; 100 mΩ</td><td>Parasitic series resistance contributes to insertion loss and thermal noise at 4K</td><td>Au–Au thermo-compression bonds have lower and more repeatable R_wb than Al wedge bonds</td></tr><tr><td>24</td><td>Metal Interface Contact Resistance</td><td>R_c / mΩ</td><td>TLM structure measurement; Q3D metal stack</td><td>&lt; 1 mΩ (clean Al–Al)</td><td>&lt; 1 mΩ</td><td>1 – 10 mΩ</td><td>&gt; 50 mΩ</td><td>Interface resistance at Al–Au and Al–Nb transitions is critical in 3D integration</td><td>Native Al₂O₃ (2–4 nm) must be removed by Ar ion milling before deposition for low R_c</td></tr></tbody></table></div></details><details class="result-category" id="q3d-parasitic-inductance" open><summary>Parasitic Inductance</summary><p class="category-note">Parasitic inductance checks identify wirebond, via, loop, and package effects that shift mode frequencies and add crosstalk.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>25</td><td>Wirebond / Bump Inductance</td><td>L_wb / nH</td><td>Q3D wire cylinder model; HFSS S-parameter fitting</td><td>0.5 – 2 nH per bond</td><td>&lt; 1 nH</td><td>0.3 – 3 nH</td><td>&gt; 5 nH</td><td>Series inductance in signal path creates impedance discontinuity; resonates near operating freq</td><td>Flip-chip indium bumps reduce L_wb to ~0.1 nH vs 1–2 nH for wirebonds; key for 3D scaling</td></tr><tr><td>26</td><td>Control Line Lead Inductance</td><td>L_lead / pH</td><td>Q3D PEEC; partial inductance extraction</td><td>&lt; 100 pH</td><td>&lt; 100 pH (short on-chip)</td><td>50 – 500 pH</td><td>&gt; 2 nH</td><td>Lead inductance in flux/charge bias lines causes AC flux errors and qubit frequency shifts</td><td>Long coax from room-temperature electronics adds 1–10 nH; de-embed by careful calibration</td></tr><tr><td>27</td><td>Ground Plane Slot Inductance</td><td>L_slot / pH/sq</td><td>Q3D mesh simulation of ground plane geometry</td><td>&lt; 1 pH/sq</td><td>&lt; 1 pH/sq (continuous ground)</td><td>1 – 5 pH/sq</td><td>&gt; 20 pH/sq</td><td>Inductance from ground return path gaps distorts mode frequencies across the chip</td><td>Vortex-pinning holes (diameter ~ 1 μm, pitch ~ 2 μm) add ~5–10 pH/sq but are necessary at B &gt; 0</td></tr><tr><td>28</td><td>Package / Board Parasitic Inductance</td><td>L_pkg / nH</td><td>HFSS full package model + Q3D trace extraction</td><td>&lt; 0.5 nH (SMA launch)</td><td>&lt; 0.5 nH</td><td>0.5 – 2 nH</td><td>&gt; 5 nH</td><td>Package inductance shifts resonator input impedance; must be de-embedded from measurement</td><td>Surface-mount SMP connectors (&lt; 0.3 nH) preferred over SMA (~0.5–1 nH) for cryo packages</td></tr></tbody></table></div></details><details class="result-category" id="q3d-parasitic-capacitance" open><summary>Parasitic Capacitance</summary><p class="category-note">Parasitic capacitance checks reveal unwanted coupling paths, loading, frequency shifts, and edge-field concentration.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>29</td><td>Trace-to-Ground Parasitic Cap</td><td>C_trace / fF/μm</td><td>Q3D electrostatic solve per-unit-length</td><td>0.1 – 0.4 fF/μm</td><td>0.1 – 0.4 fF/μm (50 Ω CPW)</td><td>0.1 – 1 fF/μm</td><td>&gt; 3 fF/μm</td><td>Distributed capacitance sets CPW characteristic impedance Z₀ = √(L/C); target 50 Ω</td><td>C&#x27; depends on gap width and substrate thickness; narrowing the gap increases C&#x27; (lowers Z₀)</td></tr><tr><td>30</td><td>Pad-to-Substrate Parasitic Cap</td><td>C_sub / fF</td><td>Q3D C matrix with substrate dielectric stack</td><td>&lt; 10 fF</td><td>&lt; 10 fF (small contact pads)</td><td>5 – 30 fF</td><td>&gt; 100 fF</td><td>Substrate capacitance creates parasitic shunt path reducing resonator Q and shifting qubit freq</td><td>Thinning substrate from 500 μm to 200 μm reduces C_sub by ~2.5×; used in IBM 3D chip stacks</td></tr><tr><td>31</td><td>Inter-Layer Cap (3D integration)</td><td>C_layer / fF</td><td>Q3D 3D stack model; bump height geometry sweep</td><td>&lt; 5 fF per crossing</td><td>&lt; 5 fF (flip-chip bump)</td><td>1 – 20 fF</td><td>&gt; 50 fF</td><td>Capacitance between chip layers through indium/SnAg bumps must be included in Hamiltonian</td><td>Bump height variation (σ ~ 1–2 μm) causes C_layer spread of ~0.5–1 fF; matters at scale</td></tr><tr><td>32</td><td>Fringe Capacitance (gap edges)</td><td>C_fringe / fF/μm</td><td>Q3D conformal mesh at conductor edges</td><td>0.02 – 0.1 fF/μm</td><td>0.02 – 0.1 fF/μm (5–20 μm gap)</td><td>0.05 – 0.5 fF/μm</td><td>&gt; 1 fF/μm</td><td>Fringe fields at edges add to intended coupling capacitance; must be in C_g design model</td><td>~30–50% of C_g in typical transmon designs comes from fringe; underestimating shifts f by 50+ MHz</td></tr><tr><td>33</td><td>Wirebond Pad Parasitic Cap</td><td>C_pad_wb / fF</td><td>Q3D parallel-plate + fringe approximation; or analytical C = ε₀ εr A/d</td><td>&lt; 50 fF (100×100 μm Al pad)</td><td>&lt; 50 fF</td><td>20 – 150 fF</td><td>&gt; 300 fF</td><td>Bond-pad capacitance loads the signal line; degrades bandwidth and causes reflection at bond</td><td>Reducing pad size from 150×150 μm to 80×80 μm cuts C_pad by ~2.5× with no bond yield penalty</td></tr></tbody></table></div></details><details class="result-category" id="q3d-electromagnetic-coupling" open><summary>Electromagnetic Coupling</summary><p class="category-note">Coupling outputs connect Q3D extraction to qubit-qubit, qubit-resonator, and package-mode interactions.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>34</td><td>External Quality Factor (Q_ext)</td><td>Q_ext</td><td>HFSS eigenmode + Q3D coupling capacitance extraction</td><td>10³ – 10⁵</td><td>5×10³ – 2×10⁴ (dispersive readout)</td><td>10³ – 10⁵</td><td>&lt; 500 or &gt; 10⁶</td><td>Sets readout bandwidth κ = ω_r/Q_ext and Purcell loss rate; undercoupled → slow; overcoupled → Purcell</td><td>Purcell limit: T₁_Purcell = Q_ext/ω_r × (Δ/g)²; Purcell filter relaxes this trade-off</td></tr><tr><td>35</td><td>Internal Quality Factor (Q_int)</td><td>Q_int</td><td>VNA transmission measurement; HFSS loss tangent input</td><td>&gt; 10⁶ (planar Al at 4K)</td><td>&gt; 10⁶</td><td>10⁵ – 10⁶</td><td>&lt; 10⁴</td><td>Intrinsic resonator loss from TLS, dielectric, radiation; directly sets T₁ floor via Purcell</td><td>Q_int &gt; 10⁶ requires: HR-Si or sapphire substrate, clean metal deposition, minimal surface TLS</td></tr><tr><td>36</td><td>Loaded Quality Factor (Q_L)</td><td>Q_L</td><td>1/Q_L = 1/Q_int + 1/Q_ext; VNA S21 Lorentzian fit</td><td>10³ – 10⁴</td><td>10³ – 10⁴ (balanced readout)</td><td>500 – 2×10⁴</td><td>&lt; 200 or &gt; 10⁵</td><td>Determines resonator 3 dB bandwidth; BW = f_r/Q_L sets speed vs SNR tradeoff for readout</td><td>In practice Q_L ≈ Q_ext when Q_int &gt;&gt; Q_ext (under-coupled limit is common design choice)</td></tr><tr><td>37</td><td>CPW Characteristic Impedance (Z₀)</td><td>Z₀ / Ω</td><td>Q3D RLGC → Z₀ = √(L&#x27;/C&#x27;); verified by HFSS S11 calibration</td><td>50 Ω ± 1 Ω</td><td>50 Ω ± 1 Ω</td><td>45 – 55 Ω</td><td>&lt; 30 or &gt; 80 Ω</td><td>Impedance mismatch causes reflections degrading signal integrity; Z₀ controlled by trace/gap ratio</td><td>On 500 μm Si: 10 μm trace / 6 μm gap → Z₀ ≈ 50 Ω; wider trace → lower Z₀</td></tr><tr><td>38</td><td>Effective Permittivity (ε_eff)</td><td>ε_eff</td><td>Q3D electrostatic fill factor calculation; HFSS eigenmode</td><td>6.0 – 6.5 (CPW on Si)</td><td>6.0 – 6.5</td><td>5.5 – 7.0</td><td>&lt; 4 or &gt; 9</td><td>Sets propagation velocity v_ph = c/√ε_eff and resonator physical length for target frequency</td><td>ε_eff depends on substrate filling fraction; ε_eff ≈ (1 + εr)/2 for CPW in air on substrate</td></tr><tr><td>39</td><td>Coupling Coefficient k²</td><td>k² / ×10⁻³</td><td>Q3D capacitance ratio k² = C_g² / (C_1 × C_2)</td><td>1 – 10 ×10⁻³</td><td>1 – 10 ×10⁻³</td><td>0.5 – 20 ×10⁻³</td><td>&lt; 0.1 or &gt; 50 ×10⁻³</td><td>Power transfer efficiency between resonator and feedline; determines Q_ext directly</td><td>k² ∝ gap width at coupling capacitor; etch depth variation of 0.1 μm → δk²/k² ~ 5%</td></tr></tbody></table></div></details><details class="result-category" id="q3d-substrate-dielectric-loss" open><summary>Substrate &amp; Dielectric Loss</summary><p class="category-note">Substrate and dielectric-loss outputs explain how material selection and surface participation affect T1.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>40</td><td>Substrate Bulk Loss Tangent</td><td>tan δ_bulk</td><td>Q3D dielectric loss tangent input; resonator Q fitting vs power</td><td>&lt; 10⁻⁶ (HR-Si, 4K)</td><td>&lt; 10⁻⁶</td><td>10⁻⁶ – 10⁻⁵</td><td>&gt; 10⁻⁴</td><td>Bulk dielectric loss sets floor on 1/Q_int from substrate volume; sapphire &lt; 5×10⁻⁷</td><td>tan δ improves by 10–100× on cooling from 300K to 4K due to reduced phonon and TLS population</td></tr><tr><td>41</td><td>Metal-Air Interface Loss (tan δ_MA)</td><td>tan δ_MA</td><td>Surface participation ratio (SPR) from Q3D E-field + measured Q factor</td><td>~10⁻³</td><td>&lt; 10⁻³ (passivated Al₂O₃)</td><td>10⁻³ – 5×10⁻³</td><td>&gt; 10⁻²</td><td>TLS loss at metal-air interface is the dominant T₁ source in planar transmon designs</td><td>Etching native oxide before Al deposition reduces tan δ_MA by up to 10×; HF vapor clean</td></tr><tr><td>42</td><td>Substrate-Air Interface Loss (tan δ_SA)</td><td>tan δ_SA</td><td>SPR analysis from Q3D E-field distribution</td><td>~5×10⁻⁴</td><td>&lt; 5×10⁻⁴ (HF-etched Si)</td><td>5×10⁻⁴ – 5×10⁻³</td><td>&gt; 10⁻²</td><td>TLS at substrate exposed surface; addressed by passivation, UV ozone clean, or dry etching</td><td>Hydrogen-passivated Si surface (HF dip) shows 5× lower tan δ_SA vs untreated Si</td></tr><tr><td>43</td><td>Metal-Substrate Interface Loss (tan δ_MS)</td><td>tan δ_MS</td><td>EELS/TEM interface composition + Q3D SPR calculation</td><td>~5×10⁻³</td><td>&lt; 5×10⁻³</td><td>5×10⁻³ – 10⁻²</td><td>&gt; 5×10⁻²</td><td>TLS at Al–Si or Nb–Si interface; reduced by HF dip substrate prep before metal deposition</td><td>Amorphous interfacial SiOx layer of 1–2 nm is the primary TLS host; substrate HF clean removes it</td></tr><tr><td>44</td><td>Surface Participation Ratio (SPR)</td><td>p_MA / ppm</td><td>Q3D E-field energy integral on metal-air interface: p = ∫_MA ε|E|²dV / ∫_all ε|E|²dV</td><td>5 – 50 ppm</td><td>&lt; 5 ppm</td><td>5 – 50 ppm</td><td>&gt; 200 ppm</td><td>p × tan δ contributes directly to 1/Q; minimise by thick metal, wider gap, no sharp corners. For planar transmons, p_MA can reach 100–1000 ppm without geometry optimisation.</td><td>1/Q_TLS = Σ p_i × tan δ_i; SPR is the design lever; tan δ is the material lever. &lt;5 ppm ideal is achievable in optimised 3D cavity or large-gap planar designs; planar CPW without optimisation may be 100–1000 ppm.</td></tr></tbody></table></div></details><details class="result-category" id="q3d-skin-effect-frequency" open><summary>Skin Effect &amp; Frequency-Dependent</summary><p class="category-note">Frequency-dependent checks show how conductor behavior changes with microwave frequency, penetration depth, and kinetic inductance.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>45</td><td>Skin Depth at 5 GHz</td><td>δ_s / μm</td><td>δ_s = √(2ρ/ωμ); Q3D skin-effect mode at frequency</td><td>0.9 μm (Al at RT)</td><td>0.5 – 2 μm</td><td>0.5 – 3 μm</td><td>&gt; 5 μm (film &lt; δ_s)</td><td>If metal thickness &lt; δ_s entire cross-section carries current and R_ac ≈ R_dc (good for thin films)</td><td>Al at 4K is superconducting so δ_s concept replaced by London penetration depth λ_L: bulk Al ~16–55 nm; thin-film Al (50–200 nm film) typically 60–163 nm — increases as film thickness decreases</td></tr><tr><td>46</td><td>AC/DC Resistance Ratio</td><td>R_ac/R_dc</td><td>Q3D frequency sweep; skin-effect solver comparison at DC vs 5 GHz</td><td>1.0 – 1.05 (thin film)</td><td>≈ 1.0 (thin film &lt; δ_s)</td><td>1.0 – 2.0</td><td>&gt; 5</td><td>Thin-film qubits (t ~ 100–200 nm) operate below skin-depth limit so R_ac ≈ R_dc</td><td>Normal-metal (Cu, Au) transmission lines show R_ac/R_dc ~ 3–5 at 5 GHz; use SC lines at mK</td></tr><tr><td>47</td><td>Propagation Constant (γ)</td><td>α / dB/m, β / rad/m</td><td>Q3D RLGC → γ = √((R+jωL)(G+jωC))</td><td>α &lt; 0.1 dB/m (SC CPW)</td><td>α &lt; 0.1 dB/m; β = ω√(L&#x27;C&#x27;)</td><td>α 0.1 – 1 dB/m</td><td>α &gt; 10 dB/m</td><td>α sets transmission line attenuation; β sets phase velocity; both from RLGC per unit length</td><td>For long interconnects (&gt; 10 mm) even 0.1 dB/m causes measurable signal loss; use SC Al/Nb</td></tr><tr><td>48</td><td>Phase Velocity (v_ph)</td><td>v_ph / ×10⁸ m/s</td><td>Q3D RLGC → v_ph = ω/β = 1/√(L&#x27;C&#x27;)</td><td>1.2 – 1.4 ×10⁸ m/s</td><td>1.2 – 1.4 ×10⁸ m/s (CPW on Si)</td><td>1.0 – 1.6 ×10⁸ m/s</td><td>&lt; 0.8 or &gt; 2.0</td><td>Sets resonator physical length for target frequency; L = v_ph/(4f_r) for λ/4 resonator</td><td>v_ph = c/√ε_eff; on Si ε_eff ≈ 6.3 → v_ph ≈ 1.19×10⁸ m/s; λ/4 at 7 GHz ≈ 4.25 mm</td></tr><tr><td>49</td><td>Per-Unit-Length Resistance (R&#x27;)</td><td>R&#x27; / mΩ/mm</td><td>Q3D frequency-dependent R matrix; RLGC R&#x27; vs frequency</td><td>&lt; 0.1 mΩ/mm (SC Al)</td><td>&lt; 0.1 mΩ/mm</td><td>0.1 – 2 mΩ/mm</td><td>&gt; 10 mΩ/mm</td><td>Distributed series resistance determines attenuation α ≈ R&#x27;/(2Z₀); critical for long interconnects</td><td>At 4K Al becomes superconducting: R&#x27; → 0 below T_c; use R&#x27; to identify non-SC regions</td></tr><tr><td>50</td><td>Per-Unit-Length Inductance (L&#x27;)</td><td>L&#x27; / nH/mm</td><td>Q3D RLGC magnetostatic solve</td><td>0.3 – 0.5 nH/mm</td><td>0.3 – 0.5 nH/mm (50 Ω CPW on Si)</td><td>0.2 – 0.8 nH/mm</td><td>&lt; 0.1 or &gt; 2 nH/mm</td><td>Distributed inductance per mm; with C&#x27; sets Z₀ = √(L&#x27;/C&#x27;) and v_ph = 1/√(L&#x27;C&#x27;)</td><td>L&#x27; includes both geometric and kinetic contributions; L&#x27;_kinetic small for Al (~0.01–0.05 nH/mm)</td></tr><tr><td>51</td><td>Per-Unit-Length Capacitance (C&#x27;)</td><td>C&#x27; / pF/mm</td><td>Q3D RLGC electrostatic solve</td><td>0.1 – 0.2 pF/mm</td><td>0.1 – 0.2 pF/mm (50 Ω CPW on Si)</td><td>0.05 – 0.3 pF/mm</td><td>&lt; 0.02 or &gt; 0.5 pF/mm</td><td>Distributed capacitance per mm; with L&#x27; sets Z₀ and ε_eff; narrow gap increases C&#x27; (lowers Z₀)</td><td>Check: Z₀ = √(L&#x27;/C&#x27;) ≈ 50 Ω; v_ph = 1/√(L&#x27;×C&#x27;) ≈ 1.2×10⁸ m/s; these are consistency checks</td></tr></tbody></table></div></details><details class="result-category" id="q3d-post-processing-derived" open><summary>Post-Processing Derived Outputs</summary><p class="category-note">Derived outputs convert Q3D matrices into qubit design metrics such as Ec, Ej, g, chi, ZZ, and Purcell rate.</p><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Parameter</th><th>Symbol / Unit</th><th>Extraction Method</th><th>Typical Q3D Value</th><th>Ideal / Optimal</th><th>Good Range</th><th>Worst Case</th><th>Why It Matters</th><th>Key Design Note</th></tr></thead><tbody><tr><td>52</td><td>Charging Energy (Ec/h)</td><td>Ec / h·MHz</td><td>Ec = e²/(2C_Σ); C_Σ from Q3D Maxwell matrix</td><td>200 – 350 MHz</td><td>200 – 350 MHz (transmon optimum)</td><td>150 – 400 MHz</td><td>&lt; 50 or &gt; 1 GHz</td><td>Sets charge sensitivity; Ej/Ec = 50–80 ideal for transmon; deviating worsens noise or anharmonicity</td><td>Ec/h = 200 MHz → C_Σ = 91 fF; exact C_Σ from Q3D is the critical input to Hamiltonian model</td></tr><tr><td>53</td><td>Josephson Energy (Ej/h)</td><td>Ej / h·GHz</td><td>Ej = Φ₀²/(2L_J) = Φ₀ I_c / 2π</td><td>10 – 30 GHz</td><td>10 – 30 GHz (Ej/Ec ~ 50–80)</td><td>5 – 50 GHz</td><td>&lt; 2 or &gt; 100 GHz</td><td>With Ec determines qubit frequency f₀₁ ≈ √(8EjEc)/h − Ec/h and anharmonicity α = −Ec/h</td><td>Ej is tunable via flux in split-junction transmons; Ej/Ec spread across chip sets yield</td></tr><tr><td>54</td><td>Qubit–Resonator Coupling (g/2π)</td><td>g / 2π / MHz</td><td>g = C_g/(C_Σ) × √(ω_q ω_r)/2; C_g from Q3D off-diagonal</td><td>50 – 150 MHz</td><td>50 – 150 MHz (dispersive regime)</td><td>20 – 300 MHz</td><td>&lt; 5 or &gt; 500 MHz</td><td>Vacuum Rabi coupling; in dispersive regime (g ≪ Δ) enables QND readout without qubit decay</td><td>g/Δ &lt; 0.1 ensures dispersive limit; Purcell rate Γ_P = (g/Δ)² × κ scales as g²</td></tr><tr><td>55</td><td>Dispersive Shift (χ/2π)</td><td>χ / 2π / MHz</td><td>χ = g²/Δ × α/(Δ+α); Δ = ω_q − ω_r; all from Q3D + junction params</td><td>1 – 5 MHz</td><td>1 – 5 MHz</td><td>0.5 – 10 MHz</td><td>&lt; 0.1 or &gt; 20 MHz</td><td>Qubit-state-dependent resonator shift; single-shot readout SNR ∝ χ/κ; larger χ → better fidelity</td><td>χ and Purcell rate trade off via g; Purcell filter allows larger g without excess Purcell loss</td></tr><tr><td>56</td><td>ZZ Coupling Rate (ζ/2π)</td><td>ζ / 2π / kHz</td><td>ζ = 2g²χ²/(Δ·α·(Δ+α)); derived from Q3D coupling capacitances</td><td>10 – 100 kHz</td><td>&lt; 10 kHz</td><td>10 – 50 kHz</td><td>&gt; 200 kHz</td><td>Always-on conditional phase rate between qubits; leads to leakage in spectator qubits during gates</td><td>ZZ suppression is the central challenge of transmon scaling; tunable coupler can push ζ &lt; 1 kHz</td></tr><tr><td>57</td><td>Anharmonicity (α/2π)</td><td>α / 2π / MHz</td><td>α = −Ec/h; Ec from Q3D C_Σ; or directly measured by two-tone spectroscopy</td><td>−200 to −300 MHz</td><td>−300 to −150 MHz</td><td>−350 to −100 MHz</td><td>|α|/2π &lt; 50 MHz</td><td>Separates |0〉→|1〉 from |1〉→|2〉 transitions; sets minimum gate duration without leakage</td><td>Gate bandwidth BW &lt; |α|/(2π) required to avoid leakage; |α| = 200 MHz → t_gate &gt; 5 ns</td></tr><tr><td>58</td><td>Purcell Decay Rate (Γ_P/2π)</td><td>Γ_P / 2π / kHz</td><td>Γ_P = (g/Δ)² × κ; κ = ω_r/Q_ext from Q3D; g from coupling cap</td><td>1 – 10 kHz</td><td>&lt; 1 kHz (with Purcell filter)</td><td>1 – 10 kHz</td><td>&gt; 100 kHz</td><td>Resonator-induced qubit relaxation limiting T₁ even with long material T₁; mitigated by filter</td><td>Purcell filter (bandpass on resonator port) can reduce Γ_P by 10–100× without affecting readout</td></tr></tbody></table></div></details>
+
+        <details class="result-category" id="q3d-key-takeaways" open><summary>Key Takeaways</summary>
+
+        <p class="category-note">Use these points as the practical Q3D learning summary for QClang users.</p>
+
+        <div class="parameter-table"><article><strong>RLGC Matrices</strong><span>R, L, G, C matrices from Q3D are the primary inputs to circuit Hamiltonian models. Even small parasitic entries shift qubit frequencies by 10–100 MHz.</span></article><article><strong>Superconducting Regime</strong><span>At 4K, Al and Nb become superconducting → R→0, L_k dominates. Normal-metal values from Q3D need T-dependent correction.</span></article><article><strong>Surface Participation</strong><span>SPR × tan δ controls T₁. Design rule: minimise p_MA below 5 ppm via thick metal, wider CPW gaps, and clean interfaces.</span></article><article><strong>Derived Outputs</strong><span>Ec, Ej, g, χ, ζ, Γ_P are all computed from Q3D matrices. Iterating Q3D → Hamiltonian → optimise is the standard qubit design loop.</span></article></div>
+
+        </details>
+
+        </div></details></div></section>
+
+        
+
+<section class="doc-section" id="epr-results-analysis">
+
+
+
+        <p class="eyebrow">Results Analysis</p>
+
+
+
+        <h2>EPR / scQubits Analysis</h2>
+
+
+
+        <p class="section-lead">EPR and scQubits results connect electromagnetic field energy to quantum-circuit behavior. Each workbook table is kept as a subcolumn under the main EPR analysis page.</p>
+
+
+
+        <div class="parameter-table"><article><strong>Core EPR</strong><span>Participation ratios, zero-point fluctuations, and Hamiltonian extraction.</span></article><article><strong>Performance</strong><span>Qubit coherence, gate fidelity, resonator coupling, and loss channels.</span></article><article><strong>Simulation quality</strong><span>Convergence and accuracy checks that make EPR extraction reliable.</span></article><article><strong>Summary table</strong><span>A complete parameter reference for learners and future QClang result mapping.</span></article></div>
+
+
+
+        <div class="result-workbook grouped-results">
+
+
+
+        <details class="result-sheet result-root" open><summary><span>EPR / scQubits Result Tables</span><small>Workbook sheets as learning subcolumns</small></summary><div class="result-nested">
+
+
+
+        <details class="result-category" id="epr-overview-table" open><summary>Overview</summary>
+
+
+
+        <div class="result-table-wrap"><table class="data-table"><tbody><tr><td>Energy Participation Ratio (EPR) Analysis — Quantum Computing Output Parameters</td></tr><tr><td>Comprehensive reference of all EPR output parameters, optimal values, good/worst thresholds — compiled from research literature &amp; theses</td></tr><tr><td>??  Sheet Guide</td></tr><tr><td>Sheet Name</td><td>Description</td></tr><tr><td>Overview</td><td>This sheet — legend, color guide, and sheet index</td></tr><tr><td>Core EPR Parameters</td><td>Primary outputs: energy participation ratios, loss rates, coupling strengths</td></tr><tr><td>Qubit Performance</td><td>Qubit quality metrics derived from EPR: T1, T2, anharmonicity, charge dispersion</td></tr><tr><td>Resonator &amp; Coupling</td><td>Resonator frequency, Purcell decay, cross-Kerr, dispersive shift ?</td></tr><tr><td>Loss &amp; Dissipation</td><td>Dielectric loss, TLS loss, radiation loss, seam loss, surface participation</td></tr><tr><td>Junction Parameters</td><td>Josephson junction inductance, participation ratio, ZPF voltage</td></tr><tr><td>Simulation Convergence</td><td>Mesh convergence, eigenmode accuracy, simulation quality indicators</td></tr><tr><td>Summary Table</td><td>Single consolidated master table across all categories</td></tr><tr><td>??  Color Legend</td></tr><tr><td>GOOD / OPTIMAL</td><td>Parameter is within the best-practice range for high-coherence devices</td></tr><tr><td>ACCEPTABLE</td><td>Parameter is functional but leaves room for improvement</td></tr><tr><td>POOR / WORST</td><td>Parameter degrades device performance; redesign recommended</td></tr><tr><td>HEADER / CATEGORY</td><td>Section or column header</td></tr><tr><td>DATA ROW</td><td>Standard data entry row</td></tr></tbody></table></div>
+
+
+
+        </details>
+
+
+
+        <details class="result-category" id="epr-core-parameters" open><summary>Core EPR Parameters</summary>
+
+
+
+        <p class="category-note">Core EPR Parameters ? Primary outputs of the EPR method: participation ratios, zero-point fluctuations, and mode hybridization metrics</p>
+
+
+
+        <div class="result-nested inner">
+
+
+
+        <details class="result-subcategory" open><summary>A. Junction Energy Participation Ratios</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Junction Participation Ratio (transmon)</td><td>p_J</td><td>dimensionless</td><td>Fraction of total inductive energy stored in the Josephson junction for the qubit mode. Central quantity of EPR method.</td><td>0.90 – 0.99</td><td>0.80 – 0.99</td><td>0.50 – 0.79</td><td>&lt; 0.30</td><td>High p_J maximises anharmonicity and qubit nonlinearity; low values reduce gate speed and anharmonicity.</td><td>Minev et al., Nature 2021; Solgun et al., PRApplied 2019</td></tr><tr><td>Junction Participation Ratio (readout mode)</td><td>p_J^res</td><td>dimensionless</td><td>Fraction of readout resonator mode energy in the junction. Should be minimised to reduce Purcell loss.</td><td>&lt; 1×10?³</td><td>&lt; 1×10?²</td><td>1×10?²–5×10?²</td><td>&gt; 0.10</td><td>Large p_J^res couples resonator decay channel to qubit, reducing T1 via Purcell effect.</td><td>Reed et al., PRL 2010; Houck et al., PRL 2008</td></tr><tr><td>Total Junction Participation (all modes)</td><td>Sp_J</td><td>dimensionless</td><td>Sum of participation ratios across all simulated eigenmodes; normalization check.</td><td>˜ 1.00 (±0.01)</td><td>0.98 – 1.02</td><td>0.95 – 1.04</td><td>&lt; 0.90 or &gt; 1.10</td><td>Deviation from unity indicates missing modes, poor mesh, or incomplete boundary conditions.</td><td>Minev, PhD Thesis Yale 2018; Nigg et al., PRL 2012</td></tr><tr><td>Participation Ratio Asymmetry</td><td>?pJ</td><td>dimensionless</td><td>Difference in junction participation between two junctions in a split-junction (SQUID) qubit.</td><td>&lt; 0.01</td><td>&lt; 0.05</td><td>0.05–0.15</td><td>&gt; 0.20</td><td>Asymmetry leads to flux-noise sensitivity and reduced coherence in tunable qubits.</td><td>Koch et al., PRA 2007; Krantz et al., APR 2019</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>B. Zero-Point Fluctuation (ZPF) Quantities</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>ZPF Voltage across Junction</td><td>V_zpf</td><td>µV</td><td>RMS zero-point voltage fluctuation across the Josephson junction; sets qubit–photon coupling strength.</td><td>10 – 50 µV</td><td>5 – 100 µV</td><td>1 – 200 µV</td><td>&lt; 0.5 µV or &gt; 500 µV</td><td>Too small ? weak anharmonicity; too large ? unwanted multiphoton transitions and leakage.</td><td>Minev et al., Nature 2021; Blais et al., RMP 2021</td></tr><tr><td>ZPF Current through Junction</td><td>I_zpf</td><td>nA</td><td>RMS zero-point current fluctuation; related to V_zpf via junction inductance.</td><td>1 – 10 nA</td><td>0.5 – 20 nA</td><td>0.1 – 50 nA</td><td>&lt; 0.05 nA</td><td>Determines coupling to flux noise and magnetic environment; critical for flux qubits.</td><td>Orlando et al., PRB 1999; Mooij et al., Science 1999</td></tr><tr><td>ZPF Phase across Junction</td><td>f_zpf</td><td>rad</td><td>RMS zero-point phase fluctuation f_zpf = v(2eV_zpf/??_q). Governs perturbative expansion validity.</td><td>0.1 – 0.5 rad</td><td>0.05 – 0.6 rad</td><td>0.6 – 0.9 rad</td><td>&gt; 1.0 rad</td><td>Values &gt;1 rad invalidate the perturbative (dispersive) approximation used in EPR.</td><td>Minev Thesis 2018; Koch et al., PRA 2007</td></tr><tr><td>Hybridization Factor</td><td>?</td><td>dimensionless</td><td>Degree of mode hybridization between qubit and resonator; off-diagonal element in EPR Hamiltonian.</td><td>&lt; 0.01 (well-dressed)</td><td>&lt; 0.05</td><td>0.05 – 0.15</td><td>&gt; 0.20</td><td>Large hybridization mixes qubit and resonator, degrading single-mode approximation.</td><td>Solgun et al., PRApplied 2019; Blais et al., PRA 2004</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>C. Hamiltonian Parameters Extracted via EPR</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Qubit Frequency (extracted)</td><td>?_q/2p</td><td>GHz</td><td>Fundamental qubit transition frequency extracted from EPR eigenmode simulation.</td><td>4 – 6 GHz</td><td>3 – 8 GHz</td><td>1 – 3 or 8–12 GHz</td><td>&lt; 1 GHz or &gt; 15 GHz</td><td>Outside optimal window: low freq ? thermal excitation; high freq ? limited coupling hardware.</td><td>Krantz et al., APR 2019; Arute et al., Nature 2019</td></tr><tr><td>Anharmonicity (EPR-derived)</td><td>a/2p</td><td>MHz</td><td>Qubit anharmonicity = ?_12 - ?_01; extracted via second-order EPR perturbation theory.</td><td>150 – 350 MHz</td><td>100 – 400 MHz</td><td>50 – 99 MHz</td><td>&lt; 30 MHz</td><td>Insufficient anharmonicity causes leakage to |2? during gates; &gt;400 MHz may indicate charge noise sensitivity.</td><td>Koch et al., PRA 2007; Barends et al., PRL 2013</td></tr><tr><td>Kerr Self-Nonlinearity</td><td>K/2p</td><td>MHz</td><td>Effective Kerr coefficient (= anharmonicity for transmon); second-order EPR correction term.</td><td>150 – 300 MHz</td><td>100 – 400 MHz</td><td>50 – 99 MHz</td><td>&lt; 20 MHz</td><td>Sets speed limit of single-qubit gates; related to DRAG pulse requirements.</td><td>Gambetta et al., PRA 2011; Motzoi et al., PRL 2009</td></tr><tr><td>Dispersive Shift ?/2p</td><td>?/2p</td><td>MHz</td><td>Qubit-state-dependent resonator frequency shift; critical for high-fidelity dispersive readout.</td><td>0.5 – 3 MHz</td><td>0.1 – 5 MHz</td><td>0.01 – 0.09 MHz</td><td>&lt; 0.01 MHz or &gt; 10 MHz</td><td>Too small ? insufficient readout contrast; too large ? measurement-induced dephasing.</td><td>Blais et al., PRA 2004; Gambetta et al., PRA 2006</td></tr><tr><td>Cross-Kerr (qubit-qubit)</td><td>?_ij/2p</td><td>MHz</td><td>Always-on ZZ interaction between coupled qubits; parasitic term in multi-qubit chips.</td><td>&lt; 0.01 MHz</td><td>&lt; 0.10 MHz</td><td>0.10 – 0.50 MHz</td><td>&gt; 1.0 MHz</td><td>Large ZZ causes always-on entanglement errors; major source of two-qubit gate infidelity.</td><td>Kandala et al., Nature 2021; Ku et al., PRL 2020</td></tr></tbody></table></div></details>
+
+
+
+        </div>
+
+
+
+        </details>
+
+
+
+        <details class="result-category" id="epr-qubit-performance" open><summary>Qubit Performance</summary>
+
+
+
+        <p class="category-note">Qubit Performance Metrics ? Coherence times, gate fidelities, and spectral properties derived from EPR loss analysis</p>
+
+
+
+        <div class="result-nested inner">
+
+
+
+        <details class="result-subcategory" open><summary>A. Coherence Times</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Energy Relaxation Time T1</td><td>T1</td><td>µs</td><td>Time for qubit to decay from |1? to |0?; bounded by all loss channels weighted by EPR participation.</td><td>&gt; 500 µs</td><td>100 – 500 µs</td><td>10 – 99 µs</td><td>&lt; 1 µs</td><td>T1 is the hard ceiling on gate fidelity; EPR identifies dominant loss channel for improvement.</td><td>Wang et al., PRApplied 2022; Place et al., NC 2021</td></tr><tr><td>Pure Dephasing Time T_f</td><td>T_f</td><td>µs</td><td>Dephasing time due to low-frequency noise (flux, charge, 1/f); not directly from EPR but informed by participation.</td><td>&gt; 200 µs</td><td>50 – 200 µs</td><td>10 – 49 µs</td><td>&lt; 5 µs</td><td>Limits T2; EPR participation at surfaces informs TLS dephasing contribution.</td><td>Ithier et al., PRB 2005; Bylander et al., Nature Phys 2011</td></tr><tr><td>Coherence Time T2 (Ramsey)</td><td>T2*</td><td>µs</td><td>Total dephasing time including low-frequency noise; T2* = 2T1.</td><td>&gt; 300 µs</td><td>100 – 300 µs</td><td>20 – 99 µs</td><td>&lt; 10 µs</td><td>Practical coherence limit; T2*/2T1 ? 1 indicates pure-dephasing free regime.</td><td>Krantz et al., APR 2019; Jurcevic et al., Quantum Sci. Tech. 2021</td></tr><tr><td>Coherence Time T2 (Echo)</td><td>T2E</td><td>µs</td><td>Echo coherence time; removes low-frequency noise contributions; T2E = 2T1.</td><td>&gt; 500 µs</td><td>200 – 500 µs</td><td>50 – 199 µs</td><td>&lt; 20 µs</td><td>Ratio T2E/T2* quantifies 1/f noise power; EPR participations guide substrate/surface optimization.</td><td>Muhonen et al., Nature Nano 2014; Yurtalan et al., Commun. Phys. 2020</td></tr><tr><td>Quality Factor Q_qubit</td><td>Q_q</td><td>dimensionless</td><td>Qubit quality factor Q = ?_q·T1; dimensionless figure of merit across frequencies.</td><td>&gt; 107</td><td>106 – 107</td><td>105 – 106</td><td>&lt; 104</td><td>Universal metric independent of frequency; Q &gt; 107 represents state-of-the-art performance.</td><td>Kosen et al., npj QI 2022; Ganjam et al., Nature Commun. 2023</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>B. Gate Performance</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Single-Qubit Gate Fidelity</td><td>F_1Q</td><td>%</td><td>Average fidelity of single-qubit Clifford gates; limited by T1, T2, leakage (anharmonicity).</td><td>&gt; 99.9%</td><td>99.5 – 99.9%</td><td>99.0 – 99.4%</td><td>&lt; 98%</td><td>&lt; 99.9% limits surface-code error correction threshold; leakage tied to anharmonicity from EPR.</td><td>Barends et al., Nature 2014; Jurcevic et al., QST 2021</td></tr><tr><td>Two-Qubit Gate Fidelity</td><td>F_2Q</td><td>%</td><td>Average fidelity of two-qubit entangling gates (CZ, iSWAP); limited by ZZ, T1, T2.</td><td>&gt; 99.5%</td><td>99.0 – 99.5%</td><td>97.0 – 98.9%</td><td>&lt; 95%</td><td>ZZ coupling (cross-Kerr from EPR) is primary source of two-qubit gate error on fixed-frequency chips.</td><td>Arute et al., Nature 2019; Sung et al., PRX 2021</td></tr><tr><td>Leakage Rate</td><td>L1</td><td>% per gate</td><td>Probability of leaking to non-computational |2? state per gate operation.</td><td>&lt; 0.01%</td><td>&lt; 0.1%</td><td>0.1 – 0.5%</td><td>&gt; 1.0%</td><td>Leakage non-destructively accumulates; requires active reset. Minimized by maximising anharmonicity.</td><td>Motzoi et al., PRL 2009; Wood &amp; Gambetta, PRA 2018</td></tr><tr><td>Readout Fidelity</td><td>F_RO</td><td>%</td><td>Assignment fidelity for single-shot qubit state discrimination.</td><td>&gt; 99%</td><td>97 – 99%</td><td>90 – 96%</td><td>&lt; 85%</td><td>Limited by ? (must be large), T1 during readout, photon number. ? extracted directly via EPR.</td><td>Walter et al., PRApplied 2017; Krantz et al., APR 2019</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>C. Spectral Properties</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Charge Dispersion</td><td>e_q</td><td>MHz</td><td>Sensitivity of qubit frequency to offset charge; exponentially suppressed in transmon regime.</td><td>&lt; 0.01 MHz</td><td>&lt; 0.1 MHz</td><td>0.1 – 1 MHz</td><td>&gt; 5 MHz</td><td>Large dispersion ? charge noise dephasing. EPR ratio EJ/EC must be &gt; 50 for transmon.</td><td>Koch et al., PRA 2007; Schreier et al., PRB 2008</td></tr><tr><td>EJ/EC Ratio</td><td>EJ/EC</td><td>dimensionless</td><td>Josephson to charging energy ratio; governs charge noise sensitivity vs. anharmonicity trade-off.</td><td>50 – 100</td><td>40 – 120</td><td>20 – 39</td><td>&lt; 10</td><td>&lt; 20: charge qubit regime with high sensitivity; &gt; 150: anharmonicity too small for fast gates.</td><td>Koch et al., PRA 2007; Krantz et al., APR 2019</td></tr><tr><td>Flux Sensitivity (tunable qubits)</td><td>??/?F</td><td>GHz/F0</td><td>Sensitivity of qubit frequency to external flux; relevant for flux-tunable transmons and SQUID qubits.</td><td>&lt; 0.1 GHz/F0 at sweet spot</td><td>&lt; 0.5 GHz/F0</td><td>0.5 – 2 GHz/F0</td><td>&gt; 5 GHz/F0</td><td>High flux sensitivity amplifies flux noise dephasing; biasing at sweet spot minimizes first-order sensitivity.</td><td>Hutchings et al., PRApplied 2017; Yan et al., Nature Commun. 2016</td></tr><tr><td>Frequency Spread (fabrication)</td><td>s_?/2p</td><td>MHz</td><td>Standard deviation of qubit frequencies across a chip due to junction fabrication variation.</td><td>&lt; 5 MHz</td><td>&lt; 20 MHz</td><td>20 – 50 MHz</td><td>&gt; 100 MHz</td><td>Large spread causes frequency collisions; EPR helps identify geometry sensitivities to dimension variation.</td><td>Kreikebaum et al., npj QI 2020; Osman et al., npj QI 2023</td></tr></tbody></table></div></details>
+
+
+
+        </div>
+
+
+
+        </details>
+
+
+
+        <details class="result-category" id="epr-resonator-coupling" open><summary>Resonator &amp; Coupling</summary>
+
+
+
+        <p class="category-note">Resonator &amp; Coupling Parameters ? Readout and bus resonator characteristics plus qubit-resonator coupling extracted via EPR</p>
+
+
+
+        <div class="result-nested inner">
+
+
+
+        <details class="result-subcategory" open><summary>A. Resonator Properties</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Resonator Frequency</td><td>?_r/2p</td><td>GHz</td><td>Bare resonator frequency; should be detuned from qubit to remain in dispersive regime.</td><td>6.5 – 8.5 GHz</td><td>5 – 10 GHz</td><td>3 – 5 GHz</td><td>&lt; 2 GHz</td><td>Must satisfy |?| = |?_q - ?_r| &gt;&gt; g for dispersive approximation; EPR gives bare frequency.</td><td>Blais et al., PRA 2004; Wallraff et al., Nature 2004</td></tr><tr><td>Resonator Internal Q</td><td>Q_int</td><td>dimensionless</td><td>Internal (material-limited) quality factor of the readout resonator.</td><td>&gt; 105</td><td>104 – 105</td><td>10³ – 104</td><td>&lt; 500</td><td>Low Q_int adds photon loss increasing measurement back-action and reducing readout SNR.</td><td>Megrant et al., APL 2012; Calusine et al., APL 2018</td></tr><tr><td>Resonator External Q</td><td>Q_ext</td><td>dimensionless</td><td>External quality factor set by coupling to transmission line; determines measurement bandwidth.</td><td>10³ – 104 (fast readout)</td><td>500 – 2×104</td><td>50 – 499</td><td>&lt; 50</td><td>Too high ? slow readout; too low ? Purcell-enhanced qubit decay. Optimized with Purcell filter.</td><td>Reed et al., APL 2010; Houck et al., PRL 2008</td></tr><tr><td>Resonator–Qubit Detuning |?|</td><td>|?|/2p</td><td>GHz</td><td>Frequency detuning between qubit and resonator; must be large compared to coupling g.</td><td>1.0 – 3.0 GHz</td><td>0.5 – 4.0 GHz</td><td>0.1 – 0.5 GHz</td><td>&lt; 0.05 GHz</td><td>Small detuning violates dispersive approximation; EPR hybridization factor ? tracks this.</td><td>Blais et al., PRA 2004; Gambetta et al., PRA 2006</td></tr><tr><td>Purcell Decay Rate</td><td>?_P/2p</td><td>kHz</td><td>Qubit decay rate via resonator Purcell channel; ? × (g/?)². Must be &lt;&lt; 1/T1_target.</td><td>&lt; 1 kHz</td><td>1 – 10 kHz</td><td>10 – 100 kHz</td><td>&gt; 500 kHz</td><td>Dominant T1 limit in many designs without Purcell filter; directly predicted by EPR p_J^res.</td><td>Houck et al., PRL 2008; Reed et al., APL 2010</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>B. Coupling Strengths</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Transverse Coupling g/2p</td><td>g/2p</td><td>MHz</td><td>Qubit-resonator coupling strength (Jaynes-Cummings); extracted from EPR as g = v(p_J^res · ?_r · ?_q/2).</td><td>50 – 150 MHz</td><td>20 – 200 MHz</td><td>5 – 19 MHz</td><td>&lt; 2 MHz</td><td>Sets ? and readout speed; g/|?| &lt; 0.1 required for dispersive regime.</td><td>Wallraff et al., Nature 2004; Krantz et al., APR 2019</td></tr><tr><td>Dispersive Coupling g/? ratio</td><td>g/|?|</td><td>dimensionless</td><td>Dimensionless ratio quantifying proximity to strong-coupling limit; must be &lt;&lt; 1 for dispersive readout.</td><td>0.01 – 0.05</td><td>0.005 – 0.09</td><td>0.09 – 0.15</td><td>&gt; 0.20</td><td>Ratio &gt; 0.1 causes photon-number-dependent qubit dephasing and higher-order dispersive corrections.</td><td>Gambetta et al., PRA 2006; Boissonneault et al., PRA 2009</td></tr><tr><td>Bus Coupler Coupling (2Q)</td><td>J/2p</td><td>MHz</td><td>Exchange coupling between two qubits via bus resonator or direct capacitance.</td><td>5 – 20 MHz</td><td>2 – 30 MHz</td><td>0.5 – 1.9 MHz</td><td>&lt; 0.1 MHz</td><td>Too weak ? slow two-qubit gates; too strong ? residual ZZ. EPR predicts J from geometry.</td><td>Majer et al., Nature 2007; Chen et al., PRL 2014</td></tr><tr><td>Residual ZZ (static)</td><td>?_ZZ/2p</td><td>kHz</td><td>Always-on longitudinal (ZZ) qubit–qubit interaction; source of conditional phase errors.</td><td>&lt; 10 kHz</td><td>&lt; 100 kHz</td><td>100 – 500 kHz</td><td>&gt; 1 MHz</td><td>Limits two-qubit gate fidelity via conditional phase accumulation; minimized by tunable couplers.</td><td>Ku et al., PRL 2020; Kandala et al., Nature 2021</td></tr><tr><td>Stray Coupling (nearest-neighbor)</td><td>J_stray/2p</td><td>kHz</td><td>Unintended coupling between non-adjacent qubits; extracted from full-chip EPR simulation.</td><td>&lt; 10 kHz</td><td>&lt; 50 kHz</td><td>50 – 200 kHz</td><td>&gt; 500 kHz</td><td>Degrades multi-qubit gate fidelity; EPR full-chip simulation essential to identify stray modes.</td><td>Arute et al., Nature 2019; Hertzberg et al., npj QI 2021</td></tr></tbody></table></div></details>
+
+
+
+        </div>
+
+
+
+        </details>
+
+
+
+        <details class="result-category" id="epr-loss-dissipation" open><summary>Loss &amp; Dissipation</summary>
+
+
+
+        <p class="category-note">Loss &amp; Dissipation Parameters ? Dielectric, surface, radiation, and junction loss channels identified and weighted by EPR participations</p>
+
+
+
+        <div class="result-nested inner">
+
+
+
+        <details class="result-subcategory" open><summary>A. Dielectric Loss (Bulk &amp; Surface)</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Bulk Substrate Loss Tangent</td><td>tan d_bulk</td><td>dimensionless</td><td>Intrinsic dielectric loss of the substrate material (Si, sapphire, SiO2); weighted by bulk EPR participation.</td><td>&lt; 1×10?7 (Si, sapphire)</td><td>&lt; 1×10?6</td><td>1×10?6 – 1×10?5</td><td>&gt; 1×10?4</td><td>Silicon and sapphire are preferred substrates; amorphous SiO2 has tan d ~ 10?³ (very poor).</td><td>Martinis et al., PRL 2005; Calusine et al., APL 2018</td></tr><tr><td>Metal-Substrate Interface Loss</td><td>tan d_MS</td><td>dimensionless</td><td>Effective loss tangent of metal–substrate (MS) two-level system (TLS) interface layer.</td><td>&lt; 1×10?³</td><td>&lt; 3×10?³</td><td>3×10?³ – 1×10?²</td><td>&gt; 5×10?²</td><td>MS interface is typically 2–5 nm thick oxide layer; dominant loss in many planar qubits.</td><td>Wang et al., APL 2015; Niepce et al., PRApplied 2019</td></tr><tr><td>Substrate-Air Interface Loss</td><td>tan d_SA</td><td>dimensionless</td><td>Effective loss tangent of substrate–air (SA) interface; due to adsorbed surface oxides and organics.</td><td>&lt; 3×10?³</td><td>&lt; 1×10?²</td><td>1×10?² – 5×10?²</td><td>&gt; 0.1</td><td>Cleaning and surface passivation reduce SA loss; participation ratio from EPR isolates this channel.</td><td>Wenner et al., APL 2011; Quintana et al., APL 2014</td></tr><tr><td>Metal-Air Interface Loss</td><td>tan d_MA</td><td>dimensionless</td><td>Effective loss tangent of metal–air (MA) interface; native oxide on superconducting film top surface.</td><td>&lt; 3×10?³</td><td>&lt; 1×10?²</td><td>1×10?² – 5×10?²</td><td>&gt; 0.1</td><td>Nb and Al form native oxides; replacing top surface with clean metal reduces MA loss.</td><td>Sandberg et al., APL 2012; Nersisyan et al., Quantum 2019</td></tr><tr><td>Surface Participation Ratio (MS)</td><td>p_MS</td><td>dimensionless</td><td>Fraction of electric field energy in metal-substrate interface region; computed from EPR E-field.</td><td>&lt; 5×10?4</td><td>&lt; 2×10?³</td><td>2×10?³ – 1×10?²</td><td>&gt; 5×10?²</td><td>Thinner gaps increase p_MS; EPR identifies geometry changes to reduce interface participation.</td><td>Wenner et al., APL 2011; Gambetta et al., npj QI 2017</td></tr><tr><td>TLS-Limited Quality Factor (1/f)</td><td>Q_TLS</td><td>dimensionless</td><td>Quality factor limited by two-level system (TLS) bath; power- and temperature-dependent.</td><td>&gt; 3×106</td><td>106 – 3×106</td><td>105 – 106</td><td>&lt; 104</td><td>Q_TLS improves with high drive power (TLS saturation); EPR participations give TLS contribution breakdown.</td><td>Martinis et al., PRL 2005; Müller et al., PRB 2019</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>B. Radiation &amp; Geometry Loss</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Radiation Loss Rate</td><td>?_rad/2p</td><td>kHz</td><td>Energy loss due to electromagnetic radiation from non-closed geometry; computed by EPR from far-field.</td><td>&lt; 1 kHz</td><td>&lt; 10 kHz</td><td>10 – 100 kHz</td><td>&gt; 500 kHz</td><td>Open transmission line stubs or poorly designed ground planes lead to radiation loss.</td><td>Houck et al., PRL 2008; Solgun et al., PRApplied 2019</td></tr><tr><td>Seam Loss (3D cavities)</td><td>?_seam/2p</td><td>kHz</td><td>Loss at mechanical seam between cavity halves; critical for 3D transmon and fluxonium devices.</td><td>&lt; 1 kHz</td><td>&lt; 5 kHz</td><td>5 – 50 kHz</td><td>&gt; 200 kHz</td><td>EPR current participation at seam predicts seam loss; improved by indium bonding or tight tolerances.</td><td>Reagor et al., PRB 2016; Brecht et al., npj QI 2016</td></tr><tr><td>Quasiparticle Loss Rate</td><td>?_qp/2p</td><td>kHz</td><td>Qubit decay due to nonequilibrium quasiparticles tunneling across junction.</td><td>&lt; 2 kHz</td><td>&lt; 20 kHz</td><td>20 – 100 kHz</td><td>&gt; 500 kHz</td><td>Quasiparticle poisoning is stochastic; mitigated by gap engineering and quasiparticle traps.</td><td>Catelani et al., PRL 2011; Serniak et al., PRL 2018</td></tr><tr><td>Vortex Loss (in-field operation)</td><td>?_vortex/2p</td><td>kHz</td><td>Loss from magnetic vortices in superconducting film when operated in residual magnetic field.</td><td>&lt; 1 kHz (&lt; 1 µT shield)</td><td>&lt; 10 kHz</td><td>10 – 100 kHz</td><td>&gt; 500 kHz</td><td>Mitigated by magnetic shielding and moat structures; EPR current maps identify vortex-sensitive areas.</td><td>Stan et al., IEEE Trans. 2004; Chiaro et al., Supercond. Sci. Tech. 2016</td></tr><tr><td>Conductor (Ohmic) Loss</td><td>?_ohm/2p</td><td>kHz</td><td>Residual ohmic loss from non-superconducting regions or above Tc contributions; usually negligible in Al.</td><td>&lt; 0.1 kHz</td><td>&lt; 1 kHz</td><td>1 – 10 kHz</td><td>&gt; 100 kHz</td><td>Typically negligible at mK temperatures; relevant for normal-metal contacts or resistive wirebonds.</td><td>Göppl et al., JAP 2008; Barends et al., APL 2010</td></tr></tbody></table></div></details>
+
+
+
+        </div>
+
+
+
+        </details>
+
+
+
+        <details class="result-category" id="epr-junction-parameters" open><summary>Junction Parameters</summary>
+
+
+
+        <p class="category-note">Josephson Junction Parameters ? Junction electrical and physical parameters extracted from or used as inputs to EPR analysis</p>
+
+
+
+        <div class="result-nested inner">
+
+
+
+        <details class="result-subcategory" open><summary>A. Junction Electrical Parameters</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Josephson Inductance</td><td>L_J</td><td>nH</td><td>Linear (small-signal) inductance of Josephson junction; L_J = F0/(2pI_c). Central EPR input.</td><td>5 – 20 nH</td><td>2 – 50 nH</td><td>50 – 200 nH</td><td>&gt; 500 nH</td><td>Sets qubit frequency via ?_q = 1/v(L_J·C_S); too large ? very low frequency, thermally excited.</td><td>Koch et al., PRA 2007; Krantz et al., APR 2019</td></tr><tr><td>Critical Current</td><td>I_c</td><td>µA</td><td>Maximum supercurrent through junction; I_c = F0/(2pL_J). Sets EJ = I_c·F0/(2p).</td><td>20 – 80 nA (transmon)</td><td>5 – 200 nA</td><td>200 nA – 2 µA</td><td>&gt; 10 µA</td><td>Too high ? small L_J ? high frequency; too low ? large L_J, strong flux noise sensitivity.</td><td>Dolan 1977 (shadow evaporation); Ambegaokar &amp; Baratoff, PRL 1963</td></tr><tr><td>Critical Current Density</td><td>J_c</td><td>A/m²</td><td>Critical current per junction area; set by AlOx barrier thickness during deposition.</td><td>100 – 500 A/m²</td><td>50 – 1000 A/m²</td><td>1000 – 5000 A/m²</td><td>&gt; 104 A/m²</td><td>Reproducibility of J_c determines frequency spread; EPR sensitivity analysis relates Jc to ?_q.</td><td>Pop et al., Nature 2014; Osman et al., npj QI 2023</td></tr><tr><td>Junction Capacitance</td><td>C_J</td><td>fF</td><td>Self-capacitance of the junction; contributes to total qubit capacitance C_S.</td><td>2 – 10 fF</td><td>1 – 20 fF</td><td>20 – 100 fF</td><td>&gt; 200 fF</td><td>Large C_J reduces charging energy EC, lowering anharmonicity; EPR partitions C_J from shunt.</td><td>Koch et al., PRA 2007; Yan et al., PRApplied 2016</td></tr><tr><td>Junction Area</td><td>A_J</td><td>µm²</td><td>Physical overlap area of the junction; A_J = I_c/J_c. Fabrication controlled.</td><td>0.01 – 0.1 µm²</td><td>0.005 – 0.5 µm²</td><td>0.5 – 2 µm²</td><td>&gt; 5 µm²</td><td>Larger area ? larger C_J and lower EC; smaller area ? harder fabrication, larger variation.</td><td>Kreikebaum et al., npj QI 2020; Hertzberg et al., npj QI 2021</td></tr><tr><td>Josephson Energy</td><td>EJ/h</td><td>GHz</td><td>Josephson energy EJ = I_c·F0/(2p); governs tunneling energy.</td><td>10 – 50 GHz</td><td>5 – 100 GHz</td><td>100 – 500 GHz</td><td>&gt; 1 THz</td><td>With EC, determines qubit spectrum; EJ/EC &gt; 50 for transmon regime.</td><td>Koch et al., PRA 2007; Nakamura et al., Nature 1999</td></tr><tr><td>Charging Energy</td><td>EC/h</td><td>MHz</td><td>Charging energy EC = e²/(2C_S); determines anharmonicity and charge sensitivity.</td><td>150 – 350 MHz</td><td>100 – 500 MHz</td><td>500 MHz – 1 GHz</td><td>&gt; 2 GHz</td><td>EC ~ anharmonicity for transmon; high EC ? charge qubit regime, high noise sensitivity.</td><td>Koch et al., PRA 2007; Schreier et al., PRB 2008</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>B. Junction Loss &amp; Quality</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Junction Loss Tangent</td><td>tan d_J</td><td>dimensionless</td><td>Intrinsic dielectric loss of AlOx tunnel barrier; limits junction Q and T1.</td><td>&lt; 3×10?6</td><td>&lt; 1×10?5</td><td>1×10?5 – 1×10?4</td><td>&gt; 1×10?³</td><td>TLS in AlOx barrier is historically the primary T1 limit; improved by ALD or crystalline barriers.</td><td>Martinis et al., PRL 2005; Müller et al., PRB 2019</td></tr><tr><td>Junction Subgap Resistance</td><td>R_sg</td><td>GO</td><td>Subgap resistance of junction; represents quasiparticle leakage channel.</td><td>&gt; 100 GO</td><td>10 – 100 GO</td><td>1 – 10 GO</td><td>&lt; 100 MO</td><td>Low R_sg indicates excess quasiparticle density; limits T1 via quasiparticle poisoning.</td><td>Aumentado et al., PRL 2004; Aumentado et al., J. Low Temp. Phys. 2011</td></tr><tr><td>Flux Noise Spectral Density</td><td>S_F(1Hz)</td><td>µF0²/Hz</td><td>Amplitude of 1/f flux noise at 1 Hz; governs dephasing for flux-sensitive qubits.</td><td>&lt; 1 µF0²/Hz</td><td>1 – 5 µF0²/Hz</td><td>5 – 20 µF0²/Hz</td><td>&gt; 50 µF0²/Hz</td><td>Arises from surface spin fluctuators; EPR current participation at surfaces informs sensitivity.</td><td>Yoshihara et al., PRL 2006; Bialczak et al., PRL 2007</td></tr><tr><td>Charge Noise Spectral Density</td><td>S_q(1Hz)</td><td>e²/Hz</td><td>Amplitude of 1/f charge noise; relevant for charge-sensitive qubits.</td><td>&lt; 10?7 e²/Hz</td><td>&lt; 10?6 e²/Hz</td><td>10?6 – 10?5 e²/Hz</td><td>&gt; 10?4 e²/Hz</td><td>Exponentially suppressed in transmon regime; relevant for qubits with EJ/EC &lt; 20.</td><td>Ithier et al., PRB 2005; Paladino et al., RMP 2014</td></tr></tbody></table></div></details>
+
+
+
+        </div>
+
+
+
+        </details>
+
+
+
+        <details class="result-category" id="epr-simulation-convergence" open><summary>Simulation Convergence</summary>
+
+
+
+        <p class="category-note">Simulation Convergence &amp; Accuracy Metrics ? HFSS / pyEPR / Ansys eigenmode simulation quality indicators for reliable EPR extraction</p>
+
+
+
+        <div class="result-nested inner">
+
+
+
+        <details class="result-subcategory" open><summary>A. Eigenmode Solver Convergence</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Eigenfrequency Convergence ?Freq</td><td>?f/f</td><td>ppm</td><td>Relative change in eigenfrequency between successive mesh refinement passes.</td><td>&lt; 5 ppm</td><td>&lt; 50 ppm</td><td>50 – 500 ppm</td><td>&gt; 1000 ppm</td><td>EPR frequencies directly set qubit and resonator values; poor convergence propagates to all outputs.</td><td>Minev Thesis Yale 2018; Ansys HFSS Documentation 2023</td></tr><tr><td>Energy Error (Maxwell equations)</td><td>?U/U</td><td>%</td><td>Relative error in total electromagnetic energy from adaptive mesh refinement.</td><td>&lt; 0.1%</td><td>&lt; 0.5%</td><td>0.5 – 2%</td><td>&gt; 5%</td><td>Energy error directly bounds participation ratio error; must be minimised for accurate loss prediction.</td><td>Minev Thesis Yale 2018; Jin, FEM for Electromagnetics, 1993</td></tr><tr><td>Tetrahedral Mesh Count</td><td>N_mesh</td><td>thousands</td><td>Number of tetrahedra in adaptive mesh; convergence criterion, not absolute target.</td><td>200 – 2000k</td><td>50 – 200k</td><td>10 – 50k</td><td>&lt; 5k</td><td>Too few ? inaccurate fields, especially at thin features (junctions, gaps); too many ? slow.</td><td>Minev Thesis Yale 2018; Solgun et al., PRApplied 2019</td></tr><tr><td>Number of Eigenmode Passes</td><td>N_passes</td><td>integer</td><td>Adaptive refinement passes until convergence criterion is met.</td><td>10 – 20 passes</td><td>7 – 10 passes</td><td>4 – 6 passes</td><td>&lt; 3 passes</td><td>Insufficient passes leave mesh unrefined in critical regions (junction vicinity, surface gaps).</td><td>pyEPR documentation; Minev GitHub 2018</td></tr><tr><td>Mode Participation Sum Check</td><td>Sp</td><td>dimensionless</td><td>Sum of EPR participations across all modes; should equal 1 for each junction.</td><td>0.99 – 1.01</td><td>0.97 – 1.03</td><td>0.93 – 1.07</td><td>&lt; 0.90 or &gt; 1.10</td><td>Deviation indicates missing eigenmodes, disconnected networks, or mesh error in junction volume.</td><td>Minev et al., Nature 2021; Nigg et al., PRL 2012</td></tr><tr><td>Participation Ratio Repeatability</td><td>s_p/p</td><td>%</td><td>Run-to-run relative standard deviation of participation ratios across identical simulations.</td><td>&lt; 0.5%</td><td>&lt; 2%</td><td>2 – 5%</td><td>&gt; 10%</td><td>Poor repeatability indicates stochastic mesh seeding issues; use fixed seed and fine mesh.</td><td>Minev Thesis Yale 2018</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>B. Loss Analysis Simulation Quality</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Description</th><th>Optimal / Best Value</th><th>Good Range</th><th>Acceptable Range</th><th>Poor / Worst Value</th><th>Physical Significance</th><th>Key References</th></tr></thead><tbody><tr><td>Surface Participation Error</td><td>?p_surf</td><td>%</td><td>Relative error in surface (interface) participation ratio from finite mesh at thin layers.</td><td>&lt; 2%</td><td>&lt; 5%</td><td>5 – 15%</td><td>&gt; 20%</td><td>Thin oxide layers (2–5 nm) require extremely fine mesh; often estimated analytically.</td><td>Wenner et al., APL 2011; Gambetta et al., npj QI 2017</td></tr><tr><td>Junction Volume Definition Accuracy</td><td>?V_J/V_J</td><td>%</td><td>Relative accuracy of the junction geometric volume used to compute junction participation.</td><td>&lt; 1%</td><td>&lt; 5%</td><td>5 – 10%</td><td>&gt; 20%</td><td>Junction volume error directly maps to participation ratio error; critical CAD accuracy needed.</td><td>Minev Thesis Yale 2018; Solgun et al., PRApplied 2019</td></tr><tr><td>Number of Loss Regions Modelled</td><td>N_regions</td><td>integer</td><td>Number of distinct lossy material regions (interfaces) explicitly included in the EPR model.</td><td>= 4 (MS, SA, MA, bulk)</td><td>3</td><td>2</td><td>1 (bulk only)</td><td>Modelling only bulk misses dominant surface/interface losses in planar devices.</td><td>Wenner et al., APL 2011; Wang et al., APL 2015</td></tr><tr><td>Frequency Band of Validity</td><td>BW_valid</td><td>GHz</td><td>Frequency range over which the extracted Hamiltonian parameters are valid (no spurious modes).</td><td>0 – 15 GHz (no spurious)</td><td>0 – 10 GHz</td><td>5 – 10 GHz only</td><td>Spurious modes present</td><td>Spurious modes can hybridize with qubit and resonator, invalidating EPR sums.</td><td>Minev Thesis 2018; Reagor et al., PRB 2016</td></tr></tbody></table></div></details>
+
+
+
+        </div>
+
+
+
+        </details>
+
+
+
+        <details class="result-category" id="epr-summary-table" open><summary>Summary Table</summary>
+
+
+
+        <p class="category-note">EPR Analysis — Master Summary Table ? All EPR output parameters consolidated — one row per parameter, sorted by category</p>
+
+
+
+        <div class="result-nested inner">
+
+
+
+        <details class="result-subcategory" open><summary>?  Core EPR</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Category</th><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Optimal Value</th><th>Good Range</th><th>Acceptable Range</th><th>Worst Value</th><th>Physical Significance</th><th>Improvement Strategy</th><th>Reference</th></tr></thead><tbody><tr><td>1</td><td>Core EPR</td><td>Junction Participation Ratio</td><td>p_J</td><td>—</td><td>0.90–0.99</td><td>0.80–0.99</td><td>0.50–0.79</td><td>&lt; 0.30</td><td>Sets anharmonicity &amp; qubit nonlinearity</td><td>Increase pad size, reduce gap to substrate</td><td>Minev et al., Nature 2021</td></tr><tr><td>2</td><td>Core EPR</td><td>Resonator Junction Participation</td><td>p_J^res</td><td>—</td><td>&lt; 1×10?³</td><td>&lt; 1×10?²</td><td>1×10?²–5×10?²</td><td>&gt; 0.10</td><td>Determines Purcell T1 limit</td><td>Increase qubit-resonator detuning</td><td>Reed et al., PRL 2010</td></tr><tr><td>3</td><td>Core EPR</td><td>ZPF Voltage across Junction</td><td>V_zpf</td><td>µV</td><td>10–50 µV</td><td>5–100 µV</td><td>1–200 µV</td><td>&lt; 0.5 µV</td><td>Governs qubit-photon coupling</td><td>Optimise mode volume and pad geometry</td><td>Minev et al., Nature 2021</td></tr><tr><td>4</td><td>Core EPR</td><td>ZPF Phase</td><td>f_zpf</td><td>rad</td><td>0.1–0.5 rad</td><td>0.05–0.6 rad</td><td>0.6–0.9 rad</td><td>&gt; 1.0 rad</td><td>Validity of dispersive approximation</td><td>Reduce anharmonicity target or redesign</td><td>Minev Thesis 2018</td></tr><tr><td>5</td><td>Core EPR</td><td>Anharmonicity (EPR)</td><td>a/2p</td><td>MHz</td><td>150–350 MHz</td><td>100–400 MHz</td><td>50–99 MHz</td><td>&lt; 30 MHz</td><td>Gate speed and leakage limit</td><td>Lower EJ/EC ratio; smaller junction</td><td>Koch et al., PRA 2007</td></tr><tr><td>6</td><td>Core EPR</td><td>Dispersive Shift ?</td><td>?/2p</td><td>MHz</td><td>0.5–3 MHz</td><td>0.1–5 MHz</td><td>0.01–0.09 MHz</td><td>&lt; 0.01 MHz</td><td>Readout contrast</td><td>Adjust g/|?| ratio via geometry</td><td>Blais et al., PRA 2004</td></tr><tr><td>7</td><td>Core EPR</td><td>Cross-Kerr ZZ</td><td>?_ij/2p</td><td>MHz</td><td>&lt; 0.01 MHz</td><td>&lt; 0.10 MHz</td><td>0.10–0.50 MHz</td><td>&gt; 1.0 MHz</td><td>Always-on 2Q gate error</td><td>Tunable coupler; echo sequences</td><td>Kandala et al., Nature 2021</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>?  Qubit Performance</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Category</th><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Optimal Value</th><th>Good Range</th><th>Acceptable Range</th><th>Worst Value</th><th>Physical Significance</th><th>Improvement Strategy</th><th>Reference</th></tr></thead><tbody><tr><td>8</td><td>Qubit Performance</td><td>Energy Relaxation T1</td><td>T1</td><td>µs</td><td>&gt; 500 µs</td><td>100–500 µs</td><td>10–99 µs</td><td>&lt; 1 µs</td><td>Hard limit on gate fidelity</td><td>Reduce dominant loss channel from EPR</td><td>Wang et al., PRApplied 2022</td></tr><tr><td>9</td><td>Qubit Performance</td><td>Coherence Time T2*</td><td>T2*</td><td>µs</td><td>&gt; 300 µs</td><td>100–300 µs</td><td>20–99 µs</td><td>&lt; 10 µs</td><td>Practical dephasing limit</td><td>Reduce flux/charge noise; surface cleaning</td><td>Krantz et al., APR 2019</td></tr><tr><td>10</td><td>Qubit Performance</td><td>Qubit Quality Factor</td><td>Q_q</td><td>—</td><td>&gt; 107</td><td>106–107</td><td>105–106</td><td>&lt; 104</td><td>Universal figure of merit</td><td>Reduce all participation-weighted losses</td><td>Ganjam et al., NC 2023</td></tr><tr><td>11</td><td>Qubit Performance</td><td>Single-Qubit Gate Fidelity</td><td>F_1Q</td><td>%</td><td>&gt; 99.9%</td><td>99.5–99.9%</td><td>99.0–99.4%</td><td>&lt; 98%</td><td>Surface-code threshold</td><td>Increase T1/T2; optimise DRAG pulses</td><td>Barends et al., Nature 2014</td></tr><tr><td>12</td><td>Qubit Performance</td><td>Two-Qubit Gate Fidelity</td><td>F_2Q</td><td>%</td><td>&gt; 99.5%</td><td>99.0–99.5%</td><td>97.0–98.9%</td><td>&lt; 95%</td><td>2Q error correction threshold</td><td>Reduce ZZ via tunable coupler design</td><td>Arute et al., Nature 2019</td></tr><tr><td>13</td><td>Qubit Performance</td><td>EJ/EC Ratio</td><td>EJ/EC</td><td>—</td><td>50–100</td><td>40–120</td><td>20–39</td><td>&lt; 10</td><td>Charge noise protection</td><td>Increase shunt capacitance C_S</td><td>Koch et al., PRA 2007</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>?  Resonator &amp; Coupling</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Category</th><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Optimal Value</th><th>Good Range</th><th>Acceptable Range</th><th>Worst Value</th><th>Physical Significance</th><th>Improvement Strategy</th><th>Reference</th></tr></thead><tbody><tr><td>14</td><td>Resonator &amp; Coupling</td><td>Resonator Frequency</td><td>?_r/2p</td><td>GHz</td><td>6.5–8.5 GHz</td><td>5–10 GHz</td><td>3–5 GHz</td><td>&lt; 2 GHz</td><td>Dispersive regime requirement</td><td>Adjust resonator length/capacitance</td><td>Blais et al., PRA 2004</td></tr><tr><td>15</td><td>Resonator &amp; Coupling</td><td>Resonator Internal Q</td><td>Q_int</td><td>—</td><td>&gt; 105</td><td>104–105</td><td>10³–104</td><td>&lt; 500</td><td>Readout SNR and back-action</td><td>Improve substrate and metal quality</td><td>Megrant et al., APL 2012</td></tr><tr><td>16</td><td>Resonator &amp; Coupling</td><td>Coupling Strength g/2p</td><td>g/2p</td><td>MHz</td><td>50–150 MHz</td><td>20–200 MHz</td><td>5–19 MHz</td><td>&lt; 2 MHz</td><td>Sets ? and readout bandwidth</td><td>Adjust coupling capacitor geometry</td><td>Wallraff et al., Nature 2004</td></tr><tr><td>17</td><td>Resonator &amp; Coupling</td><td>Purcell Decay Rate</td><td>?_P/2p</td><td>kHz</td><td>&lt; 1 kHz</td><td>1–10 kHz</td><td>10–100 kHz</td><td>&gt; 500 kHz</td><td>T1 limit via resonator</td><td>Add Purcell filter; increase detuning</td><td>Houck et al., PRL 2008</td></tr><tr><td>18</td><td>Resonator &amp; Coupling</td><td>Residual ZZ Static</td><td>?_ZZ/2p</td><td>kHz</td><td>&lt; 10 kHz</td><td>&lt; 100 kHz</td><td>100–500 kHz</td><td>&gt; 1 MHz</td><td>Conditional phase error</td><td>Tunable coupler; frequency detuning</td><td>Ku et al., PRL 2020</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>?  Loss &amp; Dissipation</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Category</th><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Optimal Value</th><th>Good Range</th><th>Acceptable Range</th><th>Worst Value</th><th>Physical Significance</th><th>Improvement Strategy</th><th>Reference</th></tr></thead><tbody><tr><td>19</td><td>Loss &amp; Dissipation</td><td>Bulk Substrate Loss Tangent</td><td>tan d_bulk</td><td>—</td><td>&lt; 1×10?7</td><td>&lt; 1×10?6</td><td>1×10?6–1×10?5</td><td>&gt; 1×10?4</td><td>Bulk energy dissipation</td><td>Use float-zone Si or sapphire</td><td>Martinis et al., PRL 2005</td></tr><tr><td>20</td><td>Loss &amp; Dissipation</td><td>Metal-Substrate Interface Loss</td><td>tan d_MS</td><td>—</td><td>&lt; 1×10?³</td><td>&lt; 3×10?³</td><td>3×10?³–1×10?²</td><td>&gt; 5×10?²</td><td>Dominant TLS loss channel</td><td>Ion mill before deposition; clean surfaces</td><td>Wang et al., APL 2015</td></tr><tr><td>21</td><td>Loss &amp; Dissipation</td><td>Surface Participation (MS)</td><td>p_MS</td><td>—</td><td>&lt; 5×10?4</td><td>&lt; 2×10?³</td><td>2×10?³–1×10?²</td><td>&gt; 5×10?²</td><td>Weights MS interface loss to T1</td><td>Wider gaps; ground plane design</td><td>Wenner et al., APL 2011</td></tr><tr><td>22</td><td>Loss &amp; Dissipation</td><td>TLS-Limited Q</td><td>Q_TLS</td><td>—</td><td>&gt; 3×106</td><td>106–3×106</td><td>105–106</td><td>&lt; 104</td><td>TLS bath limitation</td><td>Surface treatment; new barrier materials</td><td>Müller et al., PRB 2019</td></tr><tr><td>23</td><td>Loss &amp; Dissipation</td><td>Seam Loss Rate (3D)</td><td>?_seam/2p</td><td>kHz</td><td>&lt; 1 kHz</td><td>&lt; 5 kHz</td><td>5–50 kHz</td><td>&gt; 200 kHz</td><td>3D cavity assembly limit</td><td>Indium sealing; tighter tolerances</td><td>Reagor et al., PRB 2016</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>?  Junction Parameters</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Category</th><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Optimal Value</th><th>Good Range</th><th>Acceptable Range</th><th>Worst Value</th><th>Physical Significance</th><th>Improvement Strategy</th><th>Reference</th></tr></thead><tbody><tr><td>24</td><td>Junction Parameters</td><td>Josephson Inductance</td><td>L_J</td><td>nH</td><td>5–20 nH</td><td>2–50 nH</td><td>50–200 nH</td><td>&gt; 500 nH</td><td>Sets qubit frequency</td><td>Junction area and J_c control</td><td>Koch et al., PRA 2007</td></tr><tr><td>25</td><td>Junction Parameters</td><td>Josephson Energy</td><td>EJ/h</td><td>GHz</td><td>10–50 GHz</td><td>5–100 GHz</td><td>100–500 GHz</td><td>&gt; 1 THz</td><td>Qubit spectrum with EC</td><td>Barrier thickness and area</td><td>Nakamura et al., Nature 1999</td></tr><tr><td>26</td><td>Junction Parameters</td><td>Charging Energy</td><td>EC/h</td><td>MHz</td><td>150–350 MHz</td><td>100–500 MHz</td><td>500–1000 MHz</td><td>&gt; 2 GHz</td><td>Anharmonicity and charge sensitivity</td><td>Shunt capacitor area tuning</td><td>Koch et al., PRA 2007</td></tr><tr><td>27</td><td>Junction Parameters</td><td>Junction Loss Tangent</td><td>tan d_J</td><td>—</td><td>&lt; 3×10?6</td><td>&lt; 1×10?5</td><td>1×10?5–1×10?4</td><td>&gt; 1×10?³</td><td>Intrinsic junction T1 limit</td><td>ALD AlOx; crystalline barriers</td><td>Martinis et al., PRL 2005</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>?  Simulation</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Category</th><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Optimal Value</th><th>Good Range</th><th>Acceptable Range</th><th>Worst Value</th><th>Physical Significance</th><th>Improvement Strategy</th><th>Reference</th></tr></thead><tbody><tr><td>28</td><td>Simulation</td><td>Eigenfrequency Convergence</td><td>?f/f</td><td>ppm</td><td>&lt; 5 ppm</td><td>&lt; 50 ppm</td><td>50–500 ppm</td><td>&gt; 1000 ppm</td><td>Accuracy of all extracted parameters</td><td>More refinement passes; finer mesh</td><td>Minev Thesis Yale 2018</td></tr><tr><td>29</td><td>Simulation</td><td>Energy Error</td><td>?U/U</td><td>%</td><td>&lt; 0.1%</td><td>&lt; 0.5%</td><td>0.5–2%</td><td>&gt; 5%</td><td>Bounds participation ratio error</td><td>Increase mesh density at interfaces</td><td>Ansys HFSS Docs 2023</td></tr><tr><td>30</td><td>Simulation</td><td>Participation Sum Check</td><td>Sp</td><td>—</td><td>0.99–1.01</td><td>0.97–1.03</td><td>0.93–1.07</td><td>&lt; 0.90 or &gt; 1.10</td><td>Simulation completeness check</td><td>Include all eigenmodes up to 20 GHz</td><td>Minev et al., Nature 2021</td></tr></tbody></table></div></details>
+
+
+
+        <details class="result-subcategory" open><summary>Total Parameters:  30</summary><div class="result-table-wrap"><table class="data-table"><thead><tr><th>#</th><th>Category</th><th>Parameter</th><th>Symbol</th><th>Unit</th><th>Optimal Value</th><th>Good Range</th><th>Acceptable Range</th><th>Worst Value</th><th>Physical Significance</th><th>Improvement Strategy</th><th>Reference</th></tr></thead><tbody></tbody></table></div></details>
+
+
+
+        </div>
+
+
+
+        </details>
+
+
+
+        </div></details></div></section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="api-reference">
+
+
+
+          <p class="eyebrow">API Reference</p>
+
+
+
+          <h2>API Reference</h2>
+
+
+
+          <p>
+
+
+
+            The API reference should document the endpoints that connect QClang to the backend.
+
+
+
+            Keep endpoint descriptions simple until final request and response schemas are ready.
+
+
+
+          </p>
+
+
+
+          <table>
+
+
+
+            <thead><tr><th>Method</th><th>Path</th><th>Purpose</th></tr></thead>
+
+
+
+            <tbody>
+
+
+
+              <tr><td>GET</td><td><code>/api/qclang/status</code></td><td>Check available dialects and compiler support.</td></tr>
+
+
+
+              <tr><td>GET</td><td><code>/api/qclang/examples</code></td><td>Load built-in QClang examples.</td></tr>
+
+
+
+              <tr><td>POST</td><td><code>/api/qclang/parse</code></td><td>Parse source into an AST-style result.</td></tr>
+
+
+
+              <tr><td>POST</td><td><code>/api/qclang/compile</code></td><td>Compile source into the selected target output.</td></tr>
+
+
+
+            </tbody>
+
+
+
+          </table>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="integration">
+
+
+
+          <p class="eyebrow">Integration</p>
+
+
+
+          <h2>Integration</h2>
+
+
+
+          <p>
+
+
+
+            Integration documentation should explain how QClang connects the editor, backend
+
+
+
+            compiler, design graph, routing, DRC, and exports. For now, this page gives only
+
+
+
+            the intended integration parameters.
+
+
+
+          </p>
+
+
+
+          <div class="parameter-table">
+
+
+
+            <article><strong>Frontend editor</strong><span>Writes and submits QClang source text.</span></article>
+
+
+
+            <article><strong>Backend router</strong><span>Receives parse and compile API requests.</span></article>
+
+
+
+            <article><strong>Compiler service</strong><span>Parses, validates, and compiles source.</span></article>
+
+
+
+            <article><strong>Design pipeline</strong><span>Uses compiler output for graph, routing, checks, and exports.</span></article>
+
+
+
+          </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="doc-section" id="support">
+
+
+
+          <p class="eyebrow">Support</p>
+
+
+
+          <h2>Support</h2>
+
+
+
+          <p>
+
+
+
+            The support page should help future users know where to start. It should not list
+
+
+
+            unfinished development details as documentation content.
+
+
+
+          </p>
+
+
+
+          <ul class="learning-list">
+
+
+
+            <li>Start with Hello World.</li>
+
+
+
+            <li>Read the language blocks reference.</li>
+
+
+
+            <li>Learn parse and compile endpoints.</li>
+
+
+
+            <li>Use final project examples after QClang development is complete.</li>
+
+
+
+          </ul>
+
+
+
+        </section>
+
+
+
+      </main>
+
+
+
+</div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <div class="search-modal" id="searchModal" hidden>
+
+
+
+    <div class="search-dialog">
+
+
+
+      <div class="search-head">
+
+
+
+        <input id="searchInput" type="search" placeholder="Search QClang docs..." />
+
+
+
+        <button id="searchClose" class="search-close" type="button" aria-label="Close search">Close</button>
+
+
+
+      </div>
+
+
+
+      <div id="searchResults" class="search-results"></div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <div class="assistant-modal" id="assistantModal" hidden>
+
+
+
+    <section class="assistant-panel" aria-label="QClang assistant">
+
+
+
+      <header class="assistant-head">
+
+
+
+        <div>
+
+
+
+          <span class="assistant-kicker">QClang Assistant</span>
+
+
+
+          <h2>Ask Assistant</h2>
+
+
+
+        </div>
+
+
+
+        <button id="assistantClose" class="assistant-close" type="button" aria-label="Close assistant">Close</button>
+
+
+
+      </header>
+
+
+
+      <div class="assistant-messages" id="assistantMessages" aria-live="polite">
+
+
+
+        <article class="assistant-message assistant-message-bot">
+
+
+
+          <strong>Hi, I can help with QClang documentation.</strong>
+
+
+
+          <p>Ask about syntax, compiler pipeline, targets, API parameters, or integration.</p>
+
+
+
+        </article>
+
+
+
+      </div>
+
+
+
+      <div class="assistant-suggestions" aria-label="Suggested questions">
+
+
+
+        <button class="assistant-suggestion" type="button">What are QClang language blocks?</button>
+
+
+
+        <button class="assistant-suggestion" type="button">Explain compiler pipeline</button>
+
+
+
+        <button class="assistant-suggestion" type="button">What endpoints should be documented?</button>
+
+
+
+      </div>
+
+
+
+      <form class="assistant-form" id="assistantForm">
+
+
+
+        <input id="assistantInput" type="text" autocomplete="off" placeholder="Ask a question..." />
+
+
+
+        <button type="submit" aria-label="Send question">Send</button>
+
+
+
+      </form>
+
+
+
+    </section>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <script src="assets/app.js?v=cdac-materials-pages-v1"></script>
+
+
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

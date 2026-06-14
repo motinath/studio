@@ -1,0 +1,407 @@
+{
+  "analysis_id": "phys_20260605_054848",
+  "timestamp": "2026-06-05T05:48:48.134956+00:00",
+  "design_id": "design_3q_demo_v1",
+  "simulation_id": "sim_20260604_001",
+  "engine_version": "0.1.0",
+  "overall_status": "FAIL",
+  "physics_score": 0.4,
+  "qubit_results": [
+    {
+      "qubit_id": "Q1",
+      "type": "transmon",
+      "input_params": {
+        "EC_ghz": 0.0,
+        "EJ_ghz": 0.0,
+        "EL_ghz": null,
+        "EJ_EC_ratio": 67.31980185386617,
+        "capacitance_fF": 0.0,
+        "flux_bias": 0.0
+      },
+      "computed": {
+        "frequency_ghz": 6.58289323474013,
+        "anharmonicity_mhz": -333.3956291952695,
+        "f12_ghz": 6.24949760554486,
+        "energy_levels_ghz": [
+          0.0,
+          6.58289323474013,
+          12.83239084028499,
+          18.715499720586394,
+          24.178824065570087,
+          29.205107789159143,
+          33.20873124413496,
+          38.20970096777962,
+          39.099803415471946,
+          48.101299163169955
+        ],
+        "transmon_regime": true
+      },
+      "coherence": {
+        "T1_effective_us": 179361.0731955917,
+        "T2_effective_us": 358722.08494061086,
+        "T1_channels": [
+          {
+            "channel": "t1_capacitive",
+            "value_us": 24184977884.763412
+          },
+          {
+            "channel": "t1_charge_impedance",
+            "value_us": 179362.4033863124
+          }
+        ],
+        "Tphi_channels": [
+          {
+            "channel": "tphi_1_over_f_cc",
+            "value_us": 2094066027073.7031
+          },
+          {
+            "channel": "tphi_1_over_f_ng",
+            "value_us": 2.32280181684433e24
+          }
+        ],
+        "dominant_T1_channel": "t1_charge_impedance",
+        "dominant_Tphi_channel": "tphi_1_over_f_cc"
+      },
+      "validation": {
+        "frequency": {
+          "status": "FAIL",
+          "target": 5.0,
+          "actual": 6.58289323474013,
+          "tolerance": 0.15,
+          "unit": "GHz"
+        },
+        "anharmonicity": {
+          "status": "FAIL",
+          "target": -250.0,
+          "actual": -333.3956291952695,
+          "tolerance": 30.0,
+          "unit": "MHz"
+        },
+        "T1": {
+          "status": "PASS",
+          "target": 80.0,
+          "actual": 179361.0731955917,
+          "tolerance": null,
+          "unit": "µs"
+        },
+        "T2": {
+          "status": "PASS",
+          "target": 40.0,
+          "actual": 358722.08494061086,
+          "tolerance": null,
+          "unit": "µs"
+        }
+      }
+    },
+    {
+      "qubit_id": "Q2",
+      "type": "transmon",
+      "input_params": {
+        "EC_ghz": 0.0,
+        "EJ_ghz": 0.0,
+        "EL_ghz": null,
+        "EJ_EC_ratio": 66.6693191058917,
+        "capacitance_fF": 0.0,
+        "flux_bias": 0.0
+      },
+      "computed": {
+        "frequency_ghz": 7.274656280053277,
+        "anharmonicity_mhz": -370.5666304284225,
+        "f12_ghz": 6.904089649624854,
+        "energy_levels_ghz": [
+          0.0,
+          7.274656280053277,
+          14.178745929678131,
+          20.675342718285215,
+          26.703998865787483,
+          32.24894165143167,
+          36.629410693420176,
+          42.20001258112871,
+          43.13823811125044,
+          53.192897527128046
+        ],
+        "transmon_regime": true
+      },
+      "coherence": {
+        "T1_effective_us": 163135.3244561081,
+        "T2_effective_us": 326270.5978281243,
+        "T1_channels": [
+          {
+            "channel": "t1_capacitive",
+            "value_us": 21885259495.99775
+          },
+          {
+            "channel": "t1_charge_impedance",
+            "value_us": 163136.5404952631
+          }
+        ],
+        "Tphi_channels": [
+          {
+            "channel": "tphi_1_over_f_cc",
+            "value_us": 2083868298724.5498
+          },
+          {
+            "channel": "tphi_1_over_f_ng",
+            "value_us": 4.321929277916735e23
+          }
+        ],
+        "dominant_T1_channel": "t1_charge_impedance",
+        "dominant_Tphi_channel": "tphi_1_over_f_cc"
+      },
+      "validation": {
+        "frequency": {
+          "status": "FAIL",
+          "target": 5.4,
+          "actual": 7.274656280053277,
+          "tolerance": 0.15,
+          "unit": "GHz"
+        },
+        "anharmonicity": {
+          "status": "FAIL",
+          "target": -240.0,
+          "actual": -370.5666304284225,
+          "tolerance": 30.0,
+          "unit": "MHz"
+        },
+        "T1": {
+          "status": "PASS",
+          "target": 80.0,
+          "actual": 163135.3244561081,
+          "tolerance": null,
+          "unit": "µs"
+        },
+        "T2": {
+          "status": "PASS",
+          "target": 40.0,
+          "actual": 326270.5978281243,
+          "tolerance": null,
+          "unit": "µs"
+        }
+      }
+    },
+    {
+      "qubit_id": "Q3",
+      "type": "fluxonium",
+      "input_params": {
+        "EC_ghz": 0.0,
+        "EJ_ghz": 0.0,
+        "EL_ghz": null,
+        "EJ_EC_ratio": 33.12764083712223,
+        "capacitance_fF": 0.0,
+        "flux_bias": 0.0
+      },
+      "computed": {
+        "frequency_ghz": 0.000017089669475112146,
+        "anharmonicity_mhz": 4180.952726267235,
+        "f12_ghz": 4.18096981593671,
+        "energy_levels_ghz": [
+          0.0,
+          0.000017089669475112146,
+          4.1809869056061855,
+          4.181957561225046,
+          8.01693406179422,
+          8.04046728634486,
+          11.28999076496282,
+          11.569697489855011,
+          13.812424624984095,
+          14.933543594622808
+        ],
+        "transmon_regime": true
+      },
+      "coherence": {
+        "T1_effective_us": 231749856.04062614,
+        "T2_effective_us": 463499702.57529575,
+        "T1_channels": [
+          {
+            "channel": "t1_capacitive",
+            "value_us": 1858518993813806.8
+          },
+          {
+            "channel": "t1_inductive",
+            "value_us": 231750452.435249
+          },
+          {
+            "channel": "t1_quasiparticle_tunneling",
+            "value_us": 1.5496865994754327e38
+          },
+          {
+            "channel": "t1_flux_bias_line",
+            "value_us": 94640505388876.05
+          }
+        ],
+        "Tphi_channels": [
+          {
+            "channel": "tphi_1_over_f_cc",
+            "value_us": 2.2810592641229556e16
+          },
+          {
+            "channel": "tphi_1_over_f_flux",
+            "value_us": 2.4446943967198377e18
+          }
+        ],
+        "dominant_T1_channel": "t1_inductive",
+        "dominant_Tphi_channel": "tphi_1_over_f_cc"
+      },
+      "validation": {
+        "frequency": {
+          "status": "FAIL",
+          "target": 1.2,
+          "actual": 0.000017089669475112146,
+          "tolerance": 0.2,
+          "unit": "GHz"
+        },
+        "anharmonicity": {
+          "status": "FAIL",
+          "target": -800.0,
+          "actual": 4180.952726267235,
+          "tolerance": 100.0,
+          "unit": "MHz"
+        },
+        "T1": {
+          "status": "PASS",
+          "target": 200.0,
+          "actual": 231749856.04062614,
+          "tolerance": null,
+          "unit": "µs"
+        },
+        "T2": {
+          "status": "PASS",
+          "target": 100.0,
+          "actual": 463499702.57529575,
+          "tolerance": null,
+          "unit": "µs"
+        }
+      }
+    }
+  ],
+  "coupling_results": [
+    {
+      "qubit_a": "Q1",
+      "qubit_b": "Q2",
+      "coupling_capacitance_fF": 3.4,
+      "bare_coupling_mhz": 190.1606782502644,
+      "dispersive_shift_khz": 0.0,
+      "zz_coupling_khz": 154617.63558278437,
+      "validation": {
+        "coupling_strength": {
+          "status": "FAIL",
+          "target": 5.0,
+          "actual": 190.1606782502644,
+          "max_allowed": null,
+          "unit": "MHz"
+        },
+        "zz_parasitic": {
+          "status": "FAIL",
+          "target": null,
+          "actual": 154617.63558278437,
+          "max_allowed": 50.0,
+          "unit": "kHz"
+        }
+      }
+    },
+    {
+      "qubit_a": "Q1",
+      "qubit_b": "Q3",
+      "coupling_capacitance_fF": 0.12,
+      "bare_coupling_mhz": 0.009281860939498437,
+      "dispersive_shift_khz": 0.0,
+      "zz_coupling_khz": -0.00004416539400848543,
+      "validation": {}
+    },
+    {
+      "qubit_a": "Q2",
+      "qubit_b": "Q3",
+      "coupling_capacitance_fF": 2.9,
+      "bare_coupling_mhz": 0.2485160201351924,
+      "dispersive_shift_khz": 0.0,
+      "zz_coupling_khz": -0.022035662658477295,
+      "validation": {}
+    }
+  ],
+  "readout_results": [
+    {
+      "resonator_id": "R1",
+      "qubit_id": "Q1",
+      "resonator_frequency_ghz": 7.0,
+      "qubit_resonator_detuning_ghz": 0.4171067652598701,
+      "coupling_strength_mhz": 564.9272997934673,
+      "dispersive_shift_mhz": -3047.2954041645057,
+      "purcell_T1_limit_us": 0.17352396816948468,
+      "critical_photon_number": 0.13628540590575056
+    },
+    {
+      "resonator_id": "R2",
+      "qubit_id": "Q2",
+      "resonator_frequency_ghz": 7.3,
+      "qubit_resonator_detuning_ghz": 0.02534371994672302,
+      "coupling_strength_mhz": 541.4035805465774,
+      "dispersive_shift_mhz": 12414.767344225238,
+      "purcell_T1_limit_us": 0.0006975070504279145,
+      "critical_photon_number": 0.0005478207563628555
+    }
+  ],
+  "frequency_collision_analysis": {
+    "status": "FAIL",
+    "min_qubit_spacing_mhz": 691.763,
+    "collisions": [
+      {
+        "pair": [
+          "Q2",
+          "R2"
+        ],
+        "spacing_mhz": 25.344,
+        "collision_type": "qubit_resonator"
+      }
+    ],
+    "all_spacings": [
+      {
+        "pair": [
+          "Q1",
+          "Q2"
+        ],
+        "spacing_mhz": 691.763,
+        "collision_type": null
+      },
+      {
+        "pair": [
+          "Q1",
+          "Q3"
+        ],
+        "spacing_mhz": 6582.876,
+        "collision_type": null
+      },
+      {
+        "pair": [
+          "Q2",
+          "Q3"
+        ],
+        "spacing_mhz": 7274.639,
+        "collision_type": null
+      }
+    ]
+  },
+  "validation_summary": {
+    "total_checks": 15,
+    "passed": 6,
+    "warnings": 0,
+    "failures": 9,
+    "blocking": true,
+    "suggestions": [
+      "Decrease EJ for Q1 to decrease frequency toward 5.000 GHz.",
+      "Redesign Q1 capacitor geometry to change EC and adjust anharmonicity.",
+      "Decrease EJ for Q2 to decrease frequency toward 5.400 GHz.",
+      "Redesign Q2 capacitor geometry to change EC and adjust anharmonicity.",
+      "Increase EJ for Q3 to increase frequency toward 1.200 GHz.",
+      "Redesign Q3 capacitor geometry to change EC and adjust anharmonicity.",
+      "Decrease mutual capacitance between Q1-Q2 to decrease coupling strength.",
+      "Redesign Q1-Q2 coupling: increase frequency detuning or add a coupler for ZZ cancellation.",
+      "Resolve qubit_resonator frequency collision involving [Q2, R2] (spacing: 25.3 MHz)."
+    ]
+  },
+  "plots": {
+    "energy_levels": "output/energy_levels.png",
+    "coherence_breakdown": "output/coherence_breakdown.png",
+    "coupling_map": "output/coupling_map.png",
+    "frequency_map": "output/frequency_map.png"
+  }
+}
