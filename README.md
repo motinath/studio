@@ -147,7 +147,6 @@ Quantum_Studio/
 │   ├── Dockerfile               # Production container configurations (detects NPM or Bun)
 │   ├── package.json             # NPM project scripts and dependencies
 │   └── vite.config.ts           # Vite + TanStack Start runtime options
-├── qclang model/                # DSL compiler targets and syntax lexer templates for QCLang
 └── docker-compose.yml           # Complete container network definition for database, API, and UI
 ```
 
